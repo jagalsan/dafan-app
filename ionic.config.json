@@ -1,0 +1,7 @@
+{
+    "name": "dafan",
+    "integrations": {
+        "capacitor": {}
+    },
+    "type": "angular"
+}
