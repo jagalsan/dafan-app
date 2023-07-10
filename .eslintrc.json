@@ -1,0 +1,66 @@
+{
+    "root": true,
+    "ignorePatterns": ["projects/**/*"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+    ],
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "rules": {
+                "padded-blocks": ["error", "never"],
+                "quotes": ["error", "single", { "avoidEscape": true }],
+                "@angular-eslint/directive-selector": [
+                    "error",
+                    {
+                        "type": "attribute",
+                        "prefix": "df",
+                        "style": "camelCase"
+                    }
+                ],
+                "@angular-eslint/component-selector": [
+                    "error",
+                    {
+                        "type": "element",
+                        "prefix": "df",
+                        "style": "kebab-case"
+                    }
+                ],
+                "@typescript-eslint/no-empty-function": ["off"],
+                "@angular-eslint/component-class-suffix": [
+                    "error",
+                    {
+                        "suffixes": ["Page", "Component"]
+                    }
+                ],
+                "@angular-eslint/directive-class-suffix": [
+                    "error",
+                    {
+                        "suffixes": ["Directive"]
+                    }
+                ],
+                "@angular-eslint/pipe-prefix": "error",
+                "@angular-eslint/use-lifecycle-interface": "error",
+                "@angular-eslint/no-conflicting-lifecycle": "error",
+                "@angular-eslint/no-input-prefix": "error",
+                "@angular-eslint/no-input-rename": "error",
+                "@angular-eslint/no-output-on-prefix": "error",
+                "@angular-eslint/no-output-rename": "error",
+                "@angular-eslint/prefer-output-readonly": "error",
+                "@angular-eslint/use-pipe-transform-interface": "error",
+                "@angular-eslint/use-component-selector": "error",
+                "@angular-eslint/contextual-decorator": "error",
+                "@angular-eslint/contextual-lifecycle": "error",
+                "@angular-eslint/use-component-view-encapsulation": "warn",
+                "@angular-eslint/use-injectable-provided-in": "error",
+                "@angular-eslint/no-lifecycle-call": "warn",
+                "@angular-eslint/no-output-native": "error",
+                "@angular-eslint/no-pipe-impure": "error",
+                "no-console": ["error", { "allow": ["warn", "error"] }],
+                "no-undef": "off"
+            }
+        }
+    ]
+}

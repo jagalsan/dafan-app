@@ -8,7 +8,8 @@
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "jest --coverage --runInBand",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "lint": "npx eslint 'src/**/*.{js,jsx,ts,tsx,html,css,scss}' --quiet --fix"
     },
     "private": true,
     "dependencies": {
@@ -73,6 +74,7 @@
         ]
     },
     "lint-staged": {
-        "*.{js,ts,html,css,scss,json,yml}": "prettier --write"
+        "*.{js,ts,html,css,scss,json,yml}": "prettier --write",
+        "*.{js,ts}": "eslint --fix"
     }
 }
