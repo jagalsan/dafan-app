@@ -12,6 +12,7 @@
             "rules": {
                 "padded-blocks": ["error", "never"],
                 "quotes": ["error", "single", { "avoidEscape": true }],
+                "no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": false }],
                 "@angular-eslint/directive-selector": [
                     "error",
                     {
@@ -28,7 +29,6 @@
                         "style": "kebab-case"
                     }
                 ],
-                "@typescript-eslint/no-empty-function": ["off"],
                 "@angular-eslint/component-class-suffix": [
                     "error",
                     {

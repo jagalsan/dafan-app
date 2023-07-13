@@ -1,0 +1,10 @@
+<ion-tabs>
+    <ion-tab-bar [scrollLeft]="true" slot="bottom">
+        <ng-container *ngFor="let menuOption of menu">
+            <ion-tab-button [tab]="menuOption.path">
+                <ion-icon aria-hidden="true" [name]="menuOption.icon"></ion-icon>
+                <ion-label>{{ menuOption.label }}</ion-label>
+            </ion-tab-button>
+        </ng-container>
+    </ion-tab-bar>
+</ion-tabs>
