@@ -1,0 +1,76 @@
+.market {
+    &__tabs {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        :first-child {
+            margin-right: 16px;
+        }
+
+        .tabs__tab {
+            color: #f6f2f130;
+            font-size: 18px;
+            font-weight: 600;
+
+            &--active {
+                color: #f6f2f1;
+                font-size: 26px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .fan-point {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 32px;
+
+        &__amount {
+            display: flex;
+
+            ion-icon {
+                font-size: 27px;
+                margin-right: 8px;
+            }
+
+            .amount {
+                background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+
+        &__action {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            ion-button {
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: uppercase;
+                --color: #111;
+                --border-radius: 5px;
+                --background: linear-gradient(180deg, #4cc0c4 0%, #4cc0c4 100%);
+                height: 35px;
+                width: 83px;
+            }
+
+            .fan-price {
+                font-size: 14px;
+                font-weight: 200;
+                background: linear-gradient(180deg, #4cc0c4 0%, #4cc0c4 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                text-align: center;
+            }
+        }
+    }
+}

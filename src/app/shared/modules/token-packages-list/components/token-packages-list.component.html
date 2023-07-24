@@ -1,0 +1,12 @@
+<div class="package-list">
+    <div class="package" *ngFor="let tokenPackage of tokenPackages">
+        <div class="package__value">
+            <ion-icon slot="start" src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+            + {{ tokenPackage.tokenCount }}
+        </div>
+        <div class="package__actions">
+            <ion-button (click)="buyPackage(tokenPackage)"> {{ tokenPackage.price }}€ </ion-button>
+            <span *ngIf="tokenPackage.savePrice" class="save-price"> save {{ tokenPackage.savePrice }}€ </span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,82 @@
+.club-experiences {
+    .list {
+        --ion-item-background: #121212;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .experience {
+        position: relative;
+        display: flex;
+        padding-top: 30px;
+        --inner-padding-bottom: 30px;
+        --inner-padding-end: 0px;
+        --padding-start: 0px;
+        --ion-item-background: #121212;
+
+        &--blocked::before {
+            content: 'Blocked by low level';
+            width: 100%;
+            height: 100%;
+            background: #00000095;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        &__image {
+            width: 75px;
+            height: 65px;
+            border-radius: 10px;
+        }
+
+        &__label {
+            margin-right: 20px;
+            margin-left: 15px;
+            display: flex;
+            flex-direction: column;
+
+            .label {
+                font-weight: 500;
+                font-size: 16px;
+                white-space: normal;
+            }
+
+            .discount {
+                font-size: 32px;
+                font-weight: 200;
+                color: #4cc0c4;
+            }
+        }
+
+        &__button {
+            --color: #111;
+            fill: #111;
+            border-radius: 5px;
+            --background: linear-gradient(180deg, #4cc0c4 0%, #4cc0c4 100%);
+            height: 35px;
+            width: 83px;
+            font-weight: 600;
+
+            &--blocked {
+                --background: #c44c53;
+            }
+
+            ion-icon {
+                color: #111;
+                margin-right: 10px;
+            }
+        }
+    }
+}

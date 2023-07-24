@@ -1,0 +1,91 @@
+<ion-content class="market main-page" [scrollY]="true">
+    <ion-grid class="main-page__grid">
+        <div class="market__tabs tabs">
+            <span
+                class="tabs__tab"
+                [ngClass]="{ 'tabs__tab--active': galleryTabSelected === 'collectibles' }"
+                (click)="galleryTabSelected = 'collectibles'"
+            >
+                Collectibles
+            </span>
+            <span
+                class="tabs__tab"
+                [ngClass]="{ 'tabs__tab--active': galleryTabSelected === 'fanPoints' }"
+                (click)="galleryTabSelected = 'fanPoints'"
+            >
+                FanPoints
+            </span>
+        </div>
+        <section *ngIf="galleryTabSelected === 'collectibles'; else fanPointsTab" class="market__gallery">
+            <df-collectibles-gallery
+                [isMarket]="true"
+                [cols]="2"
+                [collectibles]="collectiblesListed"
+            ></df-collectibles-gallery>
+        </section>
+        <ng-template #fanPointsTab>
+            <section class="market__fan-points">
+                <div class="fan-point">
+                    <div class="fan-point__amount">
+                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+                        <span class="amount">10FP</span>
+                    </div>
+                    <div class="fan-point__action">
+                        <ion-button> BUY </ion-button>
+                        <span class="fan-price">0,5€/FP</span>
+                    </div>
+                </div>
+                <div class="fan-point">
+                    <div class="fan-point__amount">
+                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+                        <span class="amount">10FP</span>
+                    </div>
+                    <div class="fan-point__action">
+                        <ion-button> BUY </ion-button>
+                        <span class="fan-price">0,5€/FP</span>
+                    </div>
+                </div>
+                <div class="fan-point">
+                    <div class="fan-point__amount">
+                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+                        <span class="amount">10FP</span>
+                    </div>
+                    <div class="fan-point__action">
+                        <ion-button> BUY </ion-button>
+                        <span class="fan-price">0,5€/FP</span>
+                    </div>
+                </div>
+                <div class="fan-point">
+                    <div class="fan-point__amount">
+                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+                        <span class="amount">10FP</span>
+                    </div>
+                    <div class="fan-point__action">
+                        <ion-button> BUY </ion-button>
+                        <span class="fan-price">0,5€/FP</span>
+                    </div>
+                </div>
+                <div class="fan-point">
+                    <div class="fan-point__amount">
+                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+                        <span class="amount">10FP</span>
+                    </div>
+                    <div class="fan-point__action">
+                        <ion-button> BUY </ion-button>
+                        <span class="fan-price">0,5€/FP</span>
+                    </div>
+                </div>
+                <div class="fan-point">
+                    <div class="fan-point__amount">
+                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+                        <span class="amount">10FP</span>
+                    </div>
+                    <div class="fan-point__action">
+                        <ion-button> BUY </ion-button>
+                        <span class="fan-price">0,5€/FP</span>
+                    </div>
+                </div>
+            </section>
+        </ng-template>
+    </ion-grid>
+</ion-content>

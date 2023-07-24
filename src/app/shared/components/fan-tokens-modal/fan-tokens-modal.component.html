@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-icon (click)="close()" slot="start" name="close"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <section class="fan-tokens df-modal">
+        <h3 class="fan-tokens__title">Your fanpoints</h3>
+        <div class="fan-tokens__tokens">
+            <ion-icon slot="start" src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+            <span>{{ userData.fanPoints }}</span>
+        </div>
+        <h4 class="fan-tokens__sub-title">Need more?</h4>
+        <df-token-packages-list [tokenPackages]="tokenPackages"></df-token-packages-list>
+        <span class="fan-tokens__history">
+            See all transactions
+            <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </span>
+    </section>
+</ion-content>

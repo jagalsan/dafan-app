@@ -1,0 +1,27 @@
+<ion-content class="collectibles main-page" [scrollY]="true">
+    <ion-grid class="main-page__grid">
+        <section class="collectible">
+            <img class="collectible__image" [src]="collectible.image" [alt]="collectible.name" />
+            <ng-container *ngIf="isUserCollectible">
+                <ion-progress-bar
+                    class="collectible__percentage"
+                    type="determinate"
+                    [value]="userData.userCollectible.percentage"
+                    color="primary"
+                ></ion-progress-bar>
+                <ion-row class="collectible__level">
+                    <ion-col class="level" size="4">
+                        Level <span class="number">{{ userData.level }}</span>
+                    </ion-col>
+                    <ion-col size="5">
+                        <ion-button class="upgrade-action" expand="block"> Upgrade </ion-button>
+                    </ion-col>
+                    <ion-col class="points" size="3">
+                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+                        {{ userData.fanPoints }}
+                    </ion-col>
+                </ion-row>
+            </ng-container>
+        </section>
+    </ion-grid>
+</ion-content>

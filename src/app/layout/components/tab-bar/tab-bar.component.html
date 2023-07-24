@@ -1,8 +1,14 @@
+<ion-router-outlet></ion-router-outlet>
 <ion-tabs>
     <ion-tab-bar [scrollLeft]="true" slot="bottom">
         <ng-container *ngFor="let menuOption of menu">
-            <ion-tab-button [tab]="menuOption.path">
-                <ion-icon aria-hidden="true" [name]="menuOption.icon"></ion-icon>
+            <ion-tab-button routerLinkActive="tab--active" [tab]="menuOption.path">
+                <ng-container *ngIf="!menuOption.customIcon; else customIcon">
+                    <ion-icon aria-hidden="true" [name]="menuOption.icon"></ion-icon>
+                </ng-container>
+                <ng-template #customIcon>
+                    <ion-icon aria-hidden="true" [src]="'assets/icon/' + menuOption.customIcon + '.svg'"></ion-icon>
+                </ng-template>
                 <ion-label>{{ menuOption.label }}</ion-label>
             </ion-tab-button>
         </ng-container>

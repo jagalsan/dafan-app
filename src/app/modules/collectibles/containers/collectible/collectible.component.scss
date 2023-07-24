@@ -1,0 +1,55 @@
+ion-progress-bar {
+    margin-bottom: 12px;
+    height: 35px;
+    margin-top: 20px;
+
+    --ion-color-base: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%) !important;
+}
+
+.collectible {
+    &__image {
+        border-radius: 20px;
+    }
+
+    &__level {
+        align-items: center;
+
+        .points {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 60px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: #2c2c2c;
+            gap: 5px;
+            font-weight: 500;
+
+            ion-icon {
+                font-size: 19px;
+            }
+        }
+
+        .level {
+            margin-bottom: 8px;
+            font-size: 24px;
+            font-weight: 600;
+
+            .number {
+                font-size: 38px;
+                background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .upgrade-action {
+            --color: #111;
+            border-radius: 5px;
+            --background: linear-gradient(180deg, #4cc0c4 0%, #4cc0c4 100%);
+        }
+    }
+
+    &__row {
+    }
+}

@@ -1,0 +1,27 @@
+<div class="ion-page" id="main-content">
+    <ion-header>
+        <ion-toolbar>
+            <section *ngIf="!isChildView; else childViewHeader" class="menu">
+                <ion-avatar class="menu__user-profile">
+                    <img alt="Silhouette of a person's head" [src]="userData.image" />
+                </ion-avatar>
+                <section class="menu__points" (click)="openFanPointsModal()">
+                    <ion-icon slot="start" src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+                    <div class="user-points">
+                        {{ userData.fanPoints }}
+                        <span>Your fan points</span>
+                    </div>
+                </section>
+            </section>
+            <ng-template #childViewHeader>
+                <ion-buttons slot="start">
+                    <ion-back-button [defaultHref]="'/collectibles'"></ion-back-button>
+                </ion-buttons>
+                <ion-title class="child-title">#{{ childTitle }}</ion-title>
+            </ng-template>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content class="main-content">
+        <ng-content></ng-content>
+    </ion-content>
+</div>

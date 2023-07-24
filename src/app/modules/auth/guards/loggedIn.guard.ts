@@ -8,7 +8,7 @@ export const LoggedInGuard: CanActivateFn = () => {
     const authService = inject(AuthService);
 
     if (authService.isLoggedIn) {
-        navCtrl.navigateRoot('/home');
+        navCtrl.navigateRoot('/collectibles');
         return false;
     }
 

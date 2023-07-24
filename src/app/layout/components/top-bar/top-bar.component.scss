@@ -1,0 +1,52 @@
+ion-header {
+    max-height: 42px;
+    background: #111;
+
+    ion-toolbar {
+        padding: 0 16px;
+        max-height: 42px;
+        --ion-toolbar-background: #111;
+
+        --min-height: 42px;
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            &__user-profile {
+                width: 32px;
+                height: 32px;
+            }
+
+            &__points {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                ion-icon {
+                    font-size: 32px;
+                }
+
+                .user-points {
+                    font-size: 18px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    span {
+                        color: #909090;
+                        font-size: 8px;
+                    }
+                }
+            }
+        }
+
+        ion-title.child-title {
+            width: calc(100% - 48px);
+            text-align: center;
+        }
+    }
+}

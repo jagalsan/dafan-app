@@ -1,0 +1,78 @@
+$cardHeight: 125px;
+
+.collectibles {
+    .my-collectible__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        padding: 0;
+        height: fit-content;
+    }
+
+    &__my-collectible {
+        height: fit-content;
+        width: fit-content;
+
+        .collectible {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: flex-end;
+
+            img {
+                width: 190px;
+                height: 230px;
+                border-radius: 24px;
+            }
+
+            &__level {
+                margin-left: 16px;
+
+                .title {
+                    margin-bottom: 8px;
+                    font-size: 24px;
+                    font-weight: 600;
+
+                    .number {
+                        font-size: 38px;
+                        font-weight: bold;
+                        background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+
+                ion-progress-bar {
+                    margin-bottom: 12px;
+
+                    --ion-color-base: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%) !important;
+                }
+
+                .hash {
+                    font-size: 14px;
+                    color: #909090;
+                }
+            }
+        }
+    }
+
+    &__gallery {
+        margin-top: 40px;
+
+        .gallery__title {
+            margin-bottom: 20px;
+            font-size: 24px;
+            padding: 0;
+        }
+    }
+
+    &__show-all {
+        text-decoration: none;
+        color: #f6f2f1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: bold;
+    }
+}

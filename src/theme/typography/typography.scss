@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Wotfard';
+    src: url('./font/wotfard-regular-webfont.eot');
+    src:
+        url('./font/wotfard-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('./font/wotfard-regular-webfont.woff2') format('woff2'),
+        url('./font/wotfard-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wotfard';
+    src: url('./font/wotfard-light-webfont.eot');
+    src:
+        url('./font/wotfard-light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('./font/wotfard-light-webfont.woff2') format('woff2'),
+        url('./font/wotfard-light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wotfard';
+    src: url('./font/wotfard-extralight-webfont.eot');
+    src:
+        url('./font/wotfard-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+        url('./font/wotfard-extralight-webfont.woff2') format('woff2'),
+        url('./font/wotfard-extralight.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wotfard';
+    src: url('./font/wotfard-medium-webfont.eot');
+    src:
+        url('./font/wotfard-medium-webfont.eot?#iefix') format('embedded-opentype'),
+        url('./font/wotfard-medium-webfont.woff2') format('woff2'),
+        url('./font/wotfard-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wotfard';
+    src: url('./font/wotfard-semibold-webfont.eot');
+    src:
+        url('./font/wotfard-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('./font/wotfard-semibold-webfont.woff2') format('woff2'),
+        url('./font/wotfard-semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Wotfard';
+    src: url('./font/wotfard-bold-webfont.eot');
+    src:
+        url('./font/wotfard-bold-webfont.eot?#iefix') format('embedded-opentype'),
+        url('./font/wotfard-bold-webfont.woff2') format('woff2'),
+        url('./font/wotfard-bold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+:root {
+    --ion-font-family: 'Wotfard';
+}
+
+body {
+    font-family: 'Wotfard';
+}

@@ -27,4 +27,12 @@
 
 //----
 
-@import 'typography.scss';
+@import './typography/typography.scss';
+
+ion-progress-bar {
+    border-radius: 25px;
+
+    .progress-buffer-bar {
+        border-radius: 25px;
+    }
+}

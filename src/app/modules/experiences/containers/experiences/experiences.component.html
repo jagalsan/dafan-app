@@ -1,0 +1,37 @@
+<ion-content class="experiences main-page" [scrollY]="true">
+    <ion-grid class="main-page__grid">
+        <h2 class="main-page__title">FanPoint experiences</h2>
+        <section class="experiences__section club-experiences" *ngFor="let clubExperience of clubExperiences">
+            <h3 class="club-experience__title">{{ clubExperience.type.label }}</h3>
+            <ion-list class="list">
+                <ng-container *ngFor="let experience of clubExperience.experiences">
+                    <ion-item
+                        class="experience"
+                        [ngClass]="{ 'experience--blocked': userData.level < experience.levelRequired }"
+                    >
+                        <img class="experience__image" [src]="experience.previewImage" />
+                        <div class="experience__label">
+                            <ion-label class="label">{{ experience.label }}</ion-label>
+                            <span *ngIf="clubExperience.type.name === experiencesTypeEnum.Discounts" class="discount"
+                                >{{ experience.percentageDiscount }}%</span
+                            >
+                        </div>
+                        <ion-button
+                            slot="end"
+                            class="experience__button"
+                            [ngClass]="{ 'experience__button--blocked': userData.fanPoints < experience.pointsCost }"
+                        >
+                            <ng-container *ngIf="userData.fanPoints >= experience.pointsCost; else blocked">
+                                <ion-icon slot="start" src="assets/icon/df-fan-points.svg"></ion-icon>
+                            </ng-container>
+                            <ng-template #blocked>
+                                <ion-icon name="lock-closed-outline"></ion-icon>
+                            </ng-template>
+                            {{ experience.pointsCost }}
+                        </ion-button>
+                    </ion-item>
+                </ng-container>
+            </ion-list>
+        </section>
+    </ion-grid>
+</ion-content>

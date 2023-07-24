@@ -1,0 +1,262 @@
+.challenges {
+    &__title {
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    &__type {
+        margin-top: 30px;
+
+        .pre-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        align-items: center;
+
+        :first-child {
+            margin-right: 16px;
+        }
+
+        .tabs__tab {
+            color: #f6f2f130;
+            font-size: 18px;
+            font-weight: 600;
+
+            &--active {
+                color: #f6f2f1;
+                font-size: 26px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .challenge__card {
+        background: #2c2c2c;
+        position: relative;
+        border-radius: 10px;
+        padding: 15px;
+        display: flex;
+        margin-bottom: 25px;
+
+        &--column {
+            flex-direction: column;
+        }
+
+        ion-button {
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            --color: #111;
+            --border-radius: 5px;
+            --background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+            height: 35px;
+            width: 100%;
+        }
+
+        &--shadow {
+            &:before {
+                content: '';
+                position: absolute;
+                inset: -1px;
+                border-radius: 10px;
+                transform: translate(-4px, -4px);
+                z-index: -1;
+                background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+            }
+        }
+
+        .quiz {
+            &__preview {
+                height: 110px;
+                min-width: 95px;
+                border-radius: 10px;
+                margin-right: 20px;
+            }
+
+            &__content {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .title {
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+        }
+
+        .match {
+            &__challenge {
+                display: flex;
+            }
+
+            &__clubs {
+                display: flex;
+                margin-right: 45px;
+                font-size: 26px;
+                color: #fff;
+                font-weight: 300;
+                align-items: center;
+
+                :first-child {
+                    margin-right: 24px;
+                }
+
+                :last-child {
+                    margin-left: 24px;
+                }
+            }
+
+            &__action {
+            }
+        }
+
+        .scorers {
+            display: flex;
+            align-items: center;
+
+            &__players {
+                display: flex;
+                row-gap: 25px;
+                margin-right: 45px;
+                align-items: center;
+
+                .player {
+                    color: #fff;
+                    text-align: center;
+                    font-size: 10px;
+                    font-weight: 500;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 40px;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+
+            &__action {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .fantasy-league {
+            &__match {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+
+                .match__club {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+
+                    .name {
+                        color: #fff;
+                        font-size: 12px;
+                        font-weight: 300;
+                        margin-left: 10px;
+                    }
+
+                    img {
+                        max-width: 20px;
+                        max-height: 28px;
+                    }
+
+                    &:last-child {
+                        justify-content: flex-end;
+                    }
+                }
+
+                .match__result {
+                    text-align: center;
+                    width: 80%;
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .challenge-list {
+        --ion-item-background: #121212;
+
+        .challenge {
+            --inner-padding-bottom: 15px;
+            --inner-padding-end: 0px;
+            --padding-start: 0px;
+            --ion-item-background: #121212;
+
+            &__image {
+                width: 75px;
+                height: 64px;
+                border-radius: 10px;
+            }
+
+            &__content {
+                margin-left: 20px;
+                display: flex;
+                flex-direction: column;
+
+                .challenge__label {
+                    color: #f6f2f1;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+
+                .challenge__actions {
+                    display: flex;
+
+                    .points {
+                        display: flex;
+                        align-items: center;
+
+                        span {
+                            margin-right: 40px;
+                            font-size: 30px;
+                            font-weight: 200;
+                            background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+
+                        ion-icon {
+                            margin-right: 8px;
+                            font-size: 27px;
+                        }
+                    }
+
+                    ion-button {
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        --color: #111;
+                        --border-radius: 5px;
+                        --background: linear-gradient(180deg, #4cc0c4 0%, #4cc0c4 100%);
+                        height: 35px;
+                        width: 83px;
+                    }
+                }
+            }
+        }
+    }
+}

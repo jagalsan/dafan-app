@@ -1,0 +1,52 @@
+.package-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .package {
+        display: flex;
+        justify-content: space-between;
+
+        &__value {
+            background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 32px;
+            font-weight: 500;
+
+            ion-icon {
+                font-size: 38px;
+                margin-right: 5px;
+                margin-left: 0;
+            }
+        }
+
+        &__actions {
+            display: flex;
+            flex-direction: column;
+
+            ion-button {
+                --color: #111;
+                border-radius: 5px;
+                --background: linear-gradient(180deg, #4cc0c4 0%, #4cc0c4 100%);
+                height: 35px;
+                width: 83px;
+                font-weight: 600;
+            }
+
+            .save-price {
+                color: #909090;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
+
+        &__value {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+}

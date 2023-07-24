@@ -1,0 +1,17 @@
+<ion-row>
+    <ion-col *ngFor="let collectible of collectibles" [size]="12 / cols">
+        <ion-card class="collectible" (click)="clickCollectible(collectible.hashId)">
+            <div class="collectible__image">
+                <img [alt]="collectible.name" [src]="collectible.image" />
+                <span *ngIf="isMarket" class="collectible__price">
+                    <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+                    {{ collectible.price }}
+                </span>
+            </div>
+            <div *ngIf="isMarket" class="collectible__owner owner">
+                <img class="owner__image" [src]="collectible.userOwner.image" />
+                <span class="owner__name">{{ collectible.userOwner.name }}</span>
+            </div>
+        </ion-card>
+    </ion-col>
+</ion-row>

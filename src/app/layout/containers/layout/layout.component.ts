@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { menuConfig } from '../../services/menu.config';
 
 @Component({
     selector: 'df-layout',
@@ -7,7 +6,5 @@ import { menuConfig } from '../../services/menu.config';
     styleUrls: ['./layout.component.scss'],
 })
 export class LayoutComponent {
-    menuBottom = menuConfig;
-
     constructor() {}
 }

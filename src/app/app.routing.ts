@@ -8,7 +8,7 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                redirectTo: 'home',
+                redirectTo: 'collectibles',
                 pathMatch: 'full',
             },
             {
@@ -24,7 +24,7 @@ export const routes: Routes = [
             },
             {
                 path: '**',
-                redirectTo: 'home',
+                redirectTo: 'collectibles',
             },
         ],
     },

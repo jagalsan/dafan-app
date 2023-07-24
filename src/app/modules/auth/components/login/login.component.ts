@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
     login(): void {
         this.authService.updateLoggedState(true);
-        this.navCtrl.navigateRoot('/home');
+        this.navCtrl.navigateRoot('/collectibles');
     }
 
     submitLoginForm() {

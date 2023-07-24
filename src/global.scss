@@ -1,1 +1,20 @@
 @import './theme/theme.scss';
+
+.main-page {
+    &__title {
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: 30px;
+        padding: 0;
+    }
+
+    &__grid {
+        padding: 0 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.df-modal {
+    padding: 0 35px;
+}

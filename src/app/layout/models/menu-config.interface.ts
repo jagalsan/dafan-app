@@ -3,4 +3,5 @@ export interface MenuOption {
     path: string;
     icon?: string;
     children?: MenuOption[];
+    customIcon?: string;
 }
