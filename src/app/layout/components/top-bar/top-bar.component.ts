@@ -50,7 +50,7 @@ export class TopBarComponent implements OnInit {
         this.tokenPackages = this.tokensService.getTokenPackages();
     }
 
-    async openFanPointsModal() {
+    async openFanPointsModal(): Promise<void> {
         const modal = await this.modalCtrl.create({
             component: FanTokensModalComponent,
             breakpoints: [0, 0.95],

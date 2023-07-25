@@ -1,0 +1,17 @@
+<ion-list class="challenge-list">
+    <ion-item class="challenge" *ngFor="let challenge of challenges">
+        <img class="challenge__image" [src]="challenge.image" />
+        <div class="challenge__content">
+            <div class="challenge__label">
+                {{ challenge.label }}
+            </div>
+            <div class="challenge__actions">
+                <div class="points">
+                    <ion-icon slot="start" src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+                    <span>{{ challenge.rewardPoints }} FP</span>
+                </div>
+                <ion-button (click)="scanChallenge(challenge)"> Scan </ion-button>
+            </div>
+        </div>
+    </ion-item>
+</ion-list>

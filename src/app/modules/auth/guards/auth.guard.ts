@@ -4,6 +4,7 @@ import { CanDeactivateFn } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Observable } from 'rxjs';
 import { AuthService } from '../services/auth.service';
+import { userResponse } from '../mocks/user.response';
 
 export interface CanComponentDeactivate {
     canDeactivate: () => Observable<boolean> | Promise<boolean> | boolean;
@@ -14,7 +15,7 @@ export const AuthActivateGuard: CanActivateFn = () => {
     const authService = inject(AuthService);
 
     if (authService.isLoggedIn) {
-        authService.updateUserData();
+        authService.updateUserData(userResponse);
         return true;
     }
 

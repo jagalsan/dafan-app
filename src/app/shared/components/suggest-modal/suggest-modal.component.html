@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-icon (click)="close()" slot="start" name="close"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="suggest">
+    <h2 class="suggest__title">Suggest box</h2>
+    <form class="suggest__form" (ngSubmit)="submitSuggestForm()" [formGroup]="suggestForm">
+        <ion-textarea
+            formControlName="suggest"
+            fill="outline"
+            label="Suggest"
+            labelPlacement="floating"
+            placeholder="Enter your suggest"
+        ></ion-textarea>
+        <ion-button [type]="'submit'"> Send suggest </ion-button>
+    </form>
+</ion-content>

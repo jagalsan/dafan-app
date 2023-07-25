@@ -7,6 +7,7 @@ export interface Challenge {
     typeId: number;
     type: ChallengeType;
     subType?: ChallengeSubType;
+    validatorCode?: string;
 }
 
 export interface MatchChallenge extends Challenge {

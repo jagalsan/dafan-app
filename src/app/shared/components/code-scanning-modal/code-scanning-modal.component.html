@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-icon (click)="close()" slot="start" name="close"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="code-scanning">
+    <h2 class="code-scanning__title">Scan your code</h2>
+    <ng-container *ngIf="scanMethod === 'camera'; else otherMethod">
+        <div class="code-scanning__camera-method">
+            <ion-icon name="scan-outline"></ion-icon>
+            <p class="code-scanning__notice" (click)="changeScanMethod('input')">Use other scan method</p>
+        </div>
+    </ng-container>
+    <ng-template #otherMethod>
+        <div class="code-scanning__other-method">
+            <p>If you can't scan your code, type it here</p>
+            <ion-input
+                (ngModelChange)="checkValidateButtonState()"
+                [(ngModel)]="codeValidator"
+                fill="outline"
+                type="text"
+                label="Code"
+                labelPlacement="floating"
+                placeholder="Enter your code"
+            ></ion-input>
+            <p class="code-scanning__notice" (click)="changeScanMethod('camera')">Back to camera method</p>
+        </div>
+    </ng-template>
+
+    <ng-container *ngIf="codeValidator.length">
+        <p class="code-scanning__validator-code">
+            Validator code: <span>{{ codeValidator }}</span>
+        </p>
+    </ng-container>
+
+    <ion-button (click)="validateCode()" [disabled]="!enabledValidateButton" [type]="'button'">
+        Validate code
+    </ion-button>
+</ion-content>

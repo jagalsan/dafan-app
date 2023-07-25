@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
 import { User } from 'src/app/modules/auth/models/user.interface';
-import { NavController } from '@ionic/angular';
+import { ModalController, NavController, ToastController } from '@ionic/angular';
 import { onFieldChallengesResponse } from '../../mocks/challenges.response';
 import { Challenge } from '../../models/challenge.interface';
+import { CodeScanningModalComponent } from 'src/app/shared/components/code-scanning-modal/code-scanning-modal.component';
 
 @Component({
     selector: 'df-challenges',
@@ -19,6 +20,8 @@ export class ChallengesComponent implements OnInit {
     constructor(
         private authService: AuthService,
         private navCtrl: NavController,
+        private modalController: ModalController,
+        private toastController: ToastController,
     ) {}
 
     ngOnInit(): void {
@@ -34,5 +37,35 @@ export class ChallengesComponent implements OnInit {
 
     navigateCollectible(collectibleHashId: string): void {
         this.navCtrl.navigateForward(`/collectibles/${collectibleHashId}`);
+    }
+
+    async scanPhysicalChallenges(challenge: Challenge): Promise<void> {
+        const modal = await this.modalController.create({
+            component: CodeScanningModalComponent,
+            breakpoints: [0.5, 0.7],
+            initialBreakpoint: 0.5,
+            componentProps: {
+                challenge: challenge,
+            },
+        });
+
+        await modal.present();
+
+        modal.onDidDismiss().then(e => {
+            if (e.data?.action === 'successCodeScanned') {
+                const newFanPoints = this.userData.fanPoints + challenge.rewardPoints;
+                this.authService.updateUserData({ ...this.userData, fanPoints: newFanPoints });
+
+                const toast = this.toastController.create({
+                    color: 'success',
+                    message: 'Points accumulated correctly',
+                    position: 'top',
+                    duration: 1500,
+                    icon: 'checkmark-circle-outline',
+                    cssClass: 'df-toast',
+                });
+                toast.then(e => e.present());
+            }
+        });
     }
 }

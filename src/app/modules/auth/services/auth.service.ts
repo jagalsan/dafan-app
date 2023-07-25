@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { User } from '../models/user.interface';
-import { userResponse } from '../mocks/user.response';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -17,7 +16,7 @@ export class AuthService {
         return this.userData;
     }
 
-    updateUserData(): void {
-        this.userData = userResponse;
+    updateUserData(newUserData: User): void {
+        this.userData = newUserData;
     }
 }
