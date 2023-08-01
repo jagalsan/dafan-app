@@ -15,9 +15,9 @@
             </section>
             <ng-template #childViewHeader>
                 <ion-buttons slot="start">
-                    <ion-back-button [defaultHref]="'/collectibles'"></ion-back-button>
+                    <ion-icon class="back-icon" (click)="goBack()" name="chevron-back-outline"></ion-icon>
                 </ion-buttons>
-                <ion-title class="child-title">#{{ childTitle }}</ion-title>
+                <ion-title class="child-title">{{ childTitle }}</ion-title>
             </ng-template>
         </ion-toolbar>
     </ion-header>

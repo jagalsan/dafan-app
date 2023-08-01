@@ -3,7 +3,7 @@
         <ion-icon (click)="close()" slot="start" name="close"></ion-icon>
     </ion-toolbar>
 </ion-header>
-<ion-content class="suggest">
+<ion-content class="suggest" [scrollY]="true">
     <h2 class="suggest__title">Suggest box</h2>
     <form class="suggest__form" (ngSubmit)="submitSuggestForm()" [formGroup]="suggestForm">
         <ion-textarea

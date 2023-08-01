@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 import { filter } from 'rxjs';
 import { TokenPackage } from 'src/app/core/models/tokens/token-package.interface';
 import { TokensService } from 'src/app/core/services/tokens.service';
@@ -17,7 +17,6 @@ export class TopBarComponent implements OnInit {
     userData!: User;
     isChildView!: boolean;
     childTitle!: string;
-    previousUrl!: string;
     tokenPackages: TokenPackage[];
 
     constructor(
@@ -25,25 +24,35 @@ export class TopBarComponent implements OnInit {
         private router: Router,
         private modalCtrl: ModalController,
         private tokensService: TokensService,
+        private navCtrl: NavController,
     ) {}
 
     ngOnInit(): void {
         this.getUserData();
         this.getTokenPackages();
 
-        this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(() => {
+        this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
             const currentRoute = this.router.routerState.root;
             let childRoute = currentRoute;
+
             while (childRoute.firstChild) {
                 childRoute = childRoute.firstChild;
             }
-            this.childTitle = childRoute.snapshot.params['id'];
+            this.childTitle = childRoute.snapshot.data['childTitle']
+                ? childRoute.snapshot.data['childTitle']
+                : childRoute.snapshot.params['id']
+                ? '#' + childRoute.snapshot.params['id']
+                : '';
             this.isChildView = childRoute.snapshot.data['isChildView'];
         });
     }
 
     getUserData(): void {
         this.userData = this.authService.getUserData();
+    }
+
+    goBack(): void {
+        this.navCtrl.back();
     }
 
     getTokenPackages(): void {

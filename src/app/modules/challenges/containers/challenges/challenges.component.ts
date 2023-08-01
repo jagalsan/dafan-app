@@ -5,6 +5,7 @@ import { ModalController, NavController, ToastController } from '@ionic/angular'
 import { onFieldChallengesResponse } from '../../mocks/challenges.response';
 import { Challenge } from '../../models/challenge.interface';
 import { CodeScanningModalComponent } from 'src/app/shared/components/code-scanning-modal/code-scanning-modal.component';
+import { ChallengeComponent } from '../challenge/challenge.component';
 
 @Component({
     selector: 'df-challenges',
@@ -16,6 +17,7 @@ export class ChallengesComponent implements OnInit {
     digitalChallenges: any[] = [];
     userData!: User;
     challengesTabSelected: 'digital' | 'onField' = 'digital';
+    component = ChallengeComponent;
 
     constructor(
         private authService: AuthService,
@@ -67,5 +69,9 @@ export class ChallengesComponent implements OnInit {
                 toast.then(e => e.present());
             }
         });
+    }
+
+    goToChallenge(challengeId: number): void {
+        this.navCtrl.navigateForward('challenges/' + challengeId);
     }
 }

@@ -8,29 +8,29 @@ export interface Challenge {
     type: ChallengeType;
     subType?: ChallengeSubType;
     validatorCode?: string;
+    completed?: boolean;
 }
-
-export interface MatchChallenge extends Challenge {
-    opponentTeam: {
-        id: number;
-        name: string;
-        image: string;
-    };
-}
-
-export interface ScorersPredictionsChallenge extends Challenge {
-    players: {
-        name: string;
-        image: string;
-    }[];
-}
-
 interface ChallengeType {
     id: number;
     name: 'digital' | 'onField';
 }
 
-interface ChallengeSubType extends ChallengeType {
+interface ChallengePlayer {
+    id: number;
+    name: string;
+    image: string;
+}
+
+interface ChallengeTeam {
+    id: number;
+    name: string;
+    image: string;
+}
+
+interface ChallengeSubType {
+    id: number;
+    name: 'quiz' | 'bet' | 'scorersPredictions';
     typeId: number;
-    subTypeName: 'quiz' | 'match' | 'scorersPredictions';
+    players?: ChallengePlayer[];
+    teams?: [ChallengeTeam, ChallengeTeam];
 }

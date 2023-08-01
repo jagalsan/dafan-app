@@ -3,11 +3,11 @@
         <ion-icon (click)="close()" slot="start" name="close"></ion-icon>
     </ion-toolbar>
 </ion-header>
-<ion-content class="code-scanning">
+<ion-content class="code-scanning" [scrollY]="true">
     <h2 class="code-scanning__title">Scan your code</h2>
     <ng-container *ngIf="scanMethod === 'camera'; else otherMethod">
         <div class="code-scanning__camera-method">
-            <ion-icon name="scan-outline"></ion-icon>
+            <ion-icon (click)="scanChallenge()" name="scan-outline"></ion-icon>
             <p class="code-scanning__notice" (click)="changeScanMethod('input')">Use other scan method</p>
         </div>
     </ng-container>
@@ -23,7 +23,9 @@
                 labelPlacement="floating"
                 placeholder="Enter your code"
             ></ion-input>
-            <p class="code-scanning__notice" (click)="changeScanMethod('camera')">Back to camera method</p>
+            <p class="code-scanning__notice" *ngIf="barcodeSupported" (click)="changeScanMethod('camera')">
+                Back to camera method
+            </p>
         </div>
     </ng-template>
 

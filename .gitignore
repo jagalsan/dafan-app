@@ -11,3 +11,6 @@ plugins
 *.swo
 *.log
 *.DS_Store
+www/*
+android/*
+ios/*

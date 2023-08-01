@@ -9,6 +9,10 @@ ion-header {
 
         --min-height: 42px;
 
+        .back-icon {
+            font-size: 24px;
+        }
+
         .menu {
             display: flex;
             flex-direction: row;
@@ -45,8 +49,9 @@ ion-header {
         }
 
         ion-title.child-title {
-            width: calc(100% - 48px);
+            width: calc(100% - 24px);
             text-align: center;
+            font-size: 25px;
         }
     }
 }

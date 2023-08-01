@@ -54,3 +54,91 @@ export const onFieldChallengesResponse: Challenge[] = [
         validatorCode: 'xxxxxxxcccc5',
     },
 ];
+
+export const digitalChallengesList: Challenge[] = [
+    {
+        id: 5,
+        label: '#legendsQUIZ',
+        name: 'legendsQuiz',
+        rewardPoints: 110,
+        typeId: 1,
+        type: {
+            id: 1,
+            name: 'digital',
+        },
+        subType: {
+            id: 1,
+            name: 'scorersPredictions',
+            typeId: 2,
+        },
+        completed: false,
+    },
+    {
+        id: 6,
+        label: 'Porra of the week',
+        name: 'weekBet',
+        rewardPoints: 70,
+        typeId: 1,
+        type: {
+            id: 1,
+            name: 'digital',
+        },
+        completed: false,
+        subType: {
+            id: 1,
+            name: 'bet',
+            typeId: 1,
+            teams: [
+                {
+                    id: 1,
+                    image: 'deport_logo.png',
+                    name: 'Deportivo de la coruña',
+                },
+                {
+                    id: 2,
+                    image: 'barca_logo.png',
+                    name: 'Barcelona',
+                },
+            ],
+        },
+    },
+    {
+        id: 7,
+        label: 'Weekly scorers predictions',
+        name: 'weeklyScorers',
+        rewardPoints: 100,
+        typeId: 1,
+        type: {
+            id: 1,
+            name: 'digital',
+        },
+        subType: {
+            id: 1,
+            name: 'scorersPredictions',
+            typeId: 3,
+            players: [
+                {
+                    id: 1,
+                    name: '',
+                    image: '',
+                },
+                {
+                    id: 2,
+                    name: '',
+                    image: '',
+                },
+                {
+                    id: 3,
+                    name: '',
+                    image: '',
+                },
+                {
+                    id: 4,
+                    name: '',
+                    image: '',
+                },
+            ],
+        },
+        completed: false,
+    },
+];
