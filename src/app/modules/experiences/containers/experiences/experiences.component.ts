@@ -42,8 +42,8 @@ export class ExperiencesComponent implements OnInit {
     async openSuggestModal(): Promise<void> {
         const modal = await this.modalCtrl.create({
             component: SuggestModalComponent,
-            breakpoints: [0, 0.5, 0.7],
-            initialBreakpoint: 0.5,
+            breakpoints: [0, 0.5, 0.6, 0.7],
+            initialBreakpoint: 0.6,
         });
         await modal.present();
 

@@ -8,6 +8,7 @@ import { PhysicalChallengesComponent } from './components/physical-challenges/ph
 import { ChallengeComponent } from './containers/challenge/challenge.component';
 import { BetChallengeComponent } from './components/bet-challenge/bet-challenge.component';
 import { LeaderBoardComponent } from './components/leader-board/leader-board.component';
+import { QuizChallengeComponent } from './components/quiz-challenge/quiz-challenge.component';
 
 const COMPONENTS = [
     ChallengesComponent,
@@ -15,6 +16,7 @@ const COMPONENTS = [
     ChallengeComponent,
     BetChallengeComponent,
     LeaderBoardComponent,
+    QuizChallengeComponent,
 ];
 
 @NgModule({

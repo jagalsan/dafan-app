@@ -68,7 +68,7 @@ export const digitalChallengesList: Challenge[] = [
         },
         subType: {
             id: 1,
-            name: 'scorersPredictions',
+            name: 'quiz',
             typeId: 2,
         },
         completed: false,
@@ -104,7 +104,7 @@ export const digitalChallengesList: Challenge[] = [
     },
     {
         id: 7,
-        label: 'Weekly scorers predictions',
+        label: 'Weekly scorers',
         name: 'weeklyScorers',
         rewardPoints: 100,
         typeId: 1,
@@ -120,22 +120,20 @@ export const digitalChallengesList: Challenge[] = [
                 {
                     id: 1,
                     name: '',
-                    image: '',
+                    image: 'deport_player1.png',
+                    selected: false,
                 },
                 {
                     id: 2,
                     name: '',
-                    image: '',
+                    image: 'deport_player2.png',
+                    selected: false,
                 },
                 {
                     id: 3,
                     name: '',
-                    image: '',
-                },
-                {
-                    id: 4,
-                    name: '',
-                    image: '',
+                    image: 'deport_player3.png',
+                    selected: false,
                 },
             ],
         },

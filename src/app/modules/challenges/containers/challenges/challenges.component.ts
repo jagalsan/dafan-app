@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
 import { User } from 'src/app/modules/auth/models/user.interface';
 import { ModalController, NavController, ToastController } from '@ionic/angular';
-import { onFieldChallengesResponse } from '../../mocks/challenges.response';
+import { digitalChallengesList, onFieldChallengesResponse } from '../../mocks/challenges.response';
 import { Challenge } from '../../models/challenge.interface';
 import { CodeScanningModalComponent } from 'src/app/shared/components/code-scanning-modal/code-scanning-modal.component';
 import { ChallengeComponent } from '../challenge/challenge.component';
@@ -72,6 +72,11 @@ export class ChallengesComponent implements OnInit {
     }
 
     goToChallenge(challengeId: number): void {
-        this.navCtrl.navigateForward('challenges/' + challengeId);
+        const challenge = digitalChallengesList.find(challenge => challenge.id === challengeId);
+        this.navCtrl.navigateForward('challenges/' + challengeId, {
+            queryParams: {
+                childTitle: challenge.label,
+            },
+        });
     }
 }

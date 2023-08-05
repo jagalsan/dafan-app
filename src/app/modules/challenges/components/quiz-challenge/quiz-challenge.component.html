@@ -1,0 +1,85 @@
+<section class="quiz-challenge" [ngClass]="{ 'quiz-challenge--completed': quizCompleted && !quizInProgress }">
+    <ng-container *ngIf="!quizInProgress; else quiz">
+        <ng-container *ngIf="!quizCompleted; else leaderBoard">
+            <h3 class="quiz-challenge__title">Deport Quiz</h3>
+            <ion-button class="quiz-challenge__start-quiz" (click)="startQuiz()">
+                <ion-icon slot="start" name="game-controller-outline"></ion-icon>
+                Start quiz
+            </ion-button>
+        </ng-container>
+        <ng-template #leaderBoard>
+            <df-leader-board></df-leader-board>
+            <div class="quiz-completed">
+                <h3 class="quiz-challenge__title">Quiz completed</h3>
+                <p class="quiz-completed__description">
+                    Has respondido correctamente <strong>{{ quizQuestionAnswersCorrect }}</strong> de
+                    <strong>{{ quizQuestions.length }}</strong> preguntas.
+                </p>
+                <div class="quiz-completed__reward">
+                    <div class="reward-content">
+                        <h4>Has conseguido:</h4>
+                        <div>120 <span>FP</span></div>
+                    </div>
+                </div>
+                <div class="quiz-restart">
+                    <h4 class="quiz-restart__title">Restart quiz</h4>
+                    <p class="quiz-restart__description">Reinicia el quiz para mejorar tu puntuación</p>
+                    <ion-button class="quiz-restart__button" (click)="startQuiz()">
+                        <ion-icon slot="start" name="game-controller-outline"></ion-icon>
+                        Restart quiz
+                    </ion-button>
+                </div>
+            </div>
+        </ng-template>
+    </ng-container>
+    <ng-template #quiz>
+        <div class="quiz">
+            <ng-container *ngFor="let question of quizQuestions; let i = index">
+                <ion-grid class="quiz-question" *ngIf="displayedQuestion === question">
+                    <h4 class="quiz-question__title">{{ question.label }}</h4>
+                    <div class="answers">
+                        <div
+                            class="answers__answer"
+                            [ngClass]="{
+                                'answers__answer--selected': answer.selected,
+                                'answers__answer--correct': answer.isCorrect && answer.selected
+                            }"
+                            (click)="selectAnswer(answer)"
+                            *ngFor="let answer of question.answers"
+                        >
+                            {{ answer.label }}
+                            <ng-container *ngIf="answer.selected">
+                                <span *ngIf="answer.isCorrect; else answerIncorrect">
+                                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                </span>
+                                <ng-template #answerIncorrect>
+                                    <span>
+                                        <ion-icon name="close-circle-outline"></ion-icon>
+                                    </span>
+                                </ng-template>
+                            </ng-container>
+                        </div>
+                    </div>
+                </ion-grid>
+            </ng-container>
+            <div class="quiz__actions">
+                <ion-button [fill]="'clear'" [disabled]="indexDisplayedQuestion === 1" (click)="previousQuestion()">
+                    <ion-icon slot="start" name="chevron-back-outline"></ion-icon>
+                    Previous
+                </ion-button>
+                <ng-container *ngIf="indexDisplayedQuestion < quizQuestions.length; else endQuiz">
+                    <ion-button [fill]="'clear'" (click)="nextQuestion()">
+                        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+                        Next
+                    </ion-button>
+                </ng-container>
+                <ng-template #endQuiz>
+                    <ion-button class="quiz__end-quiz" (click)="sendQuiz()">
+                        <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
+                        Send
+                    </ion-button>
+                </ng-template>
+            </div>
+        </div>
+    </ng-template>
+</section>

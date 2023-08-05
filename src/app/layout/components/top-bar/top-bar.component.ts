@@ -40,6 +40,8 @@ export class TopBarComponent implements OnInit {
             }
             this.childTitle = childRoute.snapshot.data['childTitle']
                 ? childRoute.snapshot.data['childTitle']
+                : childRoute.snapshot.queryParams['childTitle']
+                ? childRoute.snapshot.queryParams['childTitle']
                 : childRoute.snapshot.params['id']
                 ? '#' + childRoute.snapshot.params['id']
                 : '';

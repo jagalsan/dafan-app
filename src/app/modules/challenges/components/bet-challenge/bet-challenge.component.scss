@@ -1,0 +1,156 @@
+.bet-challenge {
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    &__clubs {
+        display: flex;
+        height: 65px;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        flex-shrink: 0;
+        margin-bottom: 14px;
+
+        .club {
+            flex-shrink: 0;
+        }
+
+        span {
+            font-size: 26px;
+            font-weight: 300;
+        }
+    }
+
+    &__bet-action {
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        --color: #111;
+        --border-radius: 5px;
+        --background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+        height: 35px;
+    }
+
+    .match-scorers-container {
+        display: flex;
+        gap: 8px;
+
+        &--margin {
+            &:first-child {
+                margin-right: -24px;
+            }
+
+            &:last-child {
+                margin-left: -24px;
+            }
+        }
+
+        .arrows {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+
+    &__match-scorers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        flex-shrink: 0;
+        margin-bottom: 20px;
+
+        .club-scorer {
+            border-radius: 5px;
+            background: #2c2c2c;
+            width: 67px;
+            height: 42px;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 26px;
+            font-weight: 500;
+        }
+
+        span {
+            width: 18px;
+        }
+    }
+
+    &__scorers {
+        display: flex;
+        flex-direction: column;
+
+        .scorers {
+            &__description {
+                margin: 0;
+                font-weight: 200;
+                font-size: 18px;
+                margin-bottom: 16px;
+            }
+
+            &__players {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+
+                .player {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50px;
+                    position: relative;
+
+                    &--selected {
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background: #2c2c2cbf;
+                            border-radius: 50px;
+                            z-index: 2;
+                        }
+                    }
+
+                    &__image {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50px;
+                    }
+
+                    &__select {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        margin: 0 auto;
+                        color: white;
+                        font-size: 28px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 3;
+                    }
+                }
+            }
+        }
+    }
+
+    &__scorer-action {
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        --color: #111;
+        --border-radius: 5px;
+        --background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+        height: 35px;
+        margin-top: 24px;
+    }
+}

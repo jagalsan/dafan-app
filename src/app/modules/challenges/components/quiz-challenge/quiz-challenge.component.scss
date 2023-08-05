@@ -1,0 +1,179 @@
+.quiz-challenge {
+    &:not(.quiz-challenge--completed) {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__start-quiz {
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        --color: #111;
+        --border-radius: 5px;
+        --background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+        height: 35px;
+    }
+
+    .answers {
+        gap: 16px;
+        display: flex;
+        max-width: 100%;
+        flex-wrap: wrap;
+
+        &__answer {
+            width: 47%;
+            height: 60px;
+            flex-shrink: 0;
+            border-radius: 5px;
+            background: #2c2c2c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            font-size: 14px;
+            padding: 0 16px;
+            border: 1px solid transparent;
+
+            &--selected {
+                border-color: #bb2424;
+
+                span {
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+
+                    ion-icon {
+                        font-size: 16px;
+                        color: #bb2424;
+                    }
+                }
+
+                &.answers__answer--correct {
+                    border-color: #2fdf75;
+
+                    span {
+                        ion-icon {
+                            color: #2fdf75;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .quiz {
+        max-width: 100%;
+
+        &__actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            ion-button:not(.quiz__end-quiz) {
+                font-size: 16px;
+                font-weight: 600;
+                background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+                background-clip: border-box;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        &__end-quiz {
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            --color: #111;
+            --border-radius: 5px;
+            --background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+            height: 35px;
+        }
+
+        .quiz-question {
+            opacity: 0;
+        }
+    }
+}
+
+.quiz-completed {
+    &__description {
+        font-size: 16px;
+        font-weight: 200;
+    }
+
+    &__reward {
+        display: flex;
+
+        .reward-content {
+            display: flex;
+            align-items: center;
+
+            h4 {
+                font-size: 20px;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            div {
+                margin-left: 12px;
+                background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+                background-clip: border-box;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 24px;
+                font-weight: 600;
+
+                span {
+                    font-size: 16px;
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+
+    .quiz-restart {
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        background: #2c2c2c;
+        text-align: center;
+
+        &__title {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        &__description {
+            font-size: 16px;
+            font-weight: 200;
+            margin-bottom: 0;
+        }
+
+        &__button {
+            margin-top: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            --color: #111;
+            --border-radius: 5px;
+            --background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+            height: 35px;
+        }
+    }
+}

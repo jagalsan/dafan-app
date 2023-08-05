@@ -1,0 +1,61 @@
+<section class="bet-challenge">
+    <h3 class="bet-challenge__title">Your bet</h3>
+    <ng-container *ngIf="challenge.subType.name === 'bet'; else betScorers">
+        <div class="bet-challenge__match">
+            <div class="bet-challenge__clubs">
+                <img class="club" [src]="'assets/images/examples/' + challenge.subType.teams[0].image" alt="" />
+                <span>VS</span>
+                <img class="club" [src]="'assets/images/examples/' + challenge.subType.teams[1].image" alt="" />
+            </div>
+            <div class="bet-challenge__match-scorers">
+                <div class="match-scorers-container" [ngClass]="{ 'match-scorers-container--margin': !betCompleted }">
+                    <div class="club-scorer">{{ firstTeamScorer }}</div>
+                    <div class="arrows" *ngIf="!betCompleted">
+                        <ion-icon name="chevron-up-outline" (click)="incrementScorer('first')"></ion-icon>
+                        <ion-icon name="chevron-down-outline" (click)="reduceScorer('first')"></ion-icon>
+                    </div>
+                </div>
+                <span></span>
+                <div class="match-scorers-container" [ngClass]="{ 'match-scorers-container--margin': !betCompleted }">
+                    <div class="arrows" *ngIf="!betCompleted">
+                        <ion-icon name="chevron-up-outline" (click)="incrementScorer('second')"></ion-icon>
+                        <ion-icon name="chevron-down-outline" (click)="reduceScorer('second')"></ion-icon>
+                    </div>
+                    <div class="club-scorer">{{ secondTeamScorer }}</div>
+                </div>
+            </div>
+            <ion-button [disabled]="betCompleted" (click)="makeBet()" class="bet-challenge__bet-action" expand="block">
+                <ion-icon slot="start" src="assets/icon/df-fan-points.svg"></ion-icon>
+                5 <span>FP</span>
+            </ion-button>
+        </div>
+    </ng-container>
+    <ng-template #betScorers>
+        <div class="bet-challenge__scorers">
+            <p class="scorers__description">Selecciona el jugador que mas goles metera esta semana.</p>
+            <div class="scorers__players">
+                <ng-container *ngFor="let player of challenge.subType.players">
+                    <div
+                        (click)="selectPlayer(player)"
+                        class="players-container__player player"
+                        [ngClass]="{ 'player--selected': player.selected }"
+                    >
+                        <img class="player__image" [src]="'/assets/images/examples/' + player.image" />
+                        <span class="player__select" *ngIf="player.selected">
+                            <ion-icon name="checkmark-outline"></ion-icon>
+                        </span>
+                    </div>
+                </ng-container>
+            </div>
+            <ion-button
+                [disabled]="betCompleted"
+                (click)="makeBet()"
+                class="bet-challenge__scorer-action"
+                expand="block"
+            >
+                <ion-icon slot="start" src="assets/icon/df-fan-points.svg"></ion-icon>
+                40 <span>FP</span>
+            </ion-button>
+        </div>
+    </ng-template>
+</section>
