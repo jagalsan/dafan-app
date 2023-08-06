@@ -3,6 +3,7 @@
         <ion-card class="collectible" (click)="clickCollectible(collectible.hashId)">
             <div class="collectible__image">
                 <img [alt]="collectible.name" [src]="collectible.image" />
+                <span class="collectible__number" *ngIf="showCollectibleNumber"> {{ collectible.id }} </span>
                 <span *ngIf="isMarket" class="collectible__price">
                     <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
                     {{ collectible.price }}

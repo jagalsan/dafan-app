@@ -71,7 +71,7 @@ export class ChallengesComponent implements OnInit {
         });
     }
 
-    goToChallenge(challengeId: number): void {
+    navigateChallenge(challengeId: number): void {
         const challenge = digitalChallengesList.find(challenge => challenge.id === challengeId);
         this.navCtrl.navigateForward('challenges/' + challengeId, {
             queryParams: {

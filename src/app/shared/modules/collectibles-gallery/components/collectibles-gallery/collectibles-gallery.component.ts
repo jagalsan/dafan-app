@@ -10,6 +10,7 @@ export class CollectiblesGalleryComponent {
     @Input() collectibles: Collectible[];
     @Input() isMarket: boolean;
     @Input() cols: number = 1;
+    @Input() showCollectibleNumber?: boolean;
     @Output() readonly collectibleClicked: EventEmitter<string> = new EventEmitter();
 
     constructor() {}

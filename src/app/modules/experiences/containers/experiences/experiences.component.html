@@ -16,7 +16,9 @@
                     >
                         <img class="experience__image" [src]="experience.previewImage" />
                         <div class="experience__label">
-                            <ion-label class="label">{{ experience.label }}</ion-label>
+                            <ion-label (click)="navigateExperience(experience)" class="label">{{
+                                experience.label
+                            }}</ion-label>
                             <span *ngIf="clubExperience.type.name === experiencesTypeEnum.Discounts" class="discount"
                                 >{{ experience.percentageDiscount }}%</span
                             >

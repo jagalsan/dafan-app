@@ -30,6 +30,11 @@ export const mainRoutes: Routes = [
                         loadChildren: () =>
                             import('../modules/challenges/challenges.module').then(m => m.ChallengesModule),
                     },
+                    {
+                        path: 'club',
+                        loadChildren: () =>
+                            import('../modules/challenges/challenges.module').then(m => m.ChallengesModule),
+                    },
                 ],
             },
         ],

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ClubExperience } from '../../models/experience.interface';
+import { ClubExperience, Experience } from '../../models/experience.interface';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
 import { User } from 'src/app/modules/auth/models/user.interface';
 import { ModalController, NavController, ToastController } from '@ionic/angular';
@@ -74,7 +74,9 @@ export class ExperiencesComponent implements OnInit {
         this.userData = this.authService.getUserData();
     }
 
-    navigateExperience(collectibleHashId: string): void {
-        this.navCtrl.navigateForward(`/experiences/${collectibleHashId}`);
+    navigateExperience(experience: Experience): void {
+        this.navCtrl.navigateForward('experiences/' + experience.id, {
+            queryParams: { childTitle: experience.label },
+        });
     }
 }

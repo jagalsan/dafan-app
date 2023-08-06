@@ -1,0 +1,68 @@
+.experience {
+    &__preview {
+        width: 100%;
+        height: 120px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+
+    &__images {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        margin: 30px 0;
+        justify-content: center;
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+        }
+    }
+
+    &__description {
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 16px;
+
+        .points-cost {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+
+            ion-icon {
+                font-size: 32px;
+            }
+
+            .points {
+                font-size: 24px;
+                font-weight: 200;
+                background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+                background-clip: border-box;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            &__action {
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: uppercase;
+                --color: #111;
+                --border-radius: 5px;
+                --background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+                height: 35px;
+            }
+        }
+    }
+}

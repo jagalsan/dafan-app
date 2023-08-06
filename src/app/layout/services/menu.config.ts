@@ -4,12 +4,12 @@ export const menuConfig: MenuOption[] = [
     {
         customIcon: 'df-collectibles',
         path: 'collectibles',
-        label: 'Collectibles',
+        label: 'Collect',
     },
     {
         customIcon: 'df-experiences',
         path: 'experiences',
-        label: 'Experiences',
+        label: 'Exp',
     },
     {
         icon: 'checkmark-circle-outline',
@@ -20,5 +20,10 @@ export const menuConfig: MenuOption[] = [
         icon: 'search-outline',
         path: 'market',
         label: 'Market',
+    },
+    {
+        path: 'club',
+        label: 'Club',
+        customIcon: 'club-logo',
     },
 ];

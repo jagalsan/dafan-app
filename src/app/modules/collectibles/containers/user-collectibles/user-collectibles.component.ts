@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { CollectiblesService } from '../../collectibles.service';
 import { Collectible } from '../../models/collectible.interface';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
 import { User } from 'src/app/modules/auth/models/user.interface';
 import { NavController } from '@ionic/angular';
-import { collectiblesGalleryResponse } from 'src/app/modules/market/mocks/collectibles-gallery.response';
 
 @Component({
-    selector: 'df-collectibles',
-    templateUrl: 'collectibles.component.html',
-    styleUrls: ['./collectibles.component.scss'],
+    selector: 'df-user-collectibles',
+    templateUrl: 'user-collectibles.component.html',
+    styleUrls: ['./user-collectibles.component.scss'],
 })
-export class CollectiblesComponent implements OnInit {
+export class UserCollectiblesComponent implements OnInit {
     collectibles!: Collectible[];
     userData!: User;
-    colsNumber: number = 3;
 
     constructor(
+        private collectiblesService: CollectiblesService,
         private authService: AuthService,
         private navCtrl: NavController,
     ) {}
@@ -26,7 +26,7 @@ export class CollectiblesComponent implements OnInit {
     }
 
     getCollectibles(): void {
-        this.collectibles = collectiblesGalleryResponse;
+        this.collectibles = this.collectiblesService.getCollectibles();
     }
 
     getUserData(): void {
@@ -37,8 +37,7 @@ export class CollectiblesComponent implements OnInit {
         this.navCtrl.navigateForward(`/collectibles/${collectibleHashId}`);
     }
 
-    changeColsNumber() {
-        if (this.colsNumber === 2) this.colsNumber = 3;
-        else this.colsNumber = 2;
+    navigateGallery(): void {
+        this.navCtrl.navigateForward('/collectibles/gallery');
     }
 }
