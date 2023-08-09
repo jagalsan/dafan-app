@@ -6,7 +6,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 @Component({
     selector: 'df-login',
     templateUrl: 'login.component.html',
-    styleUrls: ['./login.component.scss'],
+    styleUrls: ['./login.component.scss', '../../components/auth/auth.component.scss'],
 })
 export class LoginComponent implements OnInit {
     loginForm!: FormGroup<{ email: FormControl<string | null>; password: FormControl<string | null> }>;
@@ -36,5 +36,9 @@ export class LoginComponent implements OnInit {
             email: new FormControl('', Validators.email),
             password: new FormControl(''),
         });
+    }
+
+    navigateToResetPassword(): void {
+        this.navCtrl.navigateForward('/auth/reset-password');
     }
 }

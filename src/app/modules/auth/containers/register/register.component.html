@@ -1,0 +1,42 @@
+<df-auth authView="register" [authPageTitle]="'Sign up'">
+    <form [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()">
+        <ion-input
+            formControlName="name"
+            type="string"
+            fill="clear"
+            label="NAME"
+            labelPlacement="floating"
+            errorText="Required name"
+            placeholder="Enter name"
+        ></ion-input>
+        <ion-input
+            formControlName="userName"
+            type="string"
+            fill="clear"
+            label="USERNAME"
+            labelPlacement="floating"
+            errorText="Required user name"
+            placeholder="Enter user name"
+        ></ion-input>
+        <ion-input
+            formControlName="email"
+            type="email"
+            fill="clear"
+            label="USERNAME OR EMAIL"
+            labelPlacement="floating"
+            errorText="Invalid email"
+            placeholder="Enter email"
+        ></ion-input>
+
+        <ion-input
+            formControlName="password"
+            type="password"
+            fill="clear"
+            label="Password"
+            labelPlacement="floating"
+            errorText="Invalid password"
+            placeholder="Enter password"
+        ></ion-input>
+        <ion-button class="auth-view__button" type="submit"> Reset password </ion-button>
+    </form>
+</df-auth>

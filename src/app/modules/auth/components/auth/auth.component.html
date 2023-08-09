@@ -1,0 +1,14 @@
+<ion-content class="ion-page auth-view" id="main-content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/auth/welcome"></ion-back-button>
+            </ion-buttons>
+            <ion-title class="auth-view__title">{{ authPageTitle }}</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content class="main-content auth-view__content" [scrollY]="true">
+        <img class="auth-view__logo" src="assets/images/examples/app-logo.png" />
+        <ng-content></ng-content>
+    </ion-content>
+</ion-content>

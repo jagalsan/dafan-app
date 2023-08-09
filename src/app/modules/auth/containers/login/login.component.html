@@ -1,0 +1,26 @@
+<df-auth authView="login" [authPageTitle]="'Sign in'">
+    <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm()">
+        <ion-input
+            formControlName="email"
+            type="email"
+            fill="clear"
+            label="USERNAME OR EMAIL"
+            labelPlacement="floating"
+            errorText="Invalid email"
+            placeholder="Enter email"
+        ></ion-input>
+        <ion-input
+            formControlName="password"
+            type="password"
+            fill="clear"
+            label="Password"
+            labelPlacement="floating"
+            errorText="Invalid password"
+            placeholder="Enter password"
+        ></ion-input>
+        <ion-button class="auth-view__link" (click)="navigateToResetPassword()" fill="clear">
+            Forgot password?
+        </ion-button>
+        <ion-button class="auth-view__button" type="submit"> Sign in </ion-button>
+    </form>
+</df-auth>
