@@ -21,14 +21,9 @@
                         "inlineStyleLanguage": "scss",
                         "assets": [
                             {
-                                "glob": "**/*",
+                                "glob": "*(icon|images)/**",
                                 "input": "src/assets",
                                 "output": "assets"
-                            },
-                            {
-                                "glob": "**/*.svg",
-                                "input": "src/assets/icon",
-                                "output": "./svg"
                             },
                             {
                                 "glob": "**/*.svg",
