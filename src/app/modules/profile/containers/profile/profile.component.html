@@ -1,0 +1,38 @@
+<ion-content class="profile main-page" [scrollY]="true">
+    <ion-grid class="main-page__grid">
+        <ion-avatar class="profile__avatar">
+            <img [src]="userData.image" />
+        </ion-avatar>
+        <span class="profile__partner-number"><strong>Partner Nº:</strong> #333Deport</span>
+        <form class="df-form" (ngSubmit)="submitProfileForm()" [formGroup]="profileForm">
+            <ion-input
+                formControlName="name"
+                type="text"
+                fill="clear"
+                label="Name"
+                labelPlacement="floating"
+                errorText="Invalid name"
+                placeholder="Enter name"
+            ></ion-input>
+            <ion-input
+                formControlName="surname"
+                type="text"
+                fill="clear"
+                label="Surname"
+                labelPlacement="floating"
+                errorText="Invalid surname"
+                placeholder="Enter surname"
+            ></ion-input>
+            <ion-input
+                formControlName="address"
+                type="text"
+                fill="clear"
+                label="Address"
+                labelPlacement="floating"
+                errorText="Invalid address"
+                placeholder="Enter address"
+            ></ion-input>
+            <ion-button class="profile__save-button" type="submit"> Save profile </ion-button>
+        </form>
+    </ion-grid>
+</ion-content>

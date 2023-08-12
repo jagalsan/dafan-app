@@ -1,5 +1,5 @@
 <df-auth authView="login" [authPageTitle]="'Sign in'">
-    <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm()">
+    <form class="df-form" [formGroup]="loginForm" (ngSubmit)="submitLoginForm()">
         <ion-input
             formControlName="email"
             type="email"

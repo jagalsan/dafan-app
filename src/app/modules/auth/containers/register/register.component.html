@@ -1,5 +1,5 @@
 <df-auth authView="register" [authPageTitle]="'Sign up'">
-    <form [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()">
+    <form class="df-form" [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()">
         <ion-input
             formControlName="name"
             type="string"
@@ -27,16 +27,15 @@
             errorText="Invalid email"
             placeholder="Enter email"
         ></ion-input>
-
         <ion-input
             formControlName="password"
             type="password"
             fill="clear"
-            label="Password"
+            label="PASSWORD"
             labelPlacement="floating"
             errorText="Invalid password"
             placeholder="Enter password"
         ></ion-input>
-        <ion-button class="auth-view__button" type="submit"> Reset password </ion-button>
+        <ion-button class="auth-view__button" type="submit"> SIGN UP </ion-button>
     </form>
 </df-auth>

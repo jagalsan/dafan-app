@@ -3,7 +3,7 @@ import { Collectible } from '../../collectibles/models/collectible.interface';
 export const collectiblesListedResponse: Collectible[] = [
     {
         id: 1,
-        image: 'https://artlogic-res.cloudinary.com/w_1200,c_limit,f_auto,fl_lossy,q_auto/ws-artlogicwebsite0889/usr/images/news/main_image/6/nft-bored-ape-yacht-club.png',
+        image: 'assets/images/examples/collectibles/collectible_11.png',
         hashId: 'xxxxxx1',
         name: 'Fake collectible',
         price: 35,
@@ -15,7 +15,7 @@ export const collectiblesListedResponse: Collectible[] = [
     },
     {
         id: 2,
-        image: 'https://s3.ap-northeast-1.amazonaws.com/fio.one/live/wp-content/uploads/2021/12/ape3.png',
+        image: 'assets/images/examples/collectibles/collectible_12.png',
         hashId: 'xxxxxx2',
         name: 'Fake collectible',
         price: 100,
@@ -27,7 +27,7 @@ export const collectiblesListedResponse: Collectible[] = [
     },
     {
         id: 3,
-        image: 'https://www.businesstoday.com.my/wp-content/uploads/2022/02/monkey-art-NFT.png',
+        image: 'assets/images/examples/collectibles/collectible_01.png',
         hashId: 'xxxxxx3',
         name: 'Fake collectible',
         price: 200,
@@ -39,7 +39,7 @@ export const collectiblesListedResponse: Collectible[] = [
     },
     {
         id: 4,
-        image: 'https://watcher.guru/news/wp-content/uploads/2021/08/unnamed-2-1.png.webp',
+        image: 'assets/images/examples/collectibles/collectible_14.png',
         hashId: 'xxxxxx4',
         name: 'Fake collectible',
         price: 4000,
@@ -51,7 +51,7 @@ export const collectiblesListedResponse: Collectible[] = [
     },
     {
         id: 5,
-        image: 'https://artlogic-res.cloudinary.com/w_1200,c_limit,f_auto,fl_lossy,q_auto/ws-artlogicwebsite0889/usr/images/news/main_image/6/nft-bored-ape-yacht-club.png',
+        image: 'assets/images/examples/collectibles/collectible_15.png',
         hashId: 'xxxxxx5',
         name: 'Fake collectible',
         price: 2500,
@@ -63,7 +63,7 @@ export const collectiblesListedResponse: Collectible[] = [
     },
     {
         id: 6,
-        image: 'https://s3.ap-northeast-1.amazonaws.com/fio.one/live/wp-content/uploads/2021/12/ape3.png',
+        image: 'assets/images/examples/collectibles/collectible_16.png',
         hashId: 'xxxxxx6',
         name: 'Fake collectible',
         price: 2900,
@@ -75,7 +75,7 @@ export const collectiblesListedResponse: Collectible[] = [
     },
     {
         id: 7,
-        image: 'https://www.businesstoday.com.my/wp-content/uploads/2022/02/monkey-art-NFT.png',
+        image: 'assets/images/examples/collectibles/collectible_17.png',
         hashId: 'xxxxxx7',
         name: 'Fake collectible',
         price: 11900,
@@ -87,7 +87,7 @@ export const collectiblesListedResponse: Collectible[] = [
     },
     {
         id: 8,
-        image: 'https://watcher.guru/news/wp-content/uploads/2021/08/unnamed-2-1.png.webp',
+        image: 'assets/images/examples/collectibles/collectible_18.png',
         hashId: 'xxxxxx8',
         name: 'Fake collectible',
         price: 100900,

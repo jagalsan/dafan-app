@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { ModalController, NavController } from '@ionic/angular';
 import { filter } from 'rxjs';
@@ -14,6 +14,9 @@ import { FanTokensModalComponent } from 'src/app/shared/components/fan-tokens-mo
     styleUrls: ['./top-bar.component.scss'],
 })
 export class TopBarComponent implements OnInit {
+    @ViewChild('popover') popover;
+
+    isPopoverOpen = false;
     userData!: User;
     isChildView!: boolean;
     childTitle!: string;
@@ -72,5 +75,23 @@ export class TopBarComponent implements OnInit {
             },
         });
         await modal.present();
+    }
+
+    presentPopover(e: Event) {
+        this.popover.event = e;
+        this.isPopoverOpen = true;
+    }
+
+    async logout(): Promise<void> {
+        await this.popover.dismiss();
+        this.isPopoverOpen = false;
+        this.authService.updateLoggedState(false);
+        this.navCtrl.navigateBack('/auth/welcome');
+    }
+
+    async navigateProfile(): Promise<void> {
+        await this.popover.dismiss();
+        this.isPopoverOpen = false;
+        this.navCtrl.navigateRoot('/profile');
     }
 }

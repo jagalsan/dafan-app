@@ -32,8 +32,11 @@ export const mainRoutes: Routes = [
                     },
                     {
                         path: 'club',
-                        loadChildren: () =>
-                            import('../modules/challenges/challenges.module').then(m => m.ChallengesModule),
+                        loadChildren: () => import('../modules/club/club.module').then(m => m.ClubModule),
+                    },
+                    {
+                        path: 'profile',
+                        loadChildren: () => import('../modules/profile/profile.module').then(m => m.ProfileModule),
                     },
                 ],
             },

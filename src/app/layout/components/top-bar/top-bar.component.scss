@@ -55,3 +55,24 @@ ion-header {
         }
     }
 }
+
+ion-popover {
+    ion-content {
+        --background: #1d1d1d;
+
+        ion-button {
+            --color: white;
+        }
+    }
+
+    ion-item {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 2px;
+
+        ion-icon {
+            margin-left: 16px;
+        }
+    }
+}
