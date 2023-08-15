@@ -1,0 +1,86 @@
+<ion-content class="club-history main-page" [scrollY]="true">
+    <ion-grid class="main-page__grid">
+        <h2 class="club-history__title">History of Real Club Deportivo</h2>
+        <section class="club-history__description">
+            <p>
+                History Founded in 1906, Real Club Deportivo is one of the teams with the most most historic teams in
+                Spanish football and one of the nine clubs that have nine clubs that have been able to win LaLiga
+                (1999-2000), of which it has also been runner-up five times.
+            </p>
+        </section>
+        <div class="club-history__tabs tabs">
+            <span
+                class="tabs__tab"
+                [ngClass]="{ 'tabs__tab--active': historyTabSelected === 'decades' }"
+                (click)="historyTabSelected = 'decades'"
+            >
+                Decade by decade
+            </span>
+            <span
+                class="tabs__tab"
+                [ngClass]="{ 'tabs__tab--active': historyTabSelected === 'trophies' }"
+                (click)="historyTabSelected = 'trophies'"
+            >
+                Trophies
+            </span>
+        </div>
+        <section class="club-history__decades" *ngIf="historyTabSelected === 'decades'">
+            <div class="decade">
+                <div class="decade__preview" style="--decade-title: '1907'">
+                    <img src="assets/images/examples/club-decade-1.jpeg" alt="" />
+                </div>
+                <p class="decade__description">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam
+                </p>
+            </div>
+            <div class="decade">
+                <div class="decade__preview" style="--decade-title: '1980'">
+                    <img src="assets/images/examples/club-decade-2.jpeg" alt="" />
+                </div>
+                <p class="decade__description">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam
+                </p>
+            </div>
+            <div class="decade">
+                <div class="decade__preview" style="--decade-title: '2002'">
+                    <img src="assets/images/examples/club-decade-3.jpeg" alt="" />
+                </div>
+                <p class="decade__description">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam
+                </p>
+            </div>
+        </section>
+        <section class="club-history__trophies" *ngIf="historyTabSelected === 'trophies'">
+            <div class="club-history__trophy trophy">
+                <div class="trophy__count">
+                    <ion-icon name="trophy-outline"></ion-icon>
+                </div>
+                <span class="trophy__name">Spanish League</span>
+            </div>
+            <div class="club-history__trophy trophy">
+                <div class="trophy__count">
+                    <ion-icon name="trophy-outline"></ion-icon>
+                </div>
+                <span class="trophy__name">Spanish Cup</span>
+            </div>
+            <div class="club-history__trophy trophy">
+                <div class="trophy__count">
+                    <ion-icon name="trophy-outline"></ion-icon>
+                    <ion-icon name="trophy-outline"></ion-icon>
+                </div>
+                <span class="trophy__name">Copa del Rey</span>
+            </div>
+            <div class="club-history__trophy trophy">
+                <div class="trophy__count">
+                    <ion-icon name="trophy-outline"></ion-icon>
+                    <ion-icon name="trophy-outline"></ion-icon>
+                    <ion-icon name="trophy-outline"></ion-icon>
+                </div>
+                <span class="trophy__name">Spanish Super Cups</span>
+            </div>
+        </section>
+    </ion-grid>
+</ion-content>

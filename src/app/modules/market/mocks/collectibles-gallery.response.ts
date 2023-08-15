@@ -12,6 +12,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Lumixx3',
             image: '/assets/images/examples/person1.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 2,
@@ -24,6 +44,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Fekyr3',
             image: '/assets/images/examples/person2.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 3,
@@ -36,6 +76,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Thormenta',
             image: '/assets/images/examples/person3.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 4,
@@ -48,6 +108,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Assernico3',
             image: '/assets/images/examples/person4.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 5,
@@ -60,6 +140,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'FrodoBilb',
             image: '/assets/images/examples/person2.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 6,
@@ -72,6 +172,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Aragon99',
             image: '/assets/images/examples/person1.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 7,
@@ -84,6 +204,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Meishei',
             image: '/assets/images/examples/person4.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 8,
@@ -96,6 +236,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Kalimdor.x',
             image: '/assets/images/examples/person3.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 9,
@@ -108,6 +268,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Lumx3',
             image: '/assets/images/examples/person1.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 10,
@@ -120,6 +300,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Verxoo',
             image: '/assets/images/examples/person2.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 11,
@@ -132,6 +332,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Thor22',
             image: '/assets/images/examples/person3.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 12,
@@ -144,6 +364,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Herryt',
             image: '/assets/images/examples/person4.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 13,
@@ -156,6 +396,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Frilb',
             image: '/assets/images/examples/person2.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 14,
@@ -168,6 +428,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Aon99',
             image: '/assets/images/examples/person1.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 15,
@@ -180,6 +460,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Meei',
             image: '/assets/images/examples/person4.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 16,
@@ -192,6 +492,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Kalix',
             image: '/assets/images/examples/person3.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 17,
@@ -204,6 +524,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Kalix',
             image: '/assets/images/examples/person3.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 18,
@@ -216,6 +556,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Kalix',
             image: '/assets/images/examples/person3.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 19,
@@ -228,6 +588,26 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Kalix',
             image: '/assets/images/examples/person3.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
     {
         id: 20,
@@ -240,5 +620,25 @@ export const collectiblesGalleryResponse: Collectible[] = [
             name: 'Kalix',
             image: '/assets/images/examples/person3.jpg',
         },
+        properties: [
+            {
+                id: 1,
+                label: 'Mouth',
+                name: 'mouth',
+                value: 'type 1',
+            },
+            {
+                id: 2,
+                label: 'Eyes',
+                name: 'eyes',
+                value: 'type 1',
+            },
+            {
+                id: 3,
+                label: 'Hair',
+                name: 'hair',
+                value: 'type 1',
+            },
+        ],
     },
 ];

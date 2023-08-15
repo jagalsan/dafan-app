@@ -1,41 +1,91 @@
 <df-auth authView="register" [authPageTitle]="'Sign up'">
     <form class="df-form" [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()">
-        <ion-input
-            formControlName="name"
-            type="string"
-            fill="clear"
-            label="NAME"
-            labelPlacement="floating"
-            errorText="Required name"
-            placeholder="Enter name"
-        ></ion-input>
-        <ion-input
-            formControlName="userName"
-            type="string"
-            fill="clear"
-            label="USERNAME"
-            labelPlacement="floating"
-            errorText="Required user name"
-            placeholder="Enter user name"
-        ></ion-input>
-        <ion-input
-            formControlName="email"
-            type="email"
-            fill="clear"
-            label="USERNAME OR EMAIL"
-            labelPlacement="floating"
-            errorText="Invalid email"
-            placeholder="Enter email"
-        ></ion-input>
-        <ion-input
-            formControlName="password"
-            type="password"
-            fill="clear"
-            label="PASSWORD"
-            labelPlacement="floating"
-            errorText="Invalid password"
-            placeholder="Enter password"
-        ></ion-input>
-        <ion-button class="auth-view__button" type="submit"> SIGN UP </ion-button>
+        <ng-container [formGroup]="userDataForm" *ngIf="registerStep === 0; else endRegister">
+            <ion-input
+                formControlName="name"
+                type="string"
+                fill="clear"
+                label="NAME"
+                labelPlacement="floating"
+                errorText="Required name"
+                placeholder="Enter name"
+            ></ion-input>
+            <ion-input
+                formControlName="userName"
+                type="string"
+                fill="clear"
+                label="USERNAME"
+                labelPlacement="floating"
+                errorText="Required user name"
+                placeholder="Enter user name"
+            ></ion-input>
+            <ion-input
+                formControlName="email"
+                type="email"
+                fill="clear"
+                label="USERNAME OR EMAIL"
+                labelPlacement="floating"
+                errorText="Invalid email"
+                placeholder="Enter email"
+            ></ion-input>
+            <ion-input
+                formControlName="partnerNumber"
+                type="text"
+                fill="clear"
+                label="PARTNER NUMBER"
+                labelPlacement="floating"
+                errorText="Invalid number"
+                placeholder="Enter number"
+            ></ion-input>
+            <ion-input
+                formControlName="password"
+                type="password"
+                fill="clear"
+                label="PASSWORD"
+                labelPlacement="floating"
+                errorText="Invalid password"
+                placeholder="Enter password"
+            ></ion-input>
+            <ion-button [disabled]="userDataForm.invalid" class="auth-view__button" (click)="nextStep()" type="button">
+                NEXT
+            </ion-button>
+        </ng-container>
+        <ng-template #endRegister>
+            <ion-input
+                formControlName="birthDate"
+                type="date"
+                fill="clear"
+                label="Birth date"
+                labelPlacement="floating"
+                errorText="Required birth date"
+                placeholder="Enter birth date"
+            ></ion-input>
+            <ion-input
+                formControlName="legendName"
+                type="string"
+                fill="clear"
+                label="Favourite #Club Legend"
+                labelPlacement="floating"
+                errorText="Required legend"
+                placeholder="Enter legend name"
+            ></ion-input>
+            <ion-select label="Shirt size" formControlName="shirtSize" placeholder="Shirt size">
+                <ion-select-option value="xs">XS</ion-select-option>
+                <ion-select-option value="s">S</ion-select-option>
+                <ion-select-option value="m">M</ion-select-option>
+                <ion-select-option value="l">L</ion-select-option>
+                <ion-select-option value="xl">XL</ion-select-option>
+            </ion-select>
+            <ion-input
+                formControlName="address"
+                type="text"
+                fill="clear"
+                label="Address"
+                labelPlacement="floating"
+                errorText="Invalid address"
+                placeholder="Enter address"
+            ></ion-input>
+            <ion-button class="auth-view__button" type="submit"> SIGN UP </ion-button>
+        </ng-template>
     </form>
 </df-auth>

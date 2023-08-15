@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
     selector: 'df-club',
@@ -6,5 +7,24 @@ import { Component } from '@angular/core';
     styleUrls: ['./club.component.scss'],
 })
 export class ClubComponent {
-    constructor() {}
+    ticketsPage: string = 'https://bancada.rcdeportivo.es/';
+    shopPage: string = 'https://deportienda.es/es/';
+
+    constructor(private navCtrl: NavController) {}
+
+    navigateToTickets(): void {
+        window.location.assign(this.ticketsPage);
+    }
+
+    navigateToShop(): void {
+        window.location.assign(this.shopPage);
+    }
+
+    navigateToHistory(): void {
+        this.navCtrl.navigateForward('/club/history');
+    }
+
+    navigateToStadium(): void {
+        this.navCtrl.navigateForward('/club/stadium');
+    }
 }

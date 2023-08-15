@@ -13,6 +13,9 @@ export class ProfileComponent implements OnInit {
         name: FormControl<string | null>;
         surname: FormControl<string | null>;
         address: FormControl<string | null>;
+        shirtSize: FormControl<string | null>;
+        birthDate: FormControl<string | null>;
+        legendName: FormControl<string | null>;
     }>;
 
     userData = userResponse;
@@ -28,6 +31,9 @@ export class ProfileComponent implements OnInit {
             name: new FormControl(''),
             surname: new FormControl(''),
             address: new FormControl(''),
+            birthDate: new FormControl(''),
+            legendName: new FormControl(''),
+            shirtSize: new FormControl(''),
         });
 
         this.profileForm.patchValue(this.userData);

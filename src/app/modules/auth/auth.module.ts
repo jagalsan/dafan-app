@@ -9,11 +9,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './containers/register/register.component';
 import { ResetPasswordComponent } from './containers/reset-password/reset-password.component';
 import { WelcomeComponent } from './containers/welcome/welcome.component';
+import { CommonModule } from '@angular/common';
 
 const COMPONENTS = [AuthComponent, RegisterComponent, ResetPasswordComponent, LoginComponent, WelcomeComponent];
 
 @NgModule({
-    imports: [IonicModule, HttpClientModule, FormsModule, ReactiveFormsModule, RouterModule.forChild(authRoutes)],
+    imports: [
+        CommonModule,
+        IonicModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule.forChild(authRoutes),
+    ],
     declarations: [COMPONENTS],
 })
 export class AuthModule {}

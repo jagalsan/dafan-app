@@ -1,0 +1,143 @@
+:root {
+    --decade-title: '';
+}
+
+.club-history {
+    &__title {
+        position: relative;
+        height: 110px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: url('/assets/images/examples/club-history-wallpaper.jpeg');
+        background-size: cover;
+        background-position: bottom;
+        font-weight: bold;
+        border-radius: 10px;
+        font-size: 30px;
+        text-align: center;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &__decades {
+        display: flex;
+        flex-direction: column;
+        gap: 52px;
+    }
+
+    .decade {
+        width: 100%;
+
+        &__preview {
+            border-radius: 10px;
+            height: 135px;
+            margin-bottom: 12px;
+            width: 100%;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+
+            &::before {
+                content: var(--decade-title);
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.55);
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                font-size: 32px;
+                font-weight: bold;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        &__description {
+            margin: 0;
+            font-weight: 200;
+            font-size: 18px;
+        }
+    }
+
+    &__trophies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 14px;
+        justify-content: space-between;
+    }
+
+    &__trophy {
+        position: relative;
+        height: 150px;
+        width: 48%;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.553);
+        background-color: rgba(48, 48, 48, 0.941);
+        padding: 12px;
+
+        .trophy__count {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+
+            ion-icon {
+                font-size: 24px;
+            }
+        }
+
+        .trophy__name {
+            margin-top: 12px;
+            text-align: center;
+            font-size: 24px;
+        }
+    }
+
+    &__tabs {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        :first-child {
+            margin-right: 16px;
+        }
+
+        .tabs__tab {
+            color: #f6f2f130;
+            font-size: 18px;
+            font-weight: 600;
+
+            &--active {
+                color: #f6f2f1;
+                font-size: 26px;
+                font-weight: 600;
+            }
+        }
+    }
+}
