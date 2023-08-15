@@ -53,108 +53,108 @@ export class QuizChallengeComponent implements OnInit {
             ...[
                 {
                     id: 1,
-                    label: '¿Cual es el mayor goleador de la historia del Deportivo?',
+                    label: 'In which year did Bebeto make his debut for the Brazil national team?',
                     answered: false,
                     answers: [
                         {
                             id: 1,
-                            label: 'Bebeto Retirado',
+                            label: '1985',
                             isCorrect: true,
                         },
                         {
                             id: 2,
-                            label: 'Roy Makaay Retirado',
+                            label: '1987',
                             isCorrect: false,
                         },
                         {
                             id: 3,
-                            label: 'Diego Tristán Retirado',
+                            label: '1990',
                             isCorrect: false,
                         },
                         {
                             id: 4,
-                            label: 'Riki Retirado',
+                            label: '1982',
                             isCorrect: false,
                         },
                     ],
                 },
                 {
                     id: 2,
-                    label: '¿Cual fue la primera temporada que juego el Deportivo en Primera división?',
+                    label: 'Bebeto is best known for his goal celebration in the 1994 FIFA World Cup. What was special about it?',
                     answered: false,
                     answers: [
                         {
                             id: 1,
-                            label: '1994/95',
+                            label: 'He unveiled a shirt with a message underneath',
                             isCorrect: false,
                         },
                         {
                             id: 2,
-                            label: '1990/91',
-                            isCorrect: true,
-                        },
-                        {
-                            id: 3,
-                            label: '1989/90',
+                            label: 'He did a backflip',
                             isCorrect: false,
                         },
                         {
+                            id: 3,
+                            label: 'He mimicked a rocking baby ',
+                            isCorrect: true,
+                        },
+                        {
                             id: 4,
-                            label: '1993/94',
+                            label: 'He ran around the field with his shirt off',
                             isCorrect: false,
                         },
                     ],
                 },
                 {
                     id: 3,
-                    label: '¿Que paso en la temporada 1999-2000?',
+                    label: 'Bebeto played for several clubs in his career. Which of these clubs did he NOT play for?',
                     answered: false,
                     answers: [
                         {
                             id: 1,
-                            label: 'Ganamos la liga',
+                            label: 'Flamengo',
                             isCorrect: true,
                         },
                         {
                             id: 2,
-                            label: 'Ganamos la copa del rey',
-                            isCorrect: false,
+                            label: 'Sevilla',
+                            isCorrect: true,
                         },
                         {
                             id: 3,
-                            label: 'Clasificación en la champions',
+                            label: 'Vasco da Gama',
                             isCorrect: false,
                         },
                         {
                             id: 4,
-                            label: 'Goleamos al Barcelona',
+                            label: 'Deportivo La Coruña',
                             isCorrect: false,
                         },
                     ],
                 },
                 {
                     id: 4,
-                    label: '¿Cuando se fundo el deportivo de la ocuruña?',
+                    label: 'Bebeto won the Silver Ball at the FIFA World Cup in 1994. Who won the Golden Ball in the same tournament?',
                     answered: false,
                     answers: [
                         {
                             id: 1,
-                            label: 'El 2 de Marzo de 1906',
+                            label: 'Romário',
                             isCorrect: true,
                         },
                         {
                             id: 2,
-                            label: 'El 2 de Abril de 1906',
+                            label: 'Roberto Baggio',
                             isCorrect: false,
                         },
                         {
                             id: 3,
-                            label: 'El 2 de Marzo de 1907',
+                            label: 'Dunga',
                             isCorrect: false,
                         },
                         {
                             id: 4,
-                            label: 'El 2 de Marzo de 1908',
+                            label: 'Hristo Stoichkov',
                             isCorrect: false,
                         },
                     ],
