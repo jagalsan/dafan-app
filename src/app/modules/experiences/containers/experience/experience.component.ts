@@ -9,6 +9,7 @@ import { Experience } from '../../models/experience.interface';
 })
 export class ExperienceComponent implements OnInit {
     experience: Experience;
+
     constructor(private route: ActivatedRoute) {}
 
     ngOnInit(): void {

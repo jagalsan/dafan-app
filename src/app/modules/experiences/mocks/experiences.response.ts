@@ -12,6 +12,8 @@ export const experiencesResponse: Experience[] = [
             name: 'discount',
             id: 1,
         },
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
         pointsCost: 42,
         levelRequired: 1,
     },
@@ -26,6 +28,8 @@ export const experiencesResponse: Experience[] = [
             name: 'discount',
             id: 1,
         },
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
         pointsCost: 250,
         levelRequired: 1,
     },
@@ -39,6 +43,8 @@ export const experiencesResponse: Experience[] = [
             name: 'fullExperience',
             id: 2,
         },
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
         pointsCost: 2000,
         levelRequired: 3,
     },
@@ -52,6 +58,8 @@ export const experiencesResponse: Experience[] = [
             name: 'fullExperience',
             id: 2,
         },
+        description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
         pointsCost: 1500,
         levelRequired: 1,
     },
@@ -76,6 +84,8 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                     name: 'discount',
                     id: 1,
                 },
+                description:
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
                 pointsCost: 42,
                 levelRequired: 1,
             },
@@ -90,6 +100,8 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                     name: 'discount',
                     id: 1,
                 },
+                description:
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
                 pointsCost: 250,
                 levelRequired: 1,
             },
@@ -112,6 +124,8 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                     name: 'fullExperience',
                     id: 2,
                 },
+                description:
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
                 pointsCost: 400,
                 levelRequired: 1,
             },
@@ -125,7 +139,9 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                     name: 'fullExperience',
                     id: 2,
                 },
-                pointsCost: 300,
+                description:
+                    "Acquire a signed shirt by one of Depor's legends like Bebeto, Mauro Silva or Scaloni. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br> <br> Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?",
+                pointsCost: 2000,
                 levelRequired: 2,
             },
             {
@@ -138,6 +154,8 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                     name: 'fullExperience',
                     id: 2,
                 },
+                description:
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
                 pointsCost: 2000,
                 levelRequired: 2,
             },
@@ -151,6 +169,8 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                     name: 'fullExperience',
                     id: 2,
                 },
+                description:
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
                 pointsCost: 1500,
                 levelRequired: 1,
             },
@@ -164,6 +184,8 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                     name: 'fullExperience',
                     id: 2,
                 },
+                description:
+                    ' Attend 1 Deportivo La Liga match in our VIP stand, having access to free food, beverages and located in preferencia stand.<br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellend',
                 pointsCost: 1500,
                 levelRequired: 2,
             },
@@ -177,7 +199,9 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                     name: 'fullExperience',
                     id: 2,
                 },
-                pointsCost: 6000,
+                description:
+                    "Have you ever dreamed about meeting a Deportivo's legend. This is your opportunity. Experience a match at Riazor Stadium and have the opportunity to meet & greet Donato <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?",
+                pointsCost: 3000,
                 levelRequired: 3,
             },
             {
@@ -190,6 +214,8 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                     name: 'fullExperience',
                     id: 2,
                 },
+                description:
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
                 pointsCost: 9000,
                 levelRequired: 5,
             },

@@ -1,35 +1,27 @@
 <ion-content class="experience main-page" [scrollY]="true">
-    <ion-grid class="main-page__grid">
-        <img class="experience__preview" [src]="'assets/images/examples/deport-wallpaper.png'" alt="" />
-        <p class="experience__description">
-            Los productos de merchandising del Deportivo de La Coruña son de alta calidad y están disponibles a precios
-            asequibles. La tienda ofrece también una variedad de descuentos y promociones, por lo que los aficionados
-            pueden encontrar productos de calidad a precios aún más bajos.
-        </p>
-        <div class="experience__images">
-            <img src="assets/images/examples/mochila-deport.jpg" alt="" srcset="" />
-            <img src="assets/images/examples/cami-1-deport.jpg" alt="" srcset="" />
+    <ion-grid class="main-page__grid" *ngIf="experience">
+        <img class="experience__preview" [src]="experience.previewImage" alt="" />
+        <div class="experience__tags">
+            <span class="tag tag--primary">
+                <ion-icon name="extension-puzzle"></ion-icon>{{ experience.type.label
+                }}<ng-container *ngIf="experience.type.name === 'discount'"
+                    >: {{ experience.percentageDiscount }}%
+                </ng-container>
+            </span>
+            <span class="tag tag--secondary"
+                ><ion-icon name="flash"></ion-icon>Required level: {{ experience.levelRequired }}</span
+            >
         </div>
-        <p class="experience__description">
-            Además de la tienda online, el Deportivo de La Coruña también cuenta con tiendas físicas en A Coruña, Vigo y
-            Santiago de Compostela. Estas tiendas ofrecen la misma gama de productos que la tienda online, así como la
-            posibilidad de probarse los productos antes de comprarlos.
-        </p>
-        <div class="experience__images">
-            <img src="assets/images/examples/cami-3-deport.jpg" alt="" srcset="" />
-            <img src="assets/images/examples/cami-2-deport.jpg" alt="" srcset="" />
-        </div>
+        <p class="experience__description" [innerHTML]="experience.description | sanitize: 'html'"></p>
+
         <div class="experience__actions">
             <div class="points-cost">
                 <ion-icon slot="start" src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
-                <span class="points">
-                    <!-- {{ experience.pointsCost }}  -->
-                    13
-                </span>
+                <span class="points"> {{ experience.pointsCost }} </span>
             </div>
             <ion-button class="points-cost__action">
                 <ion-icon slot="start" src="assets/icon/df-fan-points.svg"></ion-icon>
-                BUY
+                Get experience
             </ion-button>
         </div>
     </ion-grid></ion-content
