@@ -18,17 +18,14 @@ ion-toolbar {
     }
 
     ion-input {
-        --border-color: #4cc0c4;
+        --border-color: var(--color-turquoise-blue);
         --border-radius: 8px;
-        --placeholder-color: #4cc0c4;
-        --highlight-color-focused: #4cc0c4;
+        --placeholder-color: var(--color-turquoise-blue);
+        --highlight-color-focused: var(--color-turquoise-blue);
     }
 
     ion-button {
-        color: #111;
         margin-top: 24px;
-        --background: linear-gradient(180deg, #4cc0c4 0%, #4cc0c4 100%);
-        display: flex;
     }
 
     &__other-method {
@@ -48,7 +45,7 @@ ion-toolbar {
 
     &__validator-code {
         font-size: 20px;
-        color: white;
+        color: var(--color-white);
         text-align: center;
         margin: 0;
 

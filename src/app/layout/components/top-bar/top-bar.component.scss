@@ -1,12 +1,12 @@
-ion-header {
+ion-header.layout-header {
     max-height: 42px;
-    background: #111;
+    background: var(--color-dark-text);
 
     ion-toolbar {
         padding: 0 16px;
         max-height: 42px;
-        --ion-toolbar-background: #111;
-
+        --ion-toolbar-background: transparent;
+        --border-color: transparent;
         --min-height: 42px;
 
         .back-icon {
@@ -41,7 +41,7 @@ ion-header {
                     align-items: center;
 
                     span {
-                        color: #909090;
+                        color: var(--color-light-grey);
                         font-size: 8px;
                     }
                 }
@@ -58,21 +58,17 @@ ion-header {
 
 ion-popover {
     ion-content {
-        --background: #1d1d1d;
-
-        ion-button {
-            --color: white;
-        }
+        --background: var(--app-background-color);
     }
 
     ion-item {
         font-size: 20px;
-        display: flex;
-        align-items: center;
         letter-spacing: 2px;
+        --background: transparent;
 
         ion-icon {
             margin-left: 16px;
+            font-size: 16px;
         }
     }
 }

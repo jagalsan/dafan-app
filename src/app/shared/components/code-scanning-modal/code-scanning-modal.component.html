@@ -35,7 +35,12 @@
         </p>
     </ng-container>
 
-    <ion-button (click)="validateCode()" [disabled]="!enabledValidateButton" [type]="'button'">
+    <ion-button
+        class="df-button df-button--secondary"
+        (click)="validateCode()"
+        [disabled]="!enabledValidateButton"
+        [type]="'button'"
+    >
         Validate code
     </ion-button>
 </ion-content>

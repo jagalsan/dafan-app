@@ -14,7 +14,11 @@
                         class="experience"
                         [ngClass]="{ 'experience--blocked': userData.level < experience.levelRequired }"
                     >
-                        <img class="experience__image" [src]="experience.previewImage" />
+                        <img
+                            class="experience__image"
+                            (click)="navigateExperience(experience)"
+                            [src]="experience.previewImage"
+                        />
                         <div class="experience__label">
                             <ion-label (click)="navigateExperience(experience)" class="label">{{
                                 experience.label
@@ -25,7 +29,7 @@
                         </div>
                         <ion-button
                             slot="end"
-                            class="experience__button"
+                            class="experience__button df-button df-button--secondary"
                             [ngClass]="{ 'experience__button--blocked': userData.fanPoints < experience.pointsCost }"
                         >
                             <ng-container *ngIf="userData.fanPoints >= experience.pointsCost; else blocked">

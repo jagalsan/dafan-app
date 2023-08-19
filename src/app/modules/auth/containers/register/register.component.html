@@ -46,7 +46,12 @@
                 errorText="Invalid password"
                 placeholder="Enter password"
             ></ion-input>
-            <ion-button [disabled]="userDataForm.invalid" class="auth-view__button" (click)="nextStep()" type="button">
+            <ion-button
+                [disabled]="userDataForm.invalid"
+                class="auth-view__button df-button df-button--secondary"
+                (click)="nextStep()"
+                type="button"
+            >
                 NEXT
             </ion-button>
         </ng-container>
@@ -85,7 +90,7 @@
                 errorText="Invalid address"
                 placeholder="Enter address"
             ></ion-input>
-            <ion-button class="auth-view__button" type="submit"> SIGN UP </ion-button>
+            <ion-button class="auth-view__button df-button df-button--secondary" type="submit"> SIGN UP </ion-button>
         </ng-template>
     </form>
 </df-auth>

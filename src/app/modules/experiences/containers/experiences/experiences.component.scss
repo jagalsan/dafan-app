@@ -1,10 +1,6 @@
 .club-experiences {
     position: relative;
 
-    &__list {
-        --ion-item-background: #121212;
-    }
-
     &__title {
         font-size: 24px;
         font-weight: 600;
@@ -17,7 +13,6 @@
         --inner-padding-bottom: 30px;
         --inner-padding-end: 0px;
         --padding-start: 0px;
-        --ion-item-background: #121212;
 
         &--blocked::before {
             content: 'Blocked by low level';
@@ -58,25 +53,22 @@
             .discount {
                 font-size: 32px;
                 font-weight: 200;
-                color: #4cc0c4;
+                color: var(--color-turquoise-blue);
             }
         }
 
         &__button {
-            --color: #111;
-            border-radius: 5px;
-            --background: linear-gradient(180deg, #4cc0c4 0%, #4cc0c4 100%);
-            height: 35px;
-            width: 83px;
-            font-weight: 600;
+            width: 95px;
+            font-size: 16px;
 
             &--blocked {
-                --background: #c44c53;
+                --background: var(--color-light-red);
             }
 
             ion-icon {
-                color: #111;
+                color: var(--color-dark-text);
                 margin-right: 10px;
+                font-size: 18px;
             }
         }
     }
@@ -87,9 +79,9 @@
     height: 30px;
     font-size: 15px;
     font-weight: 600;
-    background: linear-gradient(180deg, #4cc0c4 0%, #4cc0c4 100%);
+    background: linear-gradient(180deg, var(--color-turquoise-blue) 0%, var(--color-turquoise-blue) 100%);
     border-radius: 10px;
-    color: #111;
+    color: var(--color-dark-text);
     position: fixed;
     right: 10px;
     bottom: 15px;
@@ -104,7 +96,7 @@
     }
 
     ion-icon {
-        color: #111;
+        color: var(--color-dark-text);
         margin-right: 8px;
         font-size: 13px;
     }

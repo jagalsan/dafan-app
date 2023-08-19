@@ -67,6 +67,7 @@ export class TopBarComponent implements OnInit {
     async openFanPointsModal(): Promise<void> {
         const modal = await this.modalCtrl.create({
             component: FanTokensModalComponent,
+            cssClass: 'df-modal',
             breakpoints: [0, 0.95],
             initialBreakpoint: 0.95,
             componentProps: {

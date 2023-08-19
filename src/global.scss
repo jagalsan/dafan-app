@@ -16,12 +16,20 @@
 }
 
 .df-modal {
-    padding: 0 35px;
+    &__container {
+        padding: 0 35px;
+        padding-bottom: 40px;
+    }
+
+    ion-toolbar {
+        --ion-toolbar-background: transparent;
+        --border-color: transparent;
+    }
 }
 
 .df-toast {
-    --color: white !important;
-    color: white !important;
+    --color: var(--color-white) !important;
+    color: var(--color-white) !important;
     font-weight: 600;
     font-size: 16px;
 }
@@ -29,9 +37,9 @@
 .df-form {
     ion-input {
         margin-top: 24px;
-        --border-color: #909090 !important;
+        --border-color: var(--color-light-grey) !important;
 
-        .label-text-wrapper.sc-ion-input-md {
+        .label-text-wrapper {
             transform: translateY(50%) scale(0.75) !important;
             max-width: calc(100% / 0.75) !important;
         }

@@ -2,7 +2,7 @@
     <ng-container *ngIf="!quizInProgress; else quiz">
         <ng-container *ngIf="!quizCompleted; else leaderBoard">
             <h3 class="quiz-challenge__title">Deport Quiz</h3>
-            <ion-button class="quiz-challenge__start-quiz" (click)="startQuiz()">
+            <ion-button class="df-button df-button--primary" (click)="startQuiz()">
                 <ion-icon slot="start" name="game-controller-outline"></ion-icon>
                 Start quiz
             </ion-button>
@@ -24,7 +24,7 @@
                 <div class="quiz-restart">
                     <h4 class="quiz-restart__title">Restart quiz</h4>
                     <p class="quiz-restart__description">Reinicia el quiz para mejorar tu puntuación</p>
-                    <ion-button class="quiz-restart__button" (click)="startQuiz()">
+                    <ion-button class="df-button df-button--primary" (click)="startQuiz()">
                         <ion-icon slot="start" name="game-controller-outline"></ion-icon>
                         Restart quiz
                     </ion-button>
@@ -74,7 +74,7 @@
                     </ion-button>
                 </ng-container>
                 <ng-template #endQuiz>
-                    <ion-button class="quiz__end-quiz" (click)="sendQuiz()">
+                    <ion-button class="df-button df-button--primary" (click)="sendQuiz()">
                         <ion-icon slot="end" name="arrow-forward-outline"></ion-icon>
                         Send
                     </ion-button>

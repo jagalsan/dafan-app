@@ -1,3 +1,5 @@
+@import '/src/theme/responsive.scss';
+
 :root {
     --decade-title: '';
 }
@@ -10,7 +12,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: white;
+        color: var(--color-white);
         background: url('/assets/images/examples/club-history-wallpaper.jpeg');
         background-size: cover;
         background-position: bottom;
@@ -66,7 +68,7 @@
                 right: 0;
                 font-size: 32px;
                 font-weight: bold;
-                color: white;
+                color: var(--color-white);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -86,6 +88,14 @@
         flex-wrap: wrap;
         gap: 14px;
         justify-content: space-between;
+
+        @media (max-width: ($breakpoint-sm - 1)) {
+            gap: 10px;
+        }
+
+        @media (max-width: ($breakpoint-xs - 1)) {
+            gap: 8px;
+        }
     }
 
     &__trophy {
@@ -129,12 +139,12 @@
         }
 
         .tabs__tab {
-            color: #f6f2f130;
+            color: var(--color-opacity-white-text);
             font-size: 18px;
             font-weight: 600;
 
             &--active {
-                color: #f6f2f1;
+                color: var(--color-white-text);
                 font-size: 26px;
                 font-weight: 600;
             }

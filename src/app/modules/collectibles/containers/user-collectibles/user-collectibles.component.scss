@@ -37,7 +37,7 @@ $cardHeight: 125px;
                     .number {
                         font-size: 38px;
                         font-weight: bold;
-                        background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+                        background: var(--gradient-primary);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                     }
@@ -46,12 +46,12 @@ $cardHeight: 125px;
                 ion-progress-bar {
                     margin-bottom: 12px;
 
-                    --ion-color-base: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%) !important;
+                    --ion-color-base: var(--gradient-primary) !important;
                 }
 
                 .hash {
                     font-size: 14px;
-                    color: #909090;
+                    color: var(--color-light-grey);
                 }
             }
         }
@@ -69,7 +69,7 @@ $cardHeight: 125px;
 
     &__show-all {
         text-decoration: none;
-        color: #f6f2f1;
+        color: var(--color-white-text);
         display: flex;
         align-items: center;
         gap: 12px;

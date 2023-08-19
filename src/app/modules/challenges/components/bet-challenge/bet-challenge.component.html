@@ -24,7 +24,12 @@
                     <div class="club-scorer">{{ secondTeamScorer }}</div>
                 </div>
             </div>
-            <ion-button [disabled]="betCompleted" (click)="makeBet()" class="bet-challenge__bet-action" expand="block">
+            <ion-button
+                [disabled]="betCompleted"
+                (click)="makeBet()"
+                class="df-button df-button--primary"
+                expand="block"
+            >
                 <ion-icon slot="start" src="assets/icon/df-fan-points.svg"></ion-icon>
                 5 <span>FP</span>
             </ion-button>
@@ -50,7 +55,7 @@
             <ion-button
                 [disabled]="betCompleted"
                 (click)="makeBet()"
-                class="bet-challenge__scorer-action"
+                class="bet-challenge__scorer-action df-button df-button--primary"
                 expand="block"
             >
                 <ion-icon slot="start" src="assets/icon/df-fan-points.svg"></ion-icon>

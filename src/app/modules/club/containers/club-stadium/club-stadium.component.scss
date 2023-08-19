@@ -13,10 +13,6 @@
     }
 
     &__instructions {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 14px;
         margin-bottom: 32px;
 
         .instruction {
@@ -24,11 +20,11 @@
             justify-content: flex-start;
             align-items: center;
             gap: 24px;
+            margin-bottom: 16px;
 
             &__icon {
                 font-size: 32px;
-                color: #5d52c7;
-                width: 30%;
+                color: var(--color-purple-2);
             }
 
             &__content {
@@ -38,9 +34,15 @@
                     font-weight: 200;
                     font-size: 24px;
                 }
+            }
+
+            &__title {
+                display: flex;
+                gap: 16px;
+                align-items: center;
 
                 h3 {
-                    background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+                    background: var(--gradient-primary);
                     background-clip: border-box;
                     background-clip: text;
                     -webkit-background-clip: text;
