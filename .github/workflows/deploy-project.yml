@@ -20,7 +20,7 @@ jobs:
       run: |
         npm install
         ng build --prod
-      working-directory: dafan-app
+      working-directory: /
 
     - name: Set up SSH
       run: |
@@ -36,4 +36,4 @@ jobs:
         sudo apt-get install lftp -y
 
         # Copia la carpeta 'dist' (o 'www' en tu caso) al servidor FTP
-        lftp -e "set ftp:ssl-allow no; open -u githubactions,$SSH_PRIVATE_KEY test-app.enlapieldeunjunior.com; mirror -R -e -x node_modules dafan-app/www test-app.enlapieldeunjunior.com; bye"
+        lftp -e "set ftp:ssl-allow no; open -u githubactions,$SSH_PRIVATE_KEY test-app.enlapieldeunjunior.com; mirror -R -e -x node_modules ./www test-app.enlapieldeunjunior.com; bye"
