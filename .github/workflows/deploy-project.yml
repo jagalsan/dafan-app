@@ -1,4 +1,4 @@
-name: Deploy Angular App to FTP (Manual)
+name: Deploy Angular App to FTP
 
 on:
   workflow_dispatch:
@@ -25,18 +25,11 @@ jobs:
         npm run build
       working-directory: .
 
-    - name: Set up SSH
-      run: |
-        mkdir -p ~/.ssh
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -t rsa test-app.enlapieldeunjunior.com >> ~/.ssh/known_hosts
-
     - name: Deploy to FTP
       run: |
         # Instala lftp
         sudo apt-get update
         sudo apt-get install lftp -y
 
-        # Copia la carpeta 'dist' (o 'www' en tu caso) al servidor FTP
-        lftp -e "set ftp:ssl-allow no; open -u githubactions,$SSH_PRIVATE_KEY test-app.enlapieldeunjunior.com; mirror -R -e -x node_modules ./www test-app.enlapieldeunjunior.com; bye"
+        lftp -e "set ftp:ssl-allow no; open -u $FTP_USER,$FTP_PASSWORD test-app.enlapieldeunjunior.com; mirror -R -e -x node_modules ./www test-app.enlapieldeunjunior.com; bye"
+
