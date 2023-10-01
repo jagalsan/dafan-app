@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies and build Angular app
       run: |
         npm install
-        ng build --prod
+        npm run build
       working-directory: .
 
     - name: Set up SSH
