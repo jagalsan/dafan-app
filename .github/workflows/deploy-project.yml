@@ -16,11 +16,14 @@ jobs:
       with:
         node-version: '14'
 
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli
+
     - name: Install dependencies and build Angular app
       run: |
         npm install
         ng build --prod
-      working-directory: /
+      working-directory: .
 
     - name: Set up SSH
       run: |
