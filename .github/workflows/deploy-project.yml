@@ -1,0 +1,97 @@
+#!/bin/sh
+
+## Set error handling
+set -e
+## Set debug mode
+#set -x
+
+GREEN='\033[0;32m'
+RED='\033[0;31m'
+YELLOW='\033[0;33m'
+TEAL='\033[0;36m'
+STARTDATE=$(date +%s)
+
+repository_url=$1
+deployment_path=$2
+folder_name=$3
+git_branch=$4
+
+if [ -z "$repository_url" ]  || [ -z "$deployment_path" ]; then
+    echo "${RED}Usage: ./$0 <repository_url> <deployment_path> <deployment_folder> <git_branch>${NC}
+    ${GREEN}Example: ./$0 git@yourdomain.com /var/www/html/ my-project-branch
+    ${GREEN}Example 2: ./$0 https://yourdomain.com/my-other-project.git my-other-project-branch /var/www/html/ ${NC}
+    ${TEAL}- Make sure you have permissions to write to the deployment directory.
+    ${TEAL}- You will also need repository credentials to clone the repository."
+    exit 1
+fi
+
+if [ -z "$git_branch" ]; then
+   git_branch="main"
+fi
+
+
+# get the folder name from the repository url
+if [ -z "$folder_name" ]; then
+    folder_name=$(basename $repository_url | cut -d. -f1)
+fi
+
+echo "${TEAL}Deploying $folder_name to $deployment_path"
+
+HOME_DIR=$(eval echo ~$(whoami))
+echo "${TEAL}Using  $HOME_DIR as home directory"
+DEPLOY_DIR=$HOME_DIR/deploy
+echo "Using  $DEPLOY_DIR as deploy directory"
+## create the deploy directory if it does not exist
+echo "Checking if $DEPLOY_DIR exists"
+if [ ! -d $DEPLOY_DIR ]; then
+    mkdir $DEPLOY_DIR
+fi
+echo "${TEAL}Switching to $DEPLOY_DIR"
+cd $DEPLOY_DIR
+
+echo "${TEAL}Checking if the current deployment is already in progress"
+if [ -d $folder_name ]; then
+    echo "${YELLOW}The current deployment is already in progress"
+    echo "${YELLOW}Please wait for the current deployment to finish"
+    exit 1
+fi
+
+## Delete deployent folder if it exists
+if [ -d "$folder_name" ]; then
+    echo "${YELLOW}Deleting old files"
+    rm -rf $folder_name
+fi
+
+git clone  $repository_url --depth=1 -b $git_branch $folder_name
+cd $folder_name
+echo "${TEAL}Commit message: ${YELLOW}$(git log -1 --pretty=%B)${NC} ${TEAL}Commit: $(git log -1 --pretty=%h)"
+echo "${YELLOW}Removing .git folder"
+rm -rf $DEPLOY_DIR/$folder_name/.git
+echo "${TEAL}Copying files from $DEPLOY_DIR/$folder_name to $deployment_path"
+cp -rf $DEPLOY_DIR/$folder_name $deployment_path
+echo "${YELLOW}Deleting the $DEPLOY_DIR/$folder_name directory"
+rm -rf $DEPLOY_DIR/$folder_name
+echo "${TEAL}switching to $deployment_path$folder_name"
+cd $deployment_path$folder_name
+echo "${TEAL}Running post deployment script"
+## check for the existtense of any of theses files update.sh, deploy.sh, postdeploy.sh
+## if they exist then run the script
+if [ -f "update.sh" ]; then
+    echo "${TEAL}Running update.sh..."
+    sh update.sh
+fi
+
+if [ -f "deploy.sh" ]; then
+    echo "${TEAL}Running deploy.sh..."
+    sh deploy.sh
+fi
+
+if [ -f "postdeploy.sh" ]; then
+    echo "${TEAL}Running postdeploy.sh..."
+    sh postdeploy.sh
+fi
+
+echo "${YELLOW}Please run your update script manually."
+ENDDATE=$(date +%s)
+echo "${YELLOW}Deployment took $(($ENDDATE - $STARTDATE)) seconds"
+exit 0
