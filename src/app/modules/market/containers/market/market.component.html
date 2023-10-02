@@ -25,94 +25,14 @@
         </section>
         <ng-template #fanPointsTab>
             <section class="market__fan-points">
-                <div class="fan-point">
+                <div class="fan-point" *ngFor="let fanPoint of fanPointsListed">
                     <div class="fan-point__amount">
                         <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
-                        <span class="amount">10FP</span>
+                        <span class="amount">{{ fanPoint.count }}FP</span>
                     </div>
                     <div class="fan-point__action">
                         <ion-button class="df-button df-button--secondary"> BUY </ion-button>
-                        <span class="fan-price">0,5€/FP</span>
-                    </div>
-                </div>
-                <div class="fan-point">
-                    <div class="fan-point__amount">
-                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
-                        <span class="amount">14FP</span>
-                    </div>
-                    <div class="fan-point__action">
-                        <ion-button class="df-button df-button--secondary"> BUY </ion-button>
-                        <span class="fan-price">0,7€/FP</span>
-                    </div>
-                </div>
-                <div class="fan-point">
-                    <div class="fan-point__amount">
-                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
-                        <span class="amount">16FP</span>
-                    </div>
-                    <div class="fan-point__action">
-                        <ion-button class="df-button df-button--secondary"> BUY </ion-button>
-                        <span class="fan-price">0,78€/FP</span>
-                    </div>
-                </div>
-                <div class="fan-point">
-                    <div class="fan-point__amount">
-                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
-                        <span class="amount">10FP</span>
-                    </div>
-                    <div class="fan-point__action">
-                        <ion-button class="df-button df-button--secondary"> BUY </ion-button>
-                        <span class="fan-price">0,5€/FP</span>
-                    </div>
-                </div>
-                <div class="fan-point">
-                    <div class="fan-point__amount">
-                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
-                        <span class="amount">14FP</span>
-                    </div>
-                    <div class="fan-point__action">
-                        <ion-button class="df-button df-button--secondary"> BUY </ion-button>
-                        <span class="fan-price">0,6€/FP</span>
-                    </div>
-                </div>
-                <div class="fan-point">
-                    <div class="fan-point__amount">
-                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
-                        <span class="amount">11FP</span>
-                    </div>
-                    <div class="fan-point__action">
-                        <ion-button class="df-button df-button--secondary"> BUY </ion-button>
-                        <span class="fan-price">0,55€/FP</span>
-                    </div>
-                </div>
-                <div class="fan-point">
-                    <div class="fan-point__amount">
-                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
-                        <span class="amount">12FP</span>
-                    </div>
-                    <div class="fan-point__action">
-                        <ion-button class="df-button df-button--secondary"> BUY </ion-button>
-                        <span class="fan-price">0,6€/FP</span>
-                    </div>
-                </div>
-                <div class="fan-point">
-                    <div class="fan-point__amount">
-                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
-                        <span class="amount">100FP</span>
-                    </div>
-                    <div class="fan-point__action">
-                        <ion-button class="df-button df-button--secondary"> BUY </ion-button>
-                        <span class="fan-price">1€/FP</span>
-                    </div>
-                </div>
-                <div class="fan-point">
-                    <div class="fan-point__amount">
-                        <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
-                        <span class="amount">30FP</span>
-                    </div>
-                    <div class="fan-point__action">
-                        <ion-button class="df-button df-button--secondary"> BUY </ion-button>
-                        <span class="fan-price">0.9€/FP</span>
+                        <span class="fan-price">{{ fanPoint.pricePerToken }}€/FP</span>
                     </div>
                 </div>
             </section>

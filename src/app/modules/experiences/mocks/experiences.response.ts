@@ -78,7 +78,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 name: 'merch',
                 label: 'Merch',
                 percentageDiscount: 20,
-                previewImage: '/assets/images/examples/shirt_deport.png',
+                previewImage: '/assets/images/examples/club-shirt.png',
                 type: {
                     label: 'Discounts',
                     name: 'discount',
@@ -94,7 +94,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 name: 'museumAccess',
                 label: 'Museum access',
                 percentageDiscount: 20,
-                previewImage: '/assets/images/examples/museum_deport.png',
+                previewImage: '/assets/images/examples/museum-club.png',
                 type: {
                     label: 'Discounts',
                     name: 'discount',
@@ -118,7 +118,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 id: 5,
                 name: 'museumAccessFree',
                 label: 'Free Stadium tour',
-                previewImage: '/assets/images/examples/museum_deport.png',
+                previewImage: '/assets/images/examples/museum-club.png',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',
@@ -133,7 +133,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 id: 6,
                 name: 'SignedShirt',
                 label: 'Signed Shirt',
-                previewImage: '/assets/images/examples/shirt_deport.png',
+                previewImage: '/assets/images/examples/club-shirt.png',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',
@@ -148,7 +148,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 id: 3,
                 name: 'meetPlayer',
                 label: 'Meet player',
-                previewImage: '/assets/images/examples/player_deport.png',
+                previewImage: '/assets/images/examples/club-player-wallpaper.png',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',
@@ -163,7 +163,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 id: 4,
                 name: 'stadiumTour',
                 label: 'Stadium tour',
-                previewImage: '/assets/images/examples/camp_deport.png',
+                previewImage: '/assets/images/examples/camp-club.png',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',
@@ -178,7 +178,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 id: 7,
                 name: 'liveMatch',
                 label: 'VIP live match section',
-                previewImage: '/assets/images/examples/deport_match.jpeg',
+                previewImage: '/assets/images/examples/club-match.jpeg',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',
@@ -193,7 +193,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 id: 8,
                 name: 'meetGreet',
                 label: 'Meet & Greet legend',
-                previewImage: '/assets/images/examples/meet_deport.jpeg',
+                previewImage: '/assets/images/examples/meet-club-players.jpeg',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',
@@ -208,7 +208,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 id: 9,
                 name: 'playInStadium',
                 label: 'Play in the stadium',
-                previewImage: '/assets/images/examples/camp_deport.png',
+                previewImage: '/assets/images/examples/camp-club.png',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',

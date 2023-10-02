@@ -1,7 +1,7 @@
 <section class="quiz-challenge" [ngClass]="{ 'quiz-challenge--completed': quizCompleted && !quizInProgress }">
     <ng-container *ngIf="!quizInProgress; else quiz">
         <ng-container *ngIf="!quizCompleted; else leaderBoard">
-            <h3 class="quiz-challenge__title">Deport Quiz</h3>
+            <h3 class="quiz-challenge__title">{{ clubName }} Quiz</h3>
             <ion-button class="df-button df-button--primary" (click)="startQuiz()">
                 <ion-icon slot="start" name="game-controller-outline"></ion-icon>
                 Start quiz
@@ -12,18 +12,18 @@
             <div class="quiz-completed">
                 <h3 class="quiz-challenge__title">Quiz completed</h3>
                 <p class="quiz-completed__description">
-                    Has respondido correctamente <strong>{{ quizQuestionAnswersCorrect }}</strong> de
-                    <strong>{{ quizQuestions.length }}</strong> preguntas.
+                    You have answered correctly <strong>{{ quizQuestionAnswersCorrect }}</strong> out of
+                    <strong>{{ quizQuestions.length }}</strong> questions.
                 </p>
                 <div class="quiz-completed__reward">
                     <div class="reward-content">
-                        <h4>Has conseguido:</h4>
+                        <h4>You have scored:</h4>
                         <div>120 <span>FP</span></div>
                     </div>
                 </div>
                 <div class="quiz-restart">
                     <h4 class="quiz-restart__title">Restart quiz</h4>
-                    <p class="quiz-restart__description">Reinicia el quiz para mejorar tu puntuación</p>
+                    <p class="quiz-restart__description">Restart the quiz to improve your score</p>
                     <ion-button class="df-button df-button--primary" (click)="startQuiz()">
                         <ion-icon slot="start" name="game-controller-outline"></ion-icon>
                         Restart quiz

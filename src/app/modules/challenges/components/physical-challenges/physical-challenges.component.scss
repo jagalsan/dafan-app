@@ -6,17 +6,17 @@
         padding-top: 15px;
 
         &__image {
-            width: 75px;
+            min-width: 75px;
             height: 64px;
             border-radius: 10px;
             max-width: 75px;
-            min-width: 60px;
         }
 
         &__content {
             margin-left: 20px;
             display: flex;
             flex-direction: column;
+            width: 100%;
 
             .challenge__label {
                 color: var(--color-white-text);
@@ -27,6 +27,7 @@
 
             .challenge__actions {
                 display: flex;
+                justify-content: space-between;
 
                 .points {
                     display: flex;

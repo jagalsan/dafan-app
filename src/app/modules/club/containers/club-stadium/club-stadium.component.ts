@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { clubStadiumResponse } from '../../mocks/club-stadium.response';
 
 @Component({
     selector: 'df-club-stadium',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./club-stadium.component.scss'],
 })
 export class ClubStadiumComponent {
+    clubStadium = clubStadiumResponse;
     constructor() {}
 }

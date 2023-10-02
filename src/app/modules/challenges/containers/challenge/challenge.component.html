@@ -1,5 +1,5 @@
 <ion-content class="challenge main-page" [scrollY]="true">
-    <ion-grid class="main-page__grid">
+    <ion-grid class="main-page__grid" [ngClass]="challengeType === 'quiz' ? 'main-page__grid--100' : ''">
         <ng-container
             *ngIf="challenge && (challengeType === 'bet' || challengeType === 'scorersPredictions'); else quizChallenge"
         >

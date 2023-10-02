@@ -6,6 +6,7 @@ import { digitalChallengesList, onFieldChallengesResponse } from '../../mocks/ch
 import { Challenge } from '../../models/challenge.interface';
 import { CodeScanningModalComponent } from 'src/app/shared/components/code-scanning-modal/code-scanning-modal.component';
 import { ChallengeComponent } from '../challenge/challenge.component';
+import { fantasyLeagueResponse } from '../../mocks/fantasy-league.response';
 
 @Component({
     selector: 'df-challenges',
@@ -18,6 +19,7 @@ export class ChallengesComponent implements OnInit {
     userData!: User;
     challengesTabSelected: 'digital' | 'onField' = 'digital';
     component = ChallengeComponent;
+    fantasyLeague = fantasyLeagueResponse;
 
     constructor(
         private authService: AuthService,

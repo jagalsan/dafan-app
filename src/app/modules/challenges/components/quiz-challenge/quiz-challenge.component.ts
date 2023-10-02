@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Animation, AnimationController, ToastController } from '@ionic/angular';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'df-quiz-challenge',
@@ -14,6 +15,7 @@ export class QuizChallengeComponent implements OnInit {
     displayedQuestion: any;
     indexDisplayedQuestion = 1;
     animation: Animation;
+    clubName = environment.clubName;
 
     constructor(
         private toastController: ToastController,

@@ -14,7 +14,7 @@ export const AuthActivateGuard: CanActivateFn = () => {
     const navCtrl = inject(NavController);
     const authService = inject(AuthService);
 
-    if (authService.isLoggedIn) {
+    if (authService.isLoggedIn || localStorage.getItem('token')) {
         authService.updateUserData(userResponse);
         return true;
     }

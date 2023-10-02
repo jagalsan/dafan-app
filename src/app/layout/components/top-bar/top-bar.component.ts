@@ -86,8 +86,7 @@ export class TopBarComponent implements OnInit {
     async logout(): Promise<void> {
         await this.popover.dismiss();
         this.isPopoverOpen = false;
-        this.authService.updateLoggedState(false);
-        this.navCtrl.navigateBack('/auth/welcome');
+        this.authService.logout();
     }
 
     async navigateProfile(): Promise<void> {

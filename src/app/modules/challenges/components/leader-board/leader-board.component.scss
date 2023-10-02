@@ -28,6 +28,17 @@
                     color: var(--color-purple);
                 }
             }
+
+            &__ranking {
+                min-width: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &__alias {
+                min-width: 100px;
+            }
         }
     }
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { leaderBoardResponse } from '../../mocks/leader-board.response';
 
 @Component({
     selector: 'df-leader-board',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./leader-board.component.scss'],
 })
 export class LeaderBoardComponent {
+    leaderBoard = leaderBoardResponse;
+
     constructor() {}
 }

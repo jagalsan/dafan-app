@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { PreloadAllModules, RouteReuseStrategy, RouterModule } from '@angular/router';
+import { RouteReuseStrategy, RouterModule } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
@@ -10,12 +10,7 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [AppComponent],
-    imports: [
-        CommonModule,
-        BrowserModule,
-        IonicModule.forRoot(),
-        RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
-    ],
+    imports: [CommonModule, BrowserModule, IonicModule.forRoot(), RouterModule.forRoot(routes)],
     providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
     bootstrap: [AppComponent],
 })

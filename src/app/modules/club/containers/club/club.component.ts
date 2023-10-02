@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { clubFeedsResponse } from '../../mocks/club-feeds.response';
 
 @Component({
     selector: 'df-club',
@@ -9,6 +10,7 @@ import { NavController } from '@ionic/angular';
 export class ClubComponent {
     ticketsPage: string = 'https://bancada.rcdeportivo.es/';
     shopPage: string = 'https://deportienda.es/es/';
+    clubFeeds = clubFeedsResponse;
 
     constructor(private navCtrl: NavController) {}
 
