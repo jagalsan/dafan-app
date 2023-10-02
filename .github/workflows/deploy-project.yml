@@ -1,0 +1,35 @@
+name: Deploy Angular App to FTP
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16.14'
+
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli
+
+    - name: Install dependencies and build Angular app
+      run: |
+        npm install
+        npm run build
+      working-directory: .
+
+    - name: Deploy to FTP
+      run: |
+        # Instala lftp
+        sudo apt-get update
+        sudo apt-get install lftp -y
+
+        lftp -e "set ftp:ssl-allow no; open -u ${{ secrets.FTP_USER }},${{ secrets.FTP_PASSWORD }} enlapieldeunjunior.com; mirror -R -e -x node_modules ./www /; bye"
+
