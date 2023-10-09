@@ -1,15 +1,21 @@
 <ion-content class="collectibles-gallery main-page" [scrollY]="true">
     <ion-grid class="main-page__grid gallery">
         <div class="collectibles-gallery__filters">
-            <span class="filter">
-                <ion-icon name="options-outline"></ion-icon>
-            </span>
+            <div class="filter-section">
+                <span class="filter">
+                    <ion-icon (click)="openFiltersModal()" name="options-outline"></ion-icon>
+                </span>
+                <span class="filter">
+                    <ion-icon (click)="shuffleCollectibles()" name="shuffle-outline"></ion-icon>
+                </span>
+                <span *ngIf="isFiltered" (click)="clearFilter()" class="filter--clear"> Clear filter </span>
+            </div>
             <span class="filter">
                 <ion-icon (click)="changeColsNumber()" name="grid-outline"></ion-icon>
             </span>
         </div>
         <df-collectibles-gallery
-            *ngIf="collectibles"
+            *ngIf="collectibles.length"
             (collectibleClicked)="navigateCollectible($event)"
             [cols]="colsNumber"
             [collectibles]="collectibles"

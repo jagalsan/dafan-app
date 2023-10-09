@@ -4,6 +4,8 @@ import { Challenge } from '../../models/challenge.interface';
 import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/modules/auth/models/user.interface';
 import { ChallengesService } from '../../challenges.service';
+import { LeaderBoardUser } from '../../models/leader-board.interface';
+import { leaderBoardResponse } from '../../mocks/leader-board.response';
 
 @Component({
     selector: 'df-challenge',
@@ -14,6 +16,8 @@ export class ChallengeComponent implements OnInit {
     challenge: Challenge;
     userData: User;
     challengeType: 'bet' | 'quiz' | 'scorersPredictions';
+    leaderBoard: { id: number; leaderBoardUsers: LeaderBoardUser[] };
+    leaderBoardResponse = leaderBoardResponse;
 
     constructor(
         private authService: AuthService,
@@ -24,6 +28,10 @@ export class ChallengeComponent implements OnInit {
     ngOnInit(): void {
         this.challenge = this.route.snapshot.data['challenge'];
         this.challengeType = this.challenge.subType.name;
+        this.leaderBoard = {
+            id: leaderBoardResponse.id,
+            leaderBoardUsers: leaderBoardResponse.leaderBoardUsers.slice(0, 4),
+        };
 
         this.getUserData();
     }

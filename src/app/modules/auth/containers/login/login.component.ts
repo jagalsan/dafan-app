@@ -2,13 +2,27 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { AuthService } from '../../services/auth.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'df-login',
     templateUrl: 'login.component.html',
-    styleUrls: ['./login.component.scss', '../../components/auth/auth.component.scss'],
+    styleUrls: ['../../components/auth/auth.component.scss'],
+    styles: [
+        `
+            .sub-description {
+                color: var(--color-white-text);
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 32px;
+                margin-top: -16px;
+            }
+        `,
+    ],
 })
 export class LoginComponent implements OnInit {
+    clubPrefix = environment.clubPrefix;
     loginForm!: FormGroup<{ email: FormControl<string | null>; password: FormControl<string | null> }>;
 
     constructor(

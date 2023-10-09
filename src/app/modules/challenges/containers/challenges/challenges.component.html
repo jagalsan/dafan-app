@@ -1,25 +1,32 @@
 <ion-content class="challenges main-page" [scrollY]="true">
     <ion-grid class="main-page__grid">
         <section class="challenges__section">
-            <h2 class="challenges__title">Challenges</h2>
+            <h2 class="challenges__title">Fan Points Challenges</h2>
             <div class="challenges__tabs tabs">
                 <span
                     class="tabs__tab"
                     [ngClass]="{ 'tabs__tab--active': challengesTabSelected === 'digital' }"
-                    (click)="challengesTabSelected = 'digital'"
+                    (click)="setTab('digital')"
                 >
                     Digital
                 </span>
                 <span
                     class="tabs__tab"
                     [ngClass]="{ 'tabs__tab--active': challengesTabSelected === 'onField' }"
-                    (click)="challengesTabSelected = 'onField'"
+                    (click)="setTab('onField')"
                 >
                     On field
                 </span>
+                <span
+                    class="tabs__tab"
+                    [ngClass]="{ 'tabs__tab--active': challengesTabSelected === 'leaderBoard' }"
+                    (click)="setTab('leaderBoard')"
+                >
+                    Leader board
+                </span>
             </div>
             <div class="challenges__type">
-                <ng-container *ngIf="challengesTabSelected === 'digital'; else onFieldChallengesSection">
+                <ng-container *ngIf="challengesTabSelected === 'digital'">
                     <div class="challenge__card challenge__card--shadow quiz__challenge">
                         <img class="quiz__preview" src="/assets/images/examples/club-player.png" />
                         <div class="quiz__content">
@@ -30,7 +37,7 @@
                         </div>
                     </div>
                     <div class="match">
-                        <h3 class="match__title pre-title">The bet of the Week</h3>
+                        <h3 class="match__title pre-title">Match result prediction</h3>
                         <div class="challenge__card challenge__card--shadow match__challenge">
                             <div class="match__clubs">
                                 <img src="/assets/images/examples/club-logo.png" />
@@ -45,7 +52,7 @@
                         </div>
                     </div>
                     <div class="scorers">
-                        <h3 class="scorers__title pre-title">Weekly scorers predictions</h3>
+                        <h3 class="scorers__title pre-title">MVP Prediction</h3>
                         <div class="challenge__card challenge__card--shadow scorers__challenge">
                             <div class="scorers__players">
                                 <div class="player">
@@ -84,15 +91,21 @@
                                     <span class="name">{{ match.awayTeam.name }}</span>
                                 </div>
                             </div>
+                            <ion-button class="df-button df-button--primary" (click)="navigateToFantasyLeague()">
+                                Play
+                            </ion-button>
                         </div>
                     </div>
                 </ng-container>
-                <ng-template #onFieldChallengesSection>
+                <ng-container *ngIf="challengesTabSelected === 'onField'">
                     <df-physical-challenges
                         (scanEmitter)="scanPhysicalChallenges($event)"
                         [challenges]="onFieldChallenges"
                     ></df-physical-challenges>
-                </ng-template>
+                </ng-container>
+                <ng-container *ngIf="challengesTabSelected === 'leaderBoard'">
+                    <df-leader-board [leaderBoard]="leaderBoard" type="normal"></df-leader-board>
+                </ng-container>
             </div>
         </section>
     </ion-grid>

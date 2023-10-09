@@ -15,7 +15,7 @@
         --padding-start: 0px;
 
         &--blocked::before {
-            content: 'Blocked by low level';
+            content: 'Blocked by low level collectible';
             width: 100%;
             height: 100%;
             background: rgba(18, 18, 18, 0.7);
@@ -28,13 +28,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
+            white-space: wrap;
+            text-align: center;
         }
 
         &__image {
-            width: 75px;
-            height: 65px;
+            width: 80px;
+            height: 68px;
             border-radius: 10px;
         }
 

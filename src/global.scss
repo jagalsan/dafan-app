@@ -20,6 +20,13 @@
 }
 
 .df-modal {
+    &--opacity {
+        --background: #0000009d;
+
+        ion-content {
+            --background: #0000009d;
+        }
+    }
     &__container {
         padding: 0 35px;
         padding-bottom: 40px;
@@ -46,6 +53,26 @@
         .label-text-wrapper {
             transform: translateY(50%) scale(0.75) !important;
             max-width: calc(100% / 0.75) !important;
+        }
+    }
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 16px;
+
+    .tabs__tab {
+        color: var(--color-opacity-white-text);
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 3px solid transparent;
+        padding-bottom: 8px;
+
+        &--active {
+            color: var(--color-white-text);
+            border-color: var(--color-purple-2);
         }
     }
 }

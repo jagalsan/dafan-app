@@ -17,7 +17,7 @@ ion-progress-bar {
         margin: 0;
         font-size: 64px;
         color: var(--color-white);
-        margin-bottom: 56px;
+        margin-bottom: 42px;
     }
 
     &__level {
@@ -55,8 +55,8 @@ ion-progress-bar {
 
     .collection-name {
         margin-top: 56px;
-        font-weight: 200;
-        font-size: 20px;
+        font-weight: 600;
+        font-size: 24px;
         margin-bottom: 0;
     }
 
@@ -67,13 +67,20 @@ ion-progress-bar {
         gap: 16px;
         justify-content: space-between;
 
+        &__title {
+            font-size: 24px;
+            color: var(--color-white);
+        }
+
         .property {
-            padding-top: 8px;
-            width: 47%;
+            flex: 1;
+            padding: 8px;
+            background: var(--color-dark);
+            border-radius: 16px;
 
             &__title {
                 line-height: 1.25rem;
-                font-size: 24px;
+                font-size: 18px;
                 color: rgb(199, 199, 199);
                 margin: 0;
                 text-transform: uppercase;
@@ -84,7 +91,7 @@ ion-progress-bar {
                 font-weight: bold;
                 margin: 0;
                 color: var(--color-white);
-                font-size: 24px;
+                font-size: 20px;
                 margin-top: 8px;
             }
         }

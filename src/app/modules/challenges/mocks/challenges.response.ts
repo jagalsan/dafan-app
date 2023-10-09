@@ -16,19 +16,6 @@ export const onFieldChallengesResponse: Challenge[] = [
     },
     {
         id: 2,
-        label: 'Attend match at the stadium',
-        name: 'AttendMatch',
-        rewardPoints: 100,
-        typeId: 2,
-        image: 'assets/images/examples/club-match-challenge.jpeg',
-        type: {
-            id: 2,
-            name: 'onField',
-        },
-        validatorCode: 'xxxxxxxcccc3',
-    },
-    {
-        id: 3,
         label: 'Buy merchandising at our official Store',
         name: 'buyMerchandising',
         rewardPoints: 60,
@@ -41,17 +28,30 @@ export const onFieldChallengesResponse: Challenge[] = [
         validatorCode: 'xxxxxxxcccc4',
     },
     {
-        id: 4,
+        id: 3,
         label: 'Visit our museum',
         name: 'VisitMuseum',
         rewardPoints: 70,
         typeId: 2,
-        image: 'assets/images/examples/museum-club.png',
+        image: 'assets/images/examples/museum-club.jpg',
         type: {
             id: 2,
             name: 'onField',
         },
         validatorCode: 'xxxxxxxcccc5',
+    },
+    {
+        id: 4,
+        label: 'Attend match at the stadium',
+        name: 'AttendMatch',
+        rewardPoints: 100,
+        typeId: 2,
+        image: 'assets/images/examples/club-match-challenge.jpeg',
+        type: {
+            id: 2,
+            name: 'onField',
+        },
+        validatorCode: 'xxxxxxxcccc3',
     },
 ];
 

@@ -4,6 +4,7 @@ import { User } from 'src/app/modules/auth/models/user.interface';
 import { NavController } from '@ionic/angular';
 import { Collectible } from 'src/app/modules/collectibles/models/collectible.interface';
 import { fanPointsListedResponse } from '../../mocks/fan-tonkens-listed.response';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'df-market',
@@ -15,6 +16,7 @@ export class MarketComponent implements OnInit {
     userData!: User;
     galleryTabSelected: 'fanPoints' | 'collectibles' = 'collectibles';
     fanPointsListed = fanPointsListedResponse;
+    clubPrefix = environment.clubPrefix;
 
     constructor(
         private collectiblesService: CollectiblesService,

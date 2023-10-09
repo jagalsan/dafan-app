@@ -1,16 +1,23 @@
 <section class="quiz-challenge" [ngClass]="{ 'quiz-challenge--completed': quizCompleted && !quizInProgress }">
     <ng-container *ngIf="!quizInProgress; else quiz">
-        <ng-container *ngIf="!quizCompleted; else leaderBoard">
-            <h3 class="quiz-challenge__title">{{ clubName }} Quiz</h3>
+        <ng-container *ngIf="!quizCompleted; else leaderBoardTemplate">
+            <h3 class="quiz-challenge__title">{{ clubName }} Quizz</h3>
+            <div class="quiz-challenge__description">
+                Compete and earn {{ fanPointsWin }} Fan Points:
+                <br />
+                - 5 Fan Points for participating
+                <br />
+                - 50 Fan Points for the winner"
+            </div>
             <ion-button class="df-button df-button--primary" (click)="startQuiz()">
                 <ion-icon slot="start" name="game-controller-outline"></ion-icon>
-                Start quiz
+                Start quizz
             </ion-button>
         </ng-container>
-        <ng-template #leaderBoard>
-            <df-leader-board></df-leader-board>
+        <ng-template #leaderBoardTemplate>
+            <df-leader-board [leaderBoard]="leaderBoard" type="challenge"></df-leader-board>
             <div class="quiz-completed">
-                <h3 class="quiz-challenge__title">Quiz completed</h3>
+                <h3 class="quiz-challenge__title">Quizz completed</h3>
                 <p class="quiz-completed__description">
                     You have answered correctly <strong>{{ quizQuestionAnswersCorrect }}</strong> out of
                     <strong>{{ quizQuestions.length }}</strong> questions.
@@ -26,7 +33,7 @@
                     <p class="quiz-restart__description">Restart the quiz to improve your score</p>
                     <ion-button class="df-button df-button--primary" (click)="startQuiz()">
                         <ion-icon slot="start" name="game-controller-outline"></ion-icon>
-                        Restart quiz
+                        Restart quizz
                     </ion-button>
                 </div>
             </div>

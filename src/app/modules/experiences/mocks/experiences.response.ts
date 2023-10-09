@@ -1,69 +1,4 @@
-import { ClubExperience, Experience } from '../models/experience.interface';
-
-export const experiencesResponse: Experience[] = [
-    {
-        id: 1,
-        name: 'merch',
-        label: 'Merch',
-        percentageDiscount: 15,
-        previewImage: '',
-        type: {
-            label: 'Discounts',
-            name: 'discount',
-            id: 1,
-        },
-        description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
-        pointsCost: 42,
-        levelRequired: 1,
-    },
-    {
-        id: 2,
-        name: 'museumAccess',
-        label: 'Museum access',
-        percentageDiscount: 30,
-        previewImage: '',
-        type: {
-            label: 'Discounts',
-            name: 'discount',
-            id: 1,
-        },
-        description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
-        pointsCost: 250,
-        levelRequired: 1,
-    },
-    {
-        id: 3,
-        name: 'meetPlayer',
-        label: 'Meet player',
-        previewImage: '',
-        type: {
-            label: 'Full experience',
-            name: 'fullExperience',
-            id: 2,
-        },
-        description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
-        pointsCost: 2000,
-        levelRequired: 3,
-    },
-    {
-        id: 4,
-        name: 'stadiumTour',
-        label: 'Stadium tour',
-        previewImage: '',
-        type: {
-            label: 'Full experience',
-            name: 'fullExperience',
-            id: 2,
-        },
-        description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
-        pointsCost: 1500,
-        levelRequired: 1,
-    },
-];
+import { ClubExperience } from '../models/experience.interface';
 
 export const ClubExperiencesResponse: ClubExperience[] = [
     {
@@ -78,7 +13,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 name: 'merch',
                 label: 'Merch',
                 percentageDiscount: 20,
-                previewImage: '/assets/images/examples/club-shirt.png',
+                previewImage: '/assets/images/examples/club-shirt.jpg',
                 type: {
                     label: 'Discounts',
                     name: 'discount',
@@ -94,7 +29,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 name: 'museumAccess',
                 label: 'Museum access',
                 percentageDiscount: 20,
-                previewImage: '/assets/images/examples/museum-club.png',
+                previewImage: '/assets/images/examples/museum-club.jpg',
                 type: {
                     label: 'Discounts',
                     name: 'discount',
@@ -115,25 +50,40 @@ export const ClubExperiencesResponse: ClubExperience[] = [
         },
         experiences: [
             {
-                id: 5,
-                name: 'museumAccessFree',
-                label: 'Free Stadium tour',
-                previewImage: '/assets/images/examples/museum-club.png',
+                id: 4,
+                name: 'stadiumTour',
+                label: 'Stadium tour',
+                previewImage: '/assets/images/examples/camp-club.png',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',
                     id: 2,
                 },
                 description:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
-                pointsCost: 400,
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
+                pointsCost: 1500,
                 levelRequired: 1,
+            },
+            {
+                id: 7,
+                name: 'liveMatch',
+                label: 'VIP live match section',
+                previewImage: '/assets/images/examples/club-vip-match.jpg',
+                type: {
+                    label: 'Full experience',
+                    name: 'fullExperience',
+                    id: 2,
+                },
+                description:
+                    ' Attend 1 Deportivo La Liga match in our VIP stand, having access to free food, beverages and located in preferencia stand.<br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellend',
+                pointsCost: 1500,
+                levelRequired: 2,
             },
             {
                 id: 6,
                 name: 'SignedShirt',
                 label: 'Signed Shirt',
-                previewImage: '/assets/images/examples/club-shirt.png',
+                previewImage: '/assets/images/examples/club-shirt.jpg',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',
@@ -160,40 +110,10 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 levelRequired: 2,
             },
             {
-                id: 4,
-                name: 'stadiumTour',
-                label: 'Stadium tour',
-                previewImage: '/assets/images/examples/camp-club.png',
-                type: {
-                    label: 'Full experience',
-                    name: 'fullExperience',
-                    id: 2,
-                },
-                description:
-                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
-                pointsCost: 1500,
-                levelRequired: 1,
-            },
-            {
-                id: 7,
-                name: 'liveMatch',
-                label: 'VIP live match section',
-                previewImage: '/assets/images/examples/club-match.jpeg',
-                type: {
-                    label: 'Full experience',
-                    name: 'fullExperience',
-                    id: 2,
-                },
-                description:
-                    ' Attend 1 Deportivo La Liga match in our VIP stand, having access to free food, beverages and located in preferencia stand.<br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellend',
-                pointsCost: 1500,
-                levelRequired: 2,
-            },
-            {
                 id: 8,
                 name: 'meetGreet',
                 label: 'Meet & Greet legend',
-                previewImage: '/assets/images/examples/meet-club-players.jpeg',
+                previewImage: '/assets/images/examples/meet-club-legend.jpg',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',

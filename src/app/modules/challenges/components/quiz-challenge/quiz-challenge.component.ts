@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Animation, AnimationController, ToastController } from '@ionic/angular';
 import { environment } from 'src/environments/environment';
+import { leaderBoardResponse } from '../../mocks/leader-board.response';
+import { LeaderBoardUser } from '../../models/leader-board.interface';
 
 @Component({
     selector: 'df-quiz-challenge',
@@ -16,6 +18,9 @@ export class QuizChallengeComponent implements OnInit {
     indexDisplayedQuestion = 1;
     animation: Animation;
     clubName = environment.clubName;
+    leaderBoard: { id: number; leaderBoardUsers: LeaderBoardUser[] };
+    leaderBoardResponse = leaderBoardResponse;
+    fanPointsWin: number = 55;
 
     constructor(
         private toastController: ToastController,
@@ -24,6 +29,11 @@ export class QuizChallengeComponent implements OnInit {
 
     ngOnInit(): void {
         this.getQuestions();
+
+        this.leaderBoard = {
+            id: leaderBoardResponse.id,
+            leaderBoardUsers: leaderBoardResponse.leaderBoardUsers.slice(0, 4),
+        };
     }
 
     sendQuiz(): void {

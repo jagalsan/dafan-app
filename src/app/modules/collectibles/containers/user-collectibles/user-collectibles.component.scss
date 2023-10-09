@@ -65,13 +65,21 @@ $cardHeight: 125px;
             font-size: 24px;
             padding: 0;
         }
-    }
 
-    &__show-all {
-        text-decoration: none;
-        color: var(--color-white-text);
-        display: flex;
-        align-items: center;
-        gap: 12px;
+        .gallery__header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .gallery__show-all {
+            text-decoration: none;
+            color: var(--color-light-grey);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+        }
     }
 }

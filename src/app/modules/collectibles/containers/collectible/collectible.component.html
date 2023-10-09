@@ -22,10 +22,11 @@
                     </ion-col>
                 </ion-row>
             </ng-container>
-            <p class="collection-name">Club collectible</p>
+            <p class="collection-name">{{ clubPrefix }} Lad</p>
             <h2 class="collectible__id">
                 {{ collectible.id }}
             </h2>
+            <h3 class="properties__title">Attributes</h3>
             <div class="properties">
                 <ng-container *ngFor="let property of collectible.properties">
                     <div class="property">

@@ -1,4 +1,5 @@
 <df-auth authView="login" [authPageTitle]="'Sign in'">
+    <p class="sub-description">Connect your {{ clubPrefix }} lad</p>
     <form class="df-form" [formGroup]="loginForm" (ngSubmit)="submitLoginForm()">
         <ion-input
             formControlName="email"

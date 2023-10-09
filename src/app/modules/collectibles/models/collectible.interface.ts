@@ -21,3 +21,10 @@ export interface CollectibleProperty {
     label: string;
     value: string;
 }
+
+export interface CollectibleFilter {
+    id: number;
+    name: string;
+    label: string;
+    properties: CollectibleProperty[];
+}

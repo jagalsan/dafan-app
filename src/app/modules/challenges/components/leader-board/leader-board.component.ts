@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { leaderBoardResponse } from '../../mocks/leader-board.response';
+import { Component, Input } from '@angular/core';
+import { LeaderBoardUser } from '../../models/leader-board.interface';
 
 @Component({
     selector: 'df-leader-board',
@@ -7,7 +7,8 @@ import { leaderBoardResponse } from '../../mocks/leader-board.response';
     styleUrls: ['./leader-board.component.scss'],
 })
 export class LeaderBoardComponent {
-    leaderBoard = leaderBoardResponse;
+    @Input() leaderBoard: { id: number; leaderBoardUsers: LeaderBoardUser[] };
+    @Input() type: 'challenge' | 'normal' = 'challenge';
 
     constructor() {}
 }

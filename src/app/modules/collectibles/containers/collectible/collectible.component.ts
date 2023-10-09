@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { User } from 'src/app/modules/auth/models/user.interface';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
 import { Collectible } from '../../models/collectible.interface';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'df-collectible',
@@ -10,6 +11,7 @@ import { Collectible } from '../../models/collectible.interface';
     styleUrls: ['./collectible.component.scss'],
 })
 export class CollectibleComponent implements OnInit {
+    clubPrefix = environment.clubPrefix;
     userData!: User;
     isUserCollectible!: boolean;
     collectible!: Collectible;

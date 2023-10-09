@@ -50,6 +50,20 @@ $cardHeight: 200px;
         color: var(--color-white);
     }
 
+    &__name {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        margin-left: 8px;
+        color: var(--color-white);
+    }
+
+    &__last-price {
+        margin-left: 8px;
+        margin-top: 4px;
+        font-size: 12px;
+    }
+
     .owner {
         display: flex;
         margin-top: 14px;

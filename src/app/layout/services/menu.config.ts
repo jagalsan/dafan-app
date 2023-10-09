@@ -7,14 +7,14 @@ export const menuConfig: MenuOption[] = [
         label: 'Collect',
     },
     {
-        customIcon: 'df-experiences',
-        path: 'experiences',
-        label: 'Exp',
-    },
-    {
         icon: 'checkmark-circle-outline',
         path: 'challenges',
         label: 'Challenges',
+    },
+    {
+        customIcon: 'df-experiences',
+        path: 'experiences',
+        label: 'Exp',
     },
     {
         icon: 'search-outline',

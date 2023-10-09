@@ -4,6 +4,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 20px;
 
         .filter {
             border-radius: 5px;
@@ -15,7 +16,19 @@
             font-size: 20px;
             height: 35px;
             width: 45px;
-            margin-bottom: 20px;
+        }
+
+        .filter-section {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            align-items: center;
+            justify-content: flex-start;
+
+            .filter--clear {
+                font-size: 14px;
+                color: var(--color-light-grey);
+            }
         }
     }
 }
