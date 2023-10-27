@@ -1,23 +1,13 @@
 export const clubHistoryTrophiesResponse: { count: number; name: string; label: string }[] = [
     {
         count: 1,
-        name: 'spanishLeague',
-        label: 'Spanish league',
+        name: 'ligaMX',
+        label: 'Liga MX',
     },
     {
         count: 1,
-        name: 'spanishCup',
-        label: 'Spanish cup',
-    },
-    {
-        count: 2,
-        name: 'kingCup',
-        label: 'Copa del rey',
-    },
-    {
-        count: 3,
-        name: 'spanishSuperCup',
-        label: 'Spanish super cup',
+        name: 'copaMX',
+        label: 'Copa MX',
     },
 ];
 
@@ -29,27 +19,19 @@ export const clubHistoryDecadesResponse: {
 }[] = [
     {
         id: 1,
-        year: '1907',
-        preview: 'club-decade-1.jpeg',
+        year: '2007',
+        preview: 'club-decade-1.jpg',
         description:
             'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam',
     },
     {
         id: 2,
-        year: '1980',
-        preview: 'club-decade-2.jpeg',
-        description:
-            'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam',
-    },
-    {
-        id: 3,
-        year: '2002',
-        preview: 'club-decade-3.jpeg',
+        year: '2011',
+        preview: 'club-decade-2.jpg',
         description:
             'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam',
     },
 ];
 
-export const clubHistoryDescriptionResponse: string = `History Founded in 1906, Real Club Deportivo is one of the teams with the most most historic teams in
-Spanish football and one of the nine clubs that have nine clubs that have been able to win LaLiga
-(1999-2000), of which it has also been runner-up five times.`;
+export const clubHistoryDescriptionResponse: string = `
+The Club Tijuana Xoloitzcuintles de Caliente, commonly known as Xolos, is a Mexican football club with a relatively short but impactful history. Founded in 2007, the club quickly ascended through the Mexican football pyramid, going from the Third Division to the Liga de Ascenso (now Liga de Expansión MX). In 2011, they achieved a significant milestone by earning promotion to the Liga MX, Mexico's top-tier league.`;

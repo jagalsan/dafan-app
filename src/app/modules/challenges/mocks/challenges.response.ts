@@ -20,7 +20,7 @@ export const onFieldChallengesResponse: Challenge[] = [
         name: 'buyMerchandising',
         rewardPoints: 60,
         typeId: 2,
-        image: 'assets/images/examples/club-shop.jpeg',
+        image: 'assets/images/examples/club-shop.webp',
         type: {
             id: 2,
             name: 'onField',
@@ -33,7 +33,7 @@ export const onFieldChallengesResponse: Challenge[] = [
         name: 'VisitMuseum',
         rewardPoints: 70,
         typeId: 2,
-        image: 'assets/images/examples/museum-club.jpg',
+        image: 'assets/images/examples/museum-club.jpeg',
         type: {
             id: 2,
             name: 'onField',
@@ -46,7 +46,7 @@ export const onFieldChallengesResponse: Challenge[] = [
         name: 'AttendMatch',
         rewardPoints: 100,
         typeId: 2,
-        image: 'assets/images/examples/club-match-challenge.jpeg',
+        image: 'assets/images/examples/club-match-challenge.jpg',
         type: {
             id: 2,
             name: 'onField',
@@ -92,12 +92,12 @@ export const digitalChallengesList: Challenge[] = [
                 {
                     id: 1,
                     image: 'club-logo.png',
-                    name: 'Deportivo de la coruña',
+                    name: 'Xolos',
                 },
                 {
                     id: 2,
-                    image: 'barca-logo.png',
-                    name: 'Barcelona',
+                    image: 'juarez-logo.png',
+                    name: 'Juarez',
                 },
             ],
         },
@@ -120,19 +120,19 @@ export const digitalChallengesList: Challenge[] = [
                 {
                     id: 1,
                     name: '',
-                    image: 'club-player-1.png',
+                    image: 'club-player-1.jpeg',
                     selected: false,
                 },
                 {
                     id: 2,
                     name: '',
-                    image: 'club-player-2.png',
+                    image: 'club-player-2.jpeg',
                     selected: false,
                 },
                 {
                     id: 3,
                     name: '',
-                    image: 'club-player-3.png',
+                    image: 'club-player-3.jpeg',
                     selected: false,
                 },
             ],

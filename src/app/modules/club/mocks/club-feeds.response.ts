@@ -7,23 +7,18 @@ export const clubFeedsResponse: {
 }[] = [
     {
         id: 1,
-        extract: 'Lucas Pérez y Davo le dan el triunfo con un marcador que se quedó corto',
-        date: '13/08/2023',
-        image: 'feed-03.png',
-        title: '2-0 | El Deportivo coge soltura ante el Compostela',
+        extract:
+            'El partido de Ida de los Cuartos de Final del Clausura 2023 disputado en el Estadio Tijuana. El encuentro comenzó con ambos equipos intentando abrir el marcador',
+        date: '28/10/2023',
+        image: 'feed-02.jpg',
+        title: 'Caen Rayadas 2-0 ante Xolos femenil en la ida de cuartos de final',
     },
     {
         id: 2,
-        extract: 'El canario, en caso de ascenso en los dos próximos cursos',
+        extract:
+            'Tijuana (México), 8 sep (EFE).- El centrocampista Efraín Álvarez, de 21 años, dejó las filas del LA Galaxy',
         date: '12/08/2023',
-        image: 'feed-01.png',
-        title: 'El Deportivo amplía hasta 2026 el contrato de Yeremay',
-    },
-    {
-        id: 3,
-        extract: 'El atacante llegó a Riazor en el verano de 2022 procedente del filial',
-        date: '10/08/2023',
-        image: 'feed-02.png',
-        title: 'Víctor Narro rescinde su contrato con el Deportivo',
+        image: 'feed-03.jpg',
+        title: 'Efraín Álvarez deja al Galaxy para fichar por Tijuana',
     },
 ];

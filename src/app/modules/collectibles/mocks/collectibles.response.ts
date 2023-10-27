@@ -3,7 +3,7 @@ import { Collectible } from '../models/collectible.interface';
 export const collectiblesResponse: Collectible[] = [
     {
         id: 1,
-        image: 'assets/images/examples/collectibles/collectible-01.png',
+        image: 'assets/images/examples/collectibles/collectible-01.jpg',
         hashId: 'xxxxxx1',
         name: 'Fake collectible',
         properties: [
@@ -35,7 +35,7 @@ export const collectiblesResponse: Collectible[] = [
     },
     {
         id: 2,
-        image: 'assets/images/examples/collectibles/collectible-02.png',
+        image: 'assets/images/examples/collectibles/collectible-02.jpg',
         hashId: 'xxxxxx2',
         name: 'Fake collectible',
         properties: [
@@ -61,7 +61,7 @@ export const collectiblesResponse: Collectible[] = [
     },
     {
         id: 3,
-        image: 'assets/images/examples/collectibles/collectible-03.png',
+        image: 'assets/images/examples/collectibles/collectible-03.jpg',
         hashId: 'xxxxxx3',
         name: 'Fake collectible',
         properties: [
@@ -87,7 +87,7 @@ export const collectiblesResponse: Collectible[] = [
     },
     {
         id: 4,
-        image: 'assets/images/examples/collectibles/collectible-04.png',
+        image: 'assets/images/examples/collectibles/collectible-04.jpg',
         hashId: 'xxxxxx4',
         name: 'Fake collectible',
         properties: [
@@ -113,7 +113,7 @@ export const collectiblesResponse: Collectible[] = [
     },
     {
         id: 5,
-        image: 'assets/images/examples/collectibles/collectible-05.png',
+        image: 'assets/images/examples/collectibles/collectible-05.jpg',
         hashId: 'xxxxxx5',
         name: 'Fake collectible',
         properties: [
@@ -139,7 +139,7 @@ export const collectiblesResponse: Collectible[] = [
     },
     {
         id: 6,
-        image: 'assets/images/examples/collectibles/collectible-06.png',
+        image: 'assets/images/examples/collectibles/collectible-06.jpg',
         hashId: 'xxxxxx6',
         name: 'Fake collectible',
         properties: [
@@ -165,7 +165,7 @@ export const collectiblesResponse: Collectible[] = [
     },
     {
         id: 7,
-        image: 'assets/images/examples/collectibles/collectible-07.png',
+        image: 'assets/images/examples/collectibles/collectible-07.jpg',
         hashId: 'xxxxxx7',
         name: 'Fake collectible',
         properties: [
@@ -191,7 +191,7 @@ export const collectiblesResponse: Collectible[] = [
     },
     {
         id: 8,
-        image: 'assets/images/examples/collectibles/collectible-08.png',
+        image: 'assets/images/examples/collectibles/collectible-08.jpg',
         hashId: 'xxxxxx8',
         name: 'Fake collectible',
         properties: [
@@ -217,7 +217,7 @@ export const collectiblesResponse: Collectible[] = [
     },
     {
         id: 9,
-        image: 'assets/images/examples/collectibles/collectible-09.png',
+        image: 'assets/images/examples/collectibles/collectible-09.jpg',
         hashId: 'xxxxxx9',
         name: 'Fake collectible',
         price: 35,
@@ -251,7 +251,7 @@ export const collectiblesResponse: Collectible[] = [
 
 export const userCollectible: Collectible = {
     id: 8,
-    image: 'assets/images/examples/collectibles/collectible-08.png',
+    image: 'assets/images/examples/collectibles/collectible-08.jpg',
     hashId: 'xxxxxx8',
     name: 'Fake collectible',
     percentage: 0.7,

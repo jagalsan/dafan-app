@@ -3,7 +3,7 @@ import { Collectible } from '../../collectibles/models/collectible.interface';
 export const collectiblesGalleryResponse: Collectible[] = [
     {
         id: 1,
-        image: 'assets/images/examples/collectibles/collectible-01.png',
+        image: 'assets/images/examples/collectibles/collectible-01.jpg',
         hashId: 'xxxxxx1',
         name: 'Fake collectible',
         price: 35,
@@ -47,7 +47,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 2,
-        image: 'assets/images/examples/collectibles/collectible-02.png',
+        image: 'assets/images/examples/collectibles/collectible-02.jpg',
         hashId: 'xxxxxx2',
         name: 'Fake collectible',
         price: 100,
@@ -91,7 +91,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 3,
-        image: 'assets/images/examples/collectibles/collectible-03.png',
+        image: 'assets/images/examples/collectibles/collectible-03.jpg',
         hashId: 'xxxxxx3',
         name: 'Fake collectible',
         price: 200,
@@ -135,7 +135,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 4,
-        image: 'assets/images/examples/collectibles/collectible-04.png',
+        image: 'assets/images/examples/collectibles/collectible-04.jpg',
         hashId: 'xxxxxx4',
         name: 'Fake collectible',
         price: 4000,
@@ -179,7 +179,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 5,
-        image: 'assets/images/examples/collectibles/collectible-05.png',
+        image: 'assets/images/examples/collectibles/collectible-05.jpg',
         hashId: 'xxxxxx5',
         name: 'Fake collectible',
         price: 2500,
@@ -223,7 +223,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 6,
-        image: 'assets/images/examples/collectibles/collectible-06.png',
+        image: 'assets/images/examples/collectibles/collectible-06.jpg',
         hashId: 'xxxxxx6',
         name: 'Fake collectible',
         price: 2900,
@@ -267,7 +267,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 7,
-        image: 'assets/images/examples/collectibles/collectible-07.png',
+        image: 'assets/images/examples/collectibles/collectible-07.jpg',
         hashId: 'xxxxxx7',
         name: 'Fake collectible',
         price: 11900,
@@ -311,7 +311,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 8,
-        image: 'assets/images/examples/collectibles/collectible-08.png',
+        image: 'assets/images/examples/collectibles/collectible-08.jpg',
         hashId: 'xxxxxx8',
         name: 'Fake collectible',
         price: 100900,
@@ -355,7 +355,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 9,
-        image: 'assets/images/examples/collectibles/collectible-09.png',
+        image: 'assets/images/examples/collectibles/collectible-09.jpg',
         hashId: 'xxxxxx9',
         name: 'Fake collectible',
         price: 35,
@@ -399,7 +399,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 10,
-        image: 'assets/images/examples/collectibles/collectible-10.png',
+        image: 'assets/images/examples/collectibles/collectible-10.jpg',
         hashId: 'xxxxxx10',
         name: 'Fake collectible',
         price: 100,
@@ -443,7 +443,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 11,
-        image: 'assets/images/examples/collectibles/collectible-11.png',
+        image: 'assets/images/examples/collectibles/collectible-11.jpg',
         hashId: 'xxxxxx11',
         name: 'Fake collectible',
         price: 200,
@@ -487,7 +487,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 12,
-        image: 'assets/images/examples/collectibles/collectible-12.png',
+        image: 'assets/images/examples/collectibles/collectible-12.jpg',
         hashId: 'xxxxxx12',
         name: 'Fake collectible',
         price: 4000,
@@ -531,7 +531,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 13,
-        image: 'assets/images/examples/collectibles/collectible-13.png',
+        image: 'assets/images/examples/collectibles/collectible-13.jpg',
         hashId: 'xxxxxx13',
         name: 'Fake collectible',
         price: 2500,
@@ -575,7 +575,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 14,
-        image: 'assets/images/examples/collectibles/collectible-14.png',
+        image: 'assets/images/examples/collectibles/collectible-14.jpg',
         hashId: 'xxxxxx14',
         name: 'Fake collectible',
         price: 2900,
@@ -619,7 +619,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 15,
-        image: 'assets/images/examples/collectibles/collectible-15.png',
+        image: 'assets/images/examples/collectibles/collectible-15.jpg',
         hashId: 'xxxxxx15',
         name: 'Fake collectible',
         price: 11900,
@@ -663,7 +663,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 16,
-        image: 'assets/images/examples/collectibles/collectible-16.png',
+        image: 'assets/images/examples/collectibles/collectible-16.jpg',
         hashId: 'xxxxxx16',
         name: 'Fake collectible',
         price: 100900,
@@ -707,7 +707,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 17,
-        image: 'assets/images/examples/collectibles/collectible-17.png',
+        image: 'assets/images/examples/collectibles/collectible-17.jpg',
         hashId: 'xxxxxx17',
         name: 'Fake collectible',
         price: 100900,
@@ -751,7 +751,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 18,
-        image: 'assets/images/examples/collectibles/collectible-18.png',
+        image: 'assets/images/examples/collectibles/collectible-18.jpg',
         hashId: 'xxxxxx18',
         name: 'Unique collectible',
         price: 7500,
@@ -795,7 +795,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 19,
-        image: 'assets/images/examples/collectibles/collectible-19.png',
+        image: 'assets/images/examples/collectibles/collectible-19.jpg',
         hashId: 'xxxxxx19',
         name: 'Fancy collectible',
         price: 12000,
@@ -839,7 +839,7 @@ export const collectiblesGalleryResponse: Collectible[] = [
     },
     {
         id: 20,
-        image: 'assets/images/examples/collectibles/collectible-20.png',
+        image: 'assets/images/examples/collectibles/collectible-20.jpg',
         hashId: 'xxxxxx20',
         name: 'Awesome collectible',
         price: 9500,

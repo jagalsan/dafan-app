@@ -29,7 +29,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 name: 'museumAccess',
                 label: 'Museum access',
                 percentageDiscount: 20,
-                previewImage: '/assets/images/examples/museum-club.jpg',
+                previewImage: '/assets/images/examples/museum-club.jpeg',
                 type: {
                     label: 'Discounts',
                     name: 'discount',
@@ -53,7 +53,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 id: 4,
                 name: 'stadiumTour',
                 label: 'Stadium tour',
-                previewImage: '/assets/images/examples/camp-club.png',
+                previewImage: '/assets/images/examples/camp-club.jpg',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',
@@ -75,7 +75,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                     id: 2,
                 },
                 description:
-                    ' Attend 1 Deportivo La Liga match in our VIP stand, having access to free food, beverages and located in preferencia stand.<br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellend',
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus',
                 pointsCost: 1500,
                 levelRequired: 2,
             },
@@ -90,7 +90,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                     id: 2,
                 },
                 description:
-                    "Acquire a signed shirt by one of Depor's legends like Bebeto, Mauro Silva or Scaloni. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br> <br> Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?",
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus? <br> <br> Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
                 pointsCost: 2000,
                 levelRequired: 2,
             },
@@ -98,7 +98,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 id: 3,
                 name: 'meetPlayer',
                 label: 'Meet player',
-                previewImage: '/assets/images/examples/club-player-wallpaper.png',
+                previewImage: '/assets/images/examples/club-player-wallpaper.jpeg',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',
@@ -113,14 +113,14 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 id: 8,
                 name: 'meetGreet',
                 label: 'Meet & Greet legend',
-                previewImage: '/assets/images/examples/meet-club-legend.jpg',
+                previewImage: '/assets/images/examples/meet-club-legend.jpeg',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',
                     id: 2,
                 },
                 description:
-                    "Have you ever dreamed about meeting a Deportivo's legend. This is your opportunity. Experience a match at Riazor Stadium and have the opportunity to meet & greet Donato <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?",
+                    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vero accusantium modi velit ducimus aspernatur debitis consequuntur exercitationem officia placeat. Dolores, consequuntur ad! Veniam sapiente aliquid quae non sint repellendus?',
                 pointsCost: 3000,
                 levelRequired: 3,
             },
@@ -128,7 +128,7 @@ export const ClubExperiencesResponse: ClubExperience[] = [
                 id: 9,
                 name: 'playInStadium',
                 label: 'Play in the stadium',
-                previewImage: '/assets/images/examples/camp-club.png',
+                previewImage: '/assets/images/examples/camp-club.jpg',
                 type: {
                     label: 'Full experience',
                     name: 'fullExperience',

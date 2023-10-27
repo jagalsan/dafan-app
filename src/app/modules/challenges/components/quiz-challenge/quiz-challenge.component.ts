@@ -139,7 +139,7 @@ export class QuizChallengeComponent implements OnInit {
                         },
                         {
                             id: 4,
-                            label: 'Deportivo La Coruña',
+                            label: 'Xolos',
                             isCorrect: false,
                         },
                     ],

@@ -28,7 +28,7 @@
             <div class="challenges__type">
                 <ng-container *ngIf="challengesTabSelected === 'digital'">
                     <div class="challenge__card challenge__card--shadow quiz__challenge">
-                        <img class="quiz__preview" src="/assets/images/examples/club-player.png" />
+                        <img class="quiz__preview" src="/assets/images/examples/club-player.jpeg" />
                         <div class="quiz__content">
                             <h3 class="title">#legendsQUIZ</h3>
                             <ion-button class="df-button df-button--primary" (click)="navigateChallenge(5)">
@@ -40,9 +40,12 @@
                         <h3 class="match__title pre-title">Match result prediction</h3>
                         <div class="challenge__card challenge__card--shadow match__challenge">
                             <div class="match__clubs">
-                                <img src="/assets/images/examples/club-logo.png" />
+                                <img style="width: 72px" src="/assets/images/examples/club-logo.png" />
                                 VS
-                                <img src="/assets/images/examples/barca-logo.png" />
+                                <img
+                                    style="width: 58px; margin-bottom: -8px"
+                                    src="/assets/images/examples/juarez-logo.png"
+                                />
                             </div>
                             <div class="match__action">
                                 <ion-button class="df-button df-button--primary" (click)="navigateChallenge(6)">
@@ -56,15 +59,15 @@
                         <div class="challenge__card challenge__card--shadow scorers__challenge">
                             <div class="scorers__players">
                                 <div class="player">
-                                    <img src="/assets/images/examples/club-player-1.png" />
+                                    <img src="/assets/images/examples/club-player-1.jpeg" />
                                     Roberto <br />Villares
                                 </div>
                                 <div class="player">
-                                    <img src="/assets/images/examples/club-player-2.png" />
+                                    <img src="/assets/images/examples/club-player-2.jpeg" />
                                     Diego <br />Villares
                                 </div>
                                 <div class="player">
-                                    <img src="/assets/images/examples/club-player-3.png" />
+                                    <img src="/assets/images/examples/club-player-3.jpeg" />
                                     Isi <br />Gomez
                                 </div>
                             </div>
