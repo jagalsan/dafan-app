@@ -8,8 +8,9 @@ import { clubFeedsResponse } from '../../mocks/club-feeds.response';
     styleUrls: ['./club.component.scss'],
 })
 export class ClubComponent {
-    ticketsPage: string = 'https://bancada.rcdeportivo.es/';
-    shopPage: string = 'https://deportienda.es/es/';
+    ticketsPage: string =
+        'https://boletomovil.com/evento/xoloitzcuintles-vs-atlas-2023-10-29?utm_campaign=sitioweb_xolos&utm_medium=sitio_xolos&utm_source=web_xolos';
+    shopPage: string = 'https://xoloshop.com/collections/hombre';
     clubFeeds = clubFeedsResponse;
 
     constructor(private navCtrl: NavController) {}

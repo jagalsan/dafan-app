@@ -30,7 +30,7 @@ export class BetChallengeComponent {
     makeBet(): void {
         const toast = this.toastController.create({
             color: 'success',
-            message: 'Successful bet',
+            message: 'Successful prediction',
             position: 'top',
             duration: 1500,
             icon: 'checkmark-circle-outline',

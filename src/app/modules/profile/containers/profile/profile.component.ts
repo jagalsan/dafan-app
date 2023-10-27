@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ToastController } from '@ionic/angular';
 import { userResponse } from 'src/app/modules/auth/mocks/user.response';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'df-profile',
@@ -19,6 +20,7 @@ export class ProfileComponent implements OnInit {
     }>;
 
     userData = userResponse;
+    environment = environment;
 
     constructor(private toastController: ToastController) {}
 
