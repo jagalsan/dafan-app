@@ -8,7 +8,7 @@ export const fantasyLeagueResponse: FantasyLeague = {
             id: 1,
             homeClub: {
                 id: 1,
-                name: 'Deport',
+                name: 'Depor',
                 image: 'club-logo.png',
             },
             homeClubScore: 1,
