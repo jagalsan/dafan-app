@@ -65,108 +65,270 @@ export class QuizChallengeComponent implements OnInit {
             ...[
                 {
                     id: 1,
-                    label: 'In which year did Bebeto make his debut for the Brazil national team?',
+                    label: 'In which country was Alfredo David Moreno born?',
                     answered: false,
                     answers: [
                         {
                             id: 1,
-                            label: '1985',
+                            label: 'Argentina',
                             isCorrect: true,
                         },
                         {
                             id: 2,
-                            label: '1987',
+                            label: 'Spain',
                             isCorrect: false,
                         },
                         {
                             id: 3,
-                            label: '1990',
+                            label: 'Mexico',
                             isCorrect: false,
                         },
                         {
                             id: 4,
-                            label: '1982',
+                            label: 'Italy',
                             isCorrect: false,
                         },
                     ],
                 },
                 {
                     id: 2,
-                    label: 'Bebeto is best known for his goal celebration in the 1994 FIFA World Cup. What was special about it?',
+                    label: 'For which Mexican club did Alfredo Moreno first play?',
                     answered: false,
                     answers: [
                         {
                             id: 1,
-                            label: 'He unveiled a shirt with a message underneath',
+                            label: 'Club Tijuana',
                             isCorrect: false,
                         },
                         {
                             id: 2,
-                            label: 'He did a backflip',
+                            label: 'Club América',
                             isCorrect: false,
                         },
                         {
                             id: 3,
-                            label: 'He mimicked a rocking baby ',
+                            label: 'Necaxa',
                             isCorrect: true,
                         },
                         {
                             id: 4,
-                            label: 'He ran around the field with his shirt off',
+                            label: 'Atlas',
                             isCorrect: false,
                         },
                     ],
                 },
                 {
                     id: 3,
-                    label: 'Bebeto played for several clubs in his career. Which of these clubs did he NOT play for?',
+                    label: 'In which year did Alfredo Moreno make his professional debut?',
                     answered: false,
                     answers: [
                         {
                             id: 1,
-                            label: 'Flamengo',
+                            label: '1999',
                             isCorrect: true,
                         },
                         {
                             id: 2,
-                            label: 'Sevilla',
-                            isCorrect: true,
+                            label: '2000',
+                            isCorrect: false,
                         },
                         {
                             id: 3,
-                            label: 'Vasco da Gama',
+                            label: '2001',
                             isCorrect: false,
                         },
                         {
                             id: 4,
-                            label: 'Xolos',
+                            label: '2002',
                             isCorrect: false,
                         },
                     ],
                 },
                 {
                     id: 4,
-                    label: 'Bebeto won the Silver Ball at the FIFA World Cup in 1994. Who won the Golden Ball in the same tournament?',
+                    label: "What is Moreno's nickname?",
                     answered: false,
                     answers: [
                         {
                             id: 1,
-                            label: 'Romário',
-                            isCorrect: true,
-                        },
-                        {
-                            id: 2,
-                            label: 'Roberto Baggio',
+                            label: 'El Mago',
                             isCorrect: false,
                         },
                         {
+                            id: 2,
+                            label: 'Chango',
+                            isCorrect: true,
+                        },
+                        {
                             id: 3,
-                            label: 'Dunga',
+                            label: 'El Tanque',
                             isCorrect: false,
                         },
                         {
                             id: 4,
-                            label: 'Hristo Stoichkov',
+                            label: 'El Águila',
+                            isCorrect: false,
+                        },
+                    ],
+                },
+                {
+                    id: 5,
+                    label: "Which Argentine city is Alfredo Moreno's birthplace?",
+                    answered: false,
+                    answers: [
+                        {
+                            id: 1,
+                            label: 'Buenos Aires',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 2,
+                            label: 'Rosario',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 3,
+                            label: 'Córdoba',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 4,
+                            label: 'Santiago del Estero',
+                            isCorrect: true,
+                        },
+                    ],
+                },
+                {
+                    id: 6,
+                    label: 'For which team did Alfredo Moreno make his professional debut?',
+                    answered: false,
+                    answers: [
+                        {
+                            id: 1,
+                            label: 'Boca Juniors',
+                            isCorrect: true,
+                        },
+                        {
+                            id: 2,
+                            label: 'River Plate',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 3,
+                            label: 'Racing Club',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 4,
+                            label: 'San Lorenzo',
+                            isCorrect: false,
+                        },
+                    ],
+                },
+                {
+                    id: 7,
+                    label: 'How many goals did Moreno score in his debut season with Boca Juniors?',
+                    answered: false,
+                    answers: [
+                        {
+                            id: 1,
+                            label: '5',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 2,
+                            label: '7',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 3,
+                            label: '9',
+                            isCorrect: true,
+                        },
+                        {
+                            id: 4,
+                            label: '11',
+                            isCorrect: false,
+                        },
+                    ],
+                },
+                {
+                    id: 8,
+                    label: "What is notable about Moreno's playing style or abilities?",
+                    answered: false,
+                    answers: [
+                        {
+                            id: 1,
+                            label: 'Exceptional speed',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 2,
+                            label: 'Aerial prowess',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 3,
+                            label: 'Free-kick expertise',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 4,
+                            label: 'Clinical finishing',
+                            isCorrect: true,
+                        },
+                    ],
+                },
+                {
+                    id: 9,
+                    label: 'Towards the end of his career, Moreno played for which team?',
+                    answered: false,
+                    answers: [
+                        {
+                            id: 1,
+                            label: 'Club Tijuana',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 2,
+                            label: 'Atlético San Luis',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 3,
+                            label: 'Celaya F.C.',
+                            isCorrect: true,
+                        },
+                        {
+                            id: 4,
+                            label: 'Dorados de Sinaloa',
+                            isCorrect: false,
+                        },
+                    ],
+                },
+                {
+                    id: 10,
+                    label: 'How many goals did Moreno score in his entire career?',
+                    answered: false,
+                    answers: [
+                        {
+                            id: 1,
+                            label: '187',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 2,
+                            label: '203',
+                            isCorrect: true,
+                        },
+                        {
+                            id: 3,
+                            label: '221',
+                            isCorrect: false,
+                        },
+                        {
+                            id: 4,
+                            label: '259',
                             isCorrect: false,
                         },
                     ],
