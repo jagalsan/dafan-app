@@ -2,6 +2,14 @@ name: Deploy Angular App to FTP
 
 on:
   workflow_dispatch:
+    inputs:
+      domain:
+        type: choice
+        description: Select domain
+        options:
+          - depor.enlapieldeunjunior.com
+          - xolos.enlapieldeunjunior.com
+        required: true
 
 jobs:
   deploy:
@@ -31,4 +39,4 @@ jobs:
           sudo apt-get update
           sudo apt-get install lftp -y
 
-          lftp -e "set ftp:ssl-allow no; open -u ${{ secrets.FTP_USER }},${{ secrets.FTP_PASSWORD }} enlapieldeunjunior.com; mirror --only-newer --exclude svg/ --exclude .htaccess -R -e -x node_modules ./www /; bye"
+          lftp -e "set ftp:ssl-allow no; open -u ${{ github.event.inputs.domain }},${{ secrets.FTP_PASSWORD }} enlapieldeunjunior.com; mirror --only-newer --exclude ./www/svg/ --exclude .htaccess -R -e -x node_modules ./www /; bye"
