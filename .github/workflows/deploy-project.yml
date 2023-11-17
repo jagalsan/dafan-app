@@ -7,8 +7,8 @@ on:
         type: choice
         description: Select domain
         options:
-          - depor.enlapieldeunjunior.com
-          - xolos.enlapieldeunjunior.com
+          - depor@depor.enlapieldeunjunior.com
+          - xolos@xolos.enlapieldeunjunior.com
         required: true
 
 jobs:
