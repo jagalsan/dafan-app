@@ -5,7 +5,9 @@
             + {{ tokenPackage.tokenCount }}
         </div>
         <div class="package__actions">
-            <ion-button (click)="buyPackage(tokenPackage)"> {{ tokenPackage.price }}€ </ion-button>
+            <ion-button class="df-button df-button--secondary" (click)="buyPackage(tokenPackage)">
+                {{ tokenPackage.price }}€
+            </ion-button>
             <span *ngIf="tokenPackage.savePrice" class="save-price"> save {{ tokenPackage.savePrice }}€ </span>
         </div>
     </div>

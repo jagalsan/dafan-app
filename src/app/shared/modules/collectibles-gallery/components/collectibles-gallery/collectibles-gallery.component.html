@@ -8,10 +8,18 @@
                     {{ collectible.price }}
                 </span>
             </div>
-            <div *ngIf="isMarket" class="collectible__owner owner">
-                <img class="owner__image" [src]="collectible.userOwner.image" />
-                <span class="owner__name">{{ collectible.userOwner.name }}</span>
+            <div class="collectible__name">
+                <span>{{ clubPrefix }} Lad #{{ collectible.id }}</span>
             </div>
+            <ng-container *ngIf="isMarket">
+                <div class="collectible__owner owner">
+                    <img class="owner__image" [src]="collectible.userOwner.image" />
+                    <span class="owner__name">{{ collectible.userOwner.name }}</span>
+                </div>
+                <div class="collectible__last-price">
+                    <span>Last sale: {{ collectible.price - 0.8 | number: '1.1-1' }} SOL</span>
+                </div>
+            </ng-container>
         </ion-card>
     </ion-col>
 </ion-row>

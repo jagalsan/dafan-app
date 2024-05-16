@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { ModalController, NavController } from '@ionic/angular';
 import { filter } from 'rxjs';
@@ -14,6 +14,9 @@ import { FanTokensModalComponent } from 'src/app/shared/components/fan-tokens-mo
     styleUrls: ['./top-bar.component.scss'],
 })
 export class TopBarComponent implements OnInit {
+    @ViewChild('popover') popover;
+
+    isPopoverOpen = false;
     userData!: User;
     isChildView!: boolean;
     childTitle!: string;
@@ -40,6 +43,8 @@ export class TopBarComponent implements OnInit {
             }
             this.childTitle = childRoute.snapshot.data['childTitle']
                 ? childRoute.snapshot.data['childTitle']
+                : childRoute.snapshot.queryParams['childTitle']
+                ? childRoute.snapshot.queryParams['childTitle']
                 : childRoute.snapshot.params['id']
                 ? '#' + childRoute.snapshot.params['id']
                 : '';
@@ -62,13 +67,31 @@ export class TopBarComponent implements OnInit {
     async openFanPointsModal(): Promise<void> {
         const modal = await this.modalCtrl.create({
             component: FanTokensModalComponent,
-            breakpoints: [0, 0.95],
-            initialBreakpoint: 0.95,
+            cssClass: 'df-modal',
+            breakpoints: [1],
+            initialBreakpoint: 1,
             componentProps: {
                 userData: this.userData,
                 tokenPackages: this.tokenPackages,
             },
         });
         await modal.present();
+    }
+
+    presentPopover(e: Event) {
+        this.popover.event = e;
+        this.isPopoverOpen = true;
+    }
+
+    async logout(): Promise<void> {
+        await this.popover.dismiss();
+        this.isPopoverOpen = false;
+        this.authService.logout();
+    }
+
+    async navigateProfile(): Promise<void> {
+        await this.popover.dismiss();
+        this.isPopoverOpen = false;
+        this.navCtrl.navigateRoot('/profile');
     }
 }

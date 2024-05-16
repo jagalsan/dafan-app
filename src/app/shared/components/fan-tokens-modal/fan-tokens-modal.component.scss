@@ -13,13 +13,13 @@ ion-toolbar {
     &__history {
         display: flex;
         align-items: center;
-        color: #f6f2f1;
+        color: var(--color-white-text);
         font-size: 16px;
         font-weight: 500;
     }
 
     &__title {
-        color: #fff;
+        color: var(--color-white);
         text-align: center;
         font-size: 34px;
         font-weight: 600;
@@ -32,7 +32,7 @@ ion-toolbar {
         align-items: center;
 
         span {
-            color: #f6f2f1;
+            color: var(--color-white-text);
             text-align: center;
             font-size: 42px;
             font-weight: 500;
@@ -49,7 +49,7 @@ ion-toolbar {
     }
 
     &__sub-title {
-        color: #fff;
+        color: var(--color-white);
         font-size: 24px;
         font-weight: 600;
         margin-bottom: 25px;

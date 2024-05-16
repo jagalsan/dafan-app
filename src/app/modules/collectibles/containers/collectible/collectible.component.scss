@@ -1,14 +1,23 @@
+@import '/src/theme/responsive.scss';
+
 ion-progress-bar {
     margin-bottom: 12px;
     height: 35px;
     margin-top: 20px;
 
-    --ion-color-base: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%) !important;
+    --ion-color-base: var(--gradient-primary) !important;
 }
 
 .collectible {
     &__image {
         border-radius: 20px;
+    }
+
+    &__id {
+        margin: 0;
+        font-size: 64px;
+        color: var(--color-white);
+        margin-bottom: 42px;
     }
 
     &__level {
@@ -21,7 +30,7 @@ ion-progress-bar {
             max-width: 60px;
             height: 40px;
             border-radius: 5px;
-            background-color: #2c2c2c;
+            background-color: var(--color-dark);
             gap: 5px;
             font-weight: 500;
 
@@ -37,19 +46,58 @@ ion-progress-bar {
 
             .number {
                 font-size: 38px;
-                background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+                background: var(--gradient-primary);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
         }
-
-        .upgrade-action {
-            --color: #111;
-            border-radius: 5px;
-            --background: linear-gradient(180deg, #4cc0c4 0%, #4cc0c4 100%);
-        }
     }
 
-    &__row {
+    .collection-name {
+        margin-top: 56px;
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+
+    .properties {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: space-between;
+
+        &__title {
+            font-size: 24px;
+            color: var(--color-white);
+        }
+
+        .property {
+            flex: 1;
+            padding: 8px;
+            background: var(--color-dark);
+            border-radius: 16px;
+
+            &__title {
+                line-height: 1.25rem;
+                font-size: 18px;
+                color: rgb(199, 199, 199);
+                margin: 0;
+                text-transform: uppercase;
+                font-weight: 200;
+            }
+
+            &__value {
+                font-weight: bold;
+                margin: 0;
+                color: var(--color-white);
+                font-size: 20px;
+                margin-top: 8px;
+            }
+        }
+
+        @media (max-width: ($breakpoint-xs - 1)) {
+            gap: 8px;
+        }
     }
 }

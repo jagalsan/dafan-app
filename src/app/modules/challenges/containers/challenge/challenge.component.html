@@ -1,19 +1,21 @@
 <ion-content class="challenge main-page" [scrollY]="true">
-    <ion-grid *ngIf="challenge" class="main-page__grid">
-        <h3 class="challenge__reward-title">Reward</h3>
-        <div class="challenge__reward">
-            <ion-icon slot="start" src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
-            <span class="points">
-                {{ challenge.rewardPoints }}
-                <span>FP</span>
-            </span>
-        </div>
-        <df-leader-board></df-leader-board>
-        <ng-container *ngIf="challengeType === 'bet'; else quizChallenge">
+    <ion-grid class="main-page__grid" [ngClass]="challengeType === 'quiz' ? 'main-page__grid--100' : ''">
+        <ng-container
+            *ngIf="challenge && (challengeType === 'bet' || challengeType === 'scorersPredictions'); else quizChallenge"
+        >
+            <h3 class="challenge__reward-title">Reward</h3>
+            <div class="challenge__reward">
+                <ion-icon slot="start" src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+                <span class="points">
+                    {{ challenge.rewardPoints }}
+                    <span>FP</span>
+                </span>
+            </div>
+            <df-leader-board [leaderBoard]="leaderBoard" type="challenge"></df-leader-board>
             <df-bet-challenge [challenge]="challenge"></df-bet-challenge>
         </ng-container>
         <ng-template #quizChallenge>
-            <!-- <df-quiz-challenge></df-quiz-challenge> -->
+            <df-quiz-challenge></df-quiz-challenge>
         </ng-template>
     </ion-grid>
 </ion-content>

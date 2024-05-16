@@ -1,0 +1,28 @@
+<ion-content class="experience main-page" [scrollY]="true">
+    <ion-grid class="main-page__grid" *ngIf="experience">
+        <img class="experience__preview" [src]="experience.previewImage" alt="" />
+        <div class="experience__tags">
+            <span class="tag tag--primary">
+                <ion-icon name="extension-puzzle"></ion-icon>{{ experience.type.label
+                }}<ng-container *ngIf="experience.type.name === 'discount'"
+                    >: {{ experience.percentageDiscount }}%
+                </ng-container>
+            </span>
+            <span class="tag tag--secondary"
+                ><ion-icon name="flash"></ion-icon>Required level: {{ experience.levelRequired }}</span
+            >
+        </div>
+        <p class="experience__description" [innerHTML]="experience.description | sanitize: 'html'"></p>
+
+        <div class="experience__actions">
+            <div class="points-cost">
+                <ion-icon slot="start" src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
+                <span class="points"> {{ experience.pointsCost }} </span>
+            </div>
+            <ion-button class="df-button df-button--primary">
+                <ion-icon slot="start" src="assets/icon/df-fan-points.svg"></ion-icon>
+                Enjoy experience
+            </ion-button>
+        </div>
+    </ion-grid></ion-content
+>

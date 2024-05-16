@@ -1,8 +1,8 @@
 <div class="ion-page" id="main-content">
-    <ion-header>
+    <ion-header class="layout-header">
         <ion-toolbar>
             <section *ngIf="!isChildView; else childViewHeader" class="menu">
-                <ion-avatar class="menu__user-profile">
+                <ion-avatar (click)="presentPopover($event)" class="menu__user-profile">
                     <img alt="Silhouette of a person's head" [src]="userData.image" />
                 </ion-avatar>
                 <section class="menu__points" (click)="openFanPointsModal()">
@@ -25,3 +25,15 @@
         <ng-content></ng-content>
     </ion-content>
 </div>
+
+<ion-popover #popover [arrow]="false" [isOpen]="isPopoverOpen" (didDismiss)="isPopoverOpen = false">
+    <ng-template>
+        <ion-content class="ion-padding">
+            <ion-item (click)="navigateProfile()"> Profile </ion-item>
+            <ion-item (click)="logout()">
+                Logout
+                <ion-icon name="exit-outline"></ion-icon>
+            </ion-item>
+        </ion-content>
+    </ng-template>
+</ion-popover>

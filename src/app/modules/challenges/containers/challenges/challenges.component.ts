@@ -2,10 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
 import { User } from 'src/app/modules/auth/models/user.interface';
 import { ModalController, NavController, ToastController } from '@ionic/angular';
-import { onFieldChallengesResponse } from '../../mocks/challenges.response';
+import { digitalChallengesList, onFieldChallengesResponse } from '../../mocks/challenges.response';
 import { Challenge } from '../../models/challenge.interface';
 import { CodeScanningModalComponent } from 'src/app/shared/components/code-scanning-modal/code-scanning-modal.component';
 import { ChallengeComponent } from '../challenge/challenge.component';
+import { fantasyLeagueResponse } from '../../mocks/fantasy-league.response';
+import { leaderBoardResponse } from '../../mocks/leader-board.response';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'df-challenges',
@@ -16,19 +19,26 @@ export class ChallengesComponent implements OnInit {
     onFieldChallenges: Challenge[] = onFieldChallengesResponse;
     digitalChallenges: any[] = [];
     userData!: User;
-    challengesTabSelected: 'digital' | 'onField' = 'digital';
+    challengesTabSelected: 'digital' | 'onField' | 'leaderBoard' = 'digital';
     component = ChallengeComponent;
+    fantasyLeague = fantasyLeagueResponse;
+    leaderBoard = leaderBoardResponse;
 
     constructor(
         private authService: AuthService,
         private navCtrl: NavController,
         private modalController: ModalController,
         private toastController: ToastController,
+        private route: ActivatedRoute,
     ) {}
 
     ngOnInit(): void {
         this.getUserData();
         this.getChallenges();
+    }
+
+    ionViewWillEnter() {
+        this.challengesTabSelected = this.route.snapshot.queryParams['tab'] || 'digital';
     }
 
     getChallenges(): void {}
@@ -71,7 +81,25 @@ export class ChallengesComponent implements OnInit {
         });
     }
 
-    goToChallenge(challengeId: number): void {
-        this.navCtrl.navigateForward('challenges/' + challengeId);
+    navigateChallenge(challengeId: number): void {
+        const challenge = digitalChallengesList.find(challenge => challenge.id === challengeId);
+        this.navCtrl.navigateForward('challenges/' + challengeId, {
+            queryParams: {
+                childTitle: challenge.label,
+            },
+        });
+    }
+
+    navigateToFantasyLeague(): void {
+        this.navCtrl.navigateForward('challenges/fantasy-league', {
+            queryParams: {
+                childTitle: 'Fantasy league',
+            },
+        });
+    }
+
+    setTab(tab: 'digital' | 'onField' | 'leaderBoard'): void {
+        this.challengesTabSelected = tab;
+        this.navCtrl.navigateRoot(`/challenges?tab=${tab}`);
     }
 }

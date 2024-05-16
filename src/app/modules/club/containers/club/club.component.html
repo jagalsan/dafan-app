@@ -1,0 +1,45 @@
+<ion-content class="club main-page" [scrollY]="true">
+    <section class="club__match match">
+        <h4 class="match__title"><strong>Liga</strong> | Jornada 1</h4>
+        <div class="match__rivals rivals">
+            <div class="rivals__local-rival rival">
+                <img class="rival__logo" src="assets/images/examples/club-logo.png" alt="" />
+                <span class="rival__title">Deportivo</span>
+            </div>
+            <div class="rivals__content">
+                <ion-icon name="football-outline"></ion-icon>
+                <span class="date">Lun 14 / AGO 2023 / 21:30h</span>
+                <span class="location">Abanca Riazor</span>
+            </div>
+            <div class="rivals__visitor-rivals rival">
+                <img class="rival__logo" src="assets/images/examples/barca-logo.png" alt="" />
+                <span class="rival__title">Barcelona</span>
+            </div>
+        </div>
+    </section>
+    <ion-grid class="main-page__grid">
+        <section class="club__navigation-cards">
+            <div class="navigation-cards__card" style="--card-title: 'History'" (click)="navigateToHistory()">
+                <img src="assets/images/examples/club-wallpaper.png" alt="" />
+            </div>
+            <div class="navigation-cards__card" style="--card-title: 'Camp'" (click)="navigateToStadium()">
+                <img src="assets/images/examples/camp-club.png" alt="" />
+            </div>
+            <div class="navigation-cards__card" style="--card-title: 'Shop'" (click)="navigateToShop()">
+                <img src="assets/images/examples/cami-1-club.jpg" alt="" />
+            </div>
+            <div class="navigation-cards__card" style="--card-title: 'Tickets'" (click)="navigateToTickets()">
+                <img src="assets/images/examples/club-match-challenge.jpeg" alt="" />
+            </div>
+        </section>
+    </ion-grid>
+    <section class="club__feeds">
+        <div class="feed" *ngFor="let feed of clubFeeds">
+            <img class="feed__preview" src="assets/images/examples/{{ feed.image }}" />
+            <p class="feed__extract">{{ feed.extract }}...</p>
+            <h3 class="feed__title">{{ feed.title }}</h3>
+            <span class="feed__date"> {{ feed.date }} </span>
+            <div class="feed__divider"></div>
+        </div>
+    </section>
+</ion-content>

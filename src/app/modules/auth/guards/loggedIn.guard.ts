@@ -7,7 +7,8 @@ export const LoggedInGuard: CanActivateFn = () => {
     const navCtrl = inject(NavController);
     const authService = inject(AuthService);
 
-    if (authService.isLoggedIn) {
+    if (authService.isLoggedIn || localStorage.getItem('token')) {
+        authService.updateLoggedState(true);
         navCtrl.navigateRoot('/collectibles');
         return false;
     }

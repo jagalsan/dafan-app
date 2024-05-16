@@ -1,0 +1,44 @@
+<ion-content class="club-history main-page" [scrollY]="true">
+    <ion-grid class="main-page__grid">
+        <h2 class="club-history__title">History of {{ environment.clubName }}</h2>
+        <section class="club-history__description">
+            <p>
+                {{ clubHistoryDescription }}
+            </p>
+        </section>
+        <div class="club-history__tabs tabs">
+            <span
+                class="tabs__tab"
+                [ngClass]="{ 'tabs__tab--active': historyTabSelected === 'decades' }"
+                (click)="historyTabSelected = 'decades'"
+            >
+                Decade by decade
+            </span>
+            <span
+                class="tabs__tab"
+                [ngClass]="{ 'tabs__tab--active': historyTabSelected === 'trophies' }"
+                (click)="historyTabSelected = 'trophies'"
+            >
+                Trophies
+            </span>
+        </div>
+        <section class="club-history__decades" *ngIf="historyTabSelected === 'decades'">
+            <div class="decade" *ngFor="let decade of clubHistoryDecades">
+                <div class="decade__preview" style="--decade-title:'{{ decade.year }}'">
+                    <img [src]="'assets/images/examples/' + decade.preview" alt="" />
+                </div>
+                <p class="decade__description">
+                    {{ decade.description }}
+                </p>
+            </div>
+        </section>
+        <section class="club-history__trophies" *ngIf="historyTabSelected === 'trophies'">
+            <div class="club-history__trophy trophy" *ngFor="let trophy of clubHistoryTrophies">
+                <div class="trophy__count">
+                    <ion-icon *ngFor="let item of [].constructor(trophy.count)" name="trophy-outline"></ion-icon>
+                </div>
+                <span class="trophy__name">{{ trophy.label }}</span>
+            </div>
+        </section>
+    </ion-grid>
+</ion-content>

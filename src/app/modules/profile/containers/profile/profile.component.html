@@ -1,0 +1,66 @@
+<ion-content class="profile main-page" [scrollY]="true">
+    <ion-grid class="main-page__grid">
+        <ion-avatar class="profile__avatar">
+            <img [src]="userData.image" />
+        </ion-avatar>
+        <span class="profile__partner-number"><strong>Club member number: </strong> #333 {{ clubPrefix }} lad</span>
+        <form class="df-form" (ngSubmit)="submitProfileForm()" [formGroup]="profileForm">
+            <ion-input
+                formControlName="name"
+                type="text"
+                fill="clear"
+                label="Name"
+                labelPlacement="floating"
+                errorText="Invalid name"
+                placeholder="Enter name"
+            ></ion-input>
+            <ion-input
+                formControlName="surname"
+                type="text"
+                fill="clear"
+                label="Surname"
+                labelPlacement="floating"
+                errorText="Invalid surname"
+                placeholder="Enter surname"
+            ></ion-input>
+            <ion-input
+                formControlName="birthDate"
+                type="date"
+                fill="clear"
+                label="Birth date"
+                labelPlacement="floating"
+                errorText="Required birth date"
+                placeholder="Enter birth date"
+            ></ion-input>
+            <ion-input
+                formControlName="legendName"
+                type="string"
+                fill="clear"
+                label="Favourite #Club Legend"
+                labelPlacement="floating"
+                errorText="Required legend"
+                placeholder="Enter legend name"
+            ></ion-input>
+            <ion-select label="Shirt size" formControlName="shirtSize" placeholder="Shirt size">
+                <ion-select-option value="xs">XS</ion-select-option>
+                <ion-select-option value="s">S</ion-select-option>
+                <ion-select-option value="m">M</ion-select-option>
+                <ion-select-option value="l">L</ion-select-option>
+                <ion-select-option value="xl">XL</ion-select-option>
+            </ion-select>
+            <ion-input
+                formControlName="address"
+                type="text"
+                fill="clear"
+                label="Address"
+                labelPlacement="floating"
+                errorText="Invalid address"
+                placeholder="Enter address"
+            ></ion-input>
+
+            <ion-button class="profile__save-button df-button df-button--secondary" type="submit">
+                Save profile
+            </ion-button>
+        </form>
+    </ion-grid>
+</ion-content>

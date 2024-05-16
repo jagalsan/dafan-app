@@ -19,6 +19,7 @@ interface ChallengePlayer {
     id: number;
     name: string;
     image: string;
+    selected?: boolean;
 }
 
 interface ChallengeTeam {

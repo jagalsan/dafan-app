@@ -7,4 +7,6 @@ export interface User {
     userCollectible?: Collectible;
     fanPoints: number;
     level: number;
+    surname?: string;
+    address?: string;
 }

@@ -28,11 +28,46 @@
 //----
 
 @import './typography/typography.scss';
+@import './colors.scss';
 
 ion-progress-bar {
     border-radius: 25px;
 
     .progress-buffer-bar {
         border-radius: 25px;
+    }
+}
+
+ion-button.df-button {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    height: 35px;
+    --border-radius: 6px;
+
+    &--primary {
+        --background-activated: var(--gradient-primary);
+        --background-activated-opacity: 0.5;
+        --background: var(--gradient-primary);
+        --color: var(--color-dark-text);
+
+        &:hover,
+        &:active {
+            --background: var(--gradient-primary);
+            filter: brightness(90%);
+        }
+    }
+
+    &--secondary {
+        --background-activated: var(--gradient-secondary);
+        --background-activated-opacity: 0.5;
+        --background: var(--gradient-secondary);
+        --color: var(--color-dark-text);
+
+        &:hover,
+        &:active {
+            --background: var(--gradient-secondary);
+            filter: brightness(90%);
+        }
     }
 }

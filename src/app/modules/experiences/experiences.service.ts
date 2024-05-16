@@ -13,11 +13,15 @@ export class ExperiencesService {
 
     getExperience(experienceId: number): Observable<Experience> {
         return new Observable(observer => {
-            const clubExperience = ClubExperiencesResponse.find(clubExperience =>
-                clubExperience.experiences.find(experience => experience.id === experienceId),
-            )?.experiences.find(experience => experience.id === experienceId);
+            let experience;
 
-            observer.next(clubExperience);
+            ClubExperiencesResponse.forEach(clubExperience => {
+                if (!experience) {
+                    experience = clubExperience.experiences.find(experience => experience.id === Number(experienceId));
+                }
+            });
+
+            observer.next(experience);
         });
     }
 }

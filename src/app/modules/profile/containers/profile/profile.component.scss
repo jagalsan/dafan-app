@@ -1,0 +1,28 @@
+.profile {
+    .main-page__grid {
+        padding: 0 48px;
+        padding-bottom: 30px;
+    }
+
+    &__avatar {
+        margin: 0 auto;
+        margin-top: 24px;
+        margin-bottom: 18px;
+    }
+
+    &__partner-number {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 32px;
+
+        strong {
+            margin-right: 12px;
+        }
+    }
+
+    &__save-button {
+        width: 100%;
+        margin-top: 25px;
+    }
+}

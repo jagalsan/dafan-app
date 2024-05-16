@@ -1,36 +1,25 @@
-<ion-content class="collectibles main-page" [scrollY]="true">
-    <ion-grid class="main-page__grid">
-        <section class="collectibles__my-collectible">
-            <h2 class="my-collectible__title">Your collectibles</h2>
-            <div class="collectible">
-                <img
-                    (click)="navigateCollectible(userData.userCollectible.hashId)"
-                    [alt]="userData.userCollectible.name"
-                    [src]="userData.userCollectible.image"
-                />
-                <div class="collectible__level">
-                    <span class="title"
-                        >Level <span class="number">{{ userData.level }}</span>
-                    </span>
-                    <ion-progress-bar
-                        type="determinate"
-                        [value]="userData.userCollectible.percentage"
-                        color="primary"
-                    ></ion-progress-bar>
-                    <span class="hash"> #{{ userData.userCollectible.hashId }} </span>
-                </div>
+<ion-content class="collectibles-gallery main-page" [scrollY]="true">
+    <ion-grid class="main-page__grid gallery">
+        <div class="collectibles-gallery__filters">
+            <div class="filter-section">
+                <span class="filter">
+                    <ion-icon (click)="openFiltersModal()" name="options-outline"></ion-icon>
+                </span>
+                <span class="filter">
+                    <ion-icon (click)="shuffleCollectibles()" name="shuffle-outline"></ion-icon>
+                </span>
+                <span *ngIf="isFiltered" (click)="clearFilter()" class="filter--clear"> Clear filter </span>
             </div>
-        </section>
-        <a class="collectibles__show-all" [routerLink]="['/']">
-            Show all <ion-icon name="chevron-forward-outline"></ion-icon>
-        </a>
-        <section class="collectibles__gallery">
-            <h3 class="gallery__title">Gallery</h3>
-            <df-collectibles-gallery
-                (collectibleClicked)="navigateCollectible($event)"
-                [cols]="3"
-                [collectibles]="collectibles"
-            ></df-collectibles-gallery>
-        </section>
+            <span class="filter">
+                <ion-icon (click)="changeColsNumber()" name="grid-outline"></ion-icon>
+            </span>
+        </div>
+        <df-collectibles-gallery
+            *ngIf="collectibles.length"
+            (collectibleClicked)="navigateCollectible($event)"
+            [cols]="colsNumber"
+            [collectibles]="collectibles"
+            [showCollectibleNumber]="true"
+        ></df-collectibles-gallery>
     </ion-grid>
 </ion-content>

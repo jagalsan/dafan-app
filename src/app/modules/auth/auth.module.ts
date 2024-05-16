@@ -3,16 +3,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { authRoutes } from './auth.routing';
 import { IonicModule } from '@ionic/angular';
-import { AuthLayoutComponent } from './containers/auth-layout/auth-layout.component';
-import { RegisterComponent } from './components/register/register.component';
-import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-import { LoginComponent } from './components/login/login.component';
+import { AuthComponent } from './components/auth/auth.component';
+import { LoginComponent } from './containers/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './containers/register/register.component';
+import { ResetPasswordComponent } from './containers/reset-password/reset-password.component';
+import { WelcomeComponent } from './containers/welcome/welcome.component';
+import { CommonModule } from '@angular/common';
 
-const COMPONENTS = [AuthLayoutComponent, RegisterComponent, ResetPasswordComponent, LoginComponent];
+const COMPONENTS = [AuthComponent, RegisterComponent, ResetPasswordComponent, LoginComponent, WelcomeComponent];
 
 @NgModule({
-    imports: [IonicModule, HttpClientModule, FormsModule, ReactiveFormsModule, RouterModule.forChild(authRoutes)],
+    imports: [
+        CommonModule,
+        IonicModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule.forChild(authRoutes),
+    ],
     declarations: [COMPONENTS],
 })
 export class AuthModule {}

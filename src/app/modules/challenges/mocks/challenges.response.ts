@@ -16,24 +16,11 @@ export const onFieldChallengesResponse: Challenge[] = [
     },
     {
         id: 2,
-        label: 'Attend match at the stadium',
-        name: 'AttendMatch',
-        rewardPoints: 100,
-        typeId: 2,
-        image: 'assets/images/examples/deport_match_challenge.jpeg',
-        type: {
-            id: 2,
-            name: 'onField',
-        },
-        validatorCode: 'xxxxxxxcccc3',
-    },
-    {
-        id: 3,
         label: 'Buy merchandising at our official Store',
         name: 'buyMerchandising',
         rewardPoints: 60,
         typeId: 2,
-        image: 'assets/images/examples/deport_shop.jpeg',
+        image: 'assets/images/examples/club-shop.jpeg',
         type: {
             id: 2,
             name: 'onField',
@@ -41,17 +28,30 @@ export const onFieldChallengesResponse: Challenge[] = [
         validatorCode: 'xxxxxxxcccc4',
     },
     {
-        id: 4,
+        id: 3,
         label: 'Visit our museum',
         name: 'VisitMuseum',
         rewardPoints: 70,
         typeId: 2,
-        image: 'assets/images/examples/museum_deport.png',
+        image: 'assets/images/examples/museum-club.jpg',
         type: {
             id: 2,
             name: 'onField',
         },
         validatorCode: 'xxxxxxxcccc5',
+    },
+    {
+        id: 4,
+        label: 'Attend match at the stadium',
+        name: 'AttendMatch',
+        rewardPoints: 100,
+        typeId: 2,
+        image: 'assets/images/examples/club-match-challenge.jpeg',
+        type: {
+            id: 2,
+            name: 'onField',
+        },
+        validatorCode: 'xxxxxxxcccc3',
     },
 ];
 
@@ -68,7 +68,7 @@ export const digitalChallengesList: Challenge[] = [
         },
         subType: {
             id: 1,
-            name: 'scorersPredictions',
+            name: 'quiz',
             typeId: 2,
         },
         completed: false,
@@ -91,12 +91,12 @@ export const digitalChallengesList: Challenge[] = [
             teams: [
                 {
                     id: 1,
-                    image: 'deport_logo.png',
+                    image: 'club-logo.png',
                     name: 'Deportivo de la coruña',
                 },
                 {
                     id: 2,
-                    image: 'barca_logo.png',
+                    image: 'barca-logo.png',
                     name: 'Barcelona',
                 },
             ],
@@ -104,7 +104,7 @@ export const digitalChallengesList: Challenge[] = [
     },
     {
         id: 7,
-        label: 'Weekly scorers predictions',
+        label: 'Weekly scorers',
         name: 'weeklyScorers',
         rewardPoints: 100,
         typeId: 1,
@@ -120,22 +120,20 @@ export const digitalChallengesList: Challenge[] = [
                 {
                     id: 1,
                     name: '',
-                    image: '',
+                    image: 'club-player-1.png',
+                    selected: false,
                 },
                 {
                     id: 2,
                     name: '',
-                    image: '',
+                    image: 'club-player-2.png',
+                    selected: false,
                 },
                 {
                     id: 3,
                     name: '',
-                    image: '',
-                },
-                {
-                    id: 4,
-                    name: '',
-                    image: '',
+                    image: 'club-player-3.png',
+                    selected: false,
                 },
             ],
         },

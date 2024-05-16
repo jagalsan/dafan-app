@@ -14,7 +14,7 @@
                         Level <span class="number">{{ userData.level }}</span>
                     </ion-col>
                     <ion-col size="5">
-                        <ion-button class="upgrade-action" expand="block"> Upgrade </ion-button>
+                        <ion-button class="df-button df-button--secondary" expand="block"> Upgrade </ion-button>
                     </ion-col>
                     <ion-col class="points" size="3">
                         <ion-icon src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
@@ -22,6 +22,19 @@
                     </ion-col>
                 </ion-row>
             </ng-container>
+            <p class="collection-name">{{ clubPrefix }} Lad</p>
+            <h2 class="collectible__id">
+                {{ collectible.id }}
+            </h2>
+            <h3 class="properties__title">Attributes</h3>
+            <div class="properties">
+                <ng-container *ngFor="let property of collectible.properties">
+                    <div class="property">
+                        <h3 class="property__title">{{ property.label }}</h3>
+                        <span class="property__value"> {{ property.value }} </span>
+                    </div>
+                </ng-container>
+            </div>
         </section>
     </ion-grid>
 </ion-content>

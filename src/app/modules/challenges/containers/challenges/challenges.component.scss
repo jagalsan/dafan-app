@@ -1,6 +1,8 @@
+@import '/src/theme/responsive.scss';
+
 .challenges {
     &__title {
-        font-size: 34px;
+        font-size: 30px;
         font-style: normal;
         font-weight: 600;
         margin-bottom: 30px;
@@ -15,30 +17,8 @@
             margin-bottom: 15px;
         }
     }
-
-    &__tabs {
-        display: flex;
-        align-items: center;
-
-        :first-child {
-            margin-right: 16px;
-        }
-
-        .tabs__tab {
-            color: #f6f2f130;
-            font-size: 18px;
-            font-weight: 600;
-
-            &--active {
-                color: #f6f2f1;
-                font-size: 26px;
-                font-weight: 600;
-            }
-        }
-    }
-
     .challenge__card {
-        background: #2c2c2c;
+        background: var(--color-dark);
         position: relative;
         border-radius: 10px;
         padding: 15px;
@@ -49,15 +29,13 @@
             flex-direction: column;
         }
 
-        ion-button {
-            font-size: 18px;
-            font-weight: 600;
-            text-transform: uppercase;
-            --color: #111;
-            --border-radius: 5px;
-            --background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
-            height: 35px;
-            width: 100%;
+        @media (max-width: ($breakpoint-xs - 1)) {
+            flex-direction: column;
+            gap: 24px;
+
+            ion-button {
+                width: 100%;
+            }
         }
 
         &--shadow {
@@ -68,7 +46,7 @@
                 border-radius: 10px;
                 transform: translate(-4px, -4px);
                 z-index: -1;
-                background: linear-gradient(54deg, #a30eca 0%, #5d52c7 49.21%, #4dc1c5 100%);
+                background: var(--gradient-primary);
             }
         }
 
@@ -78,6 +56,10 @@
                 min-width: 95px;
                 border-radius: 10px;
                 margin-right: 20px;
+
+                @media (max-width: ($breakpoint-xs - 1)) {
+                    margin-right: 0px;
+                }
             }
 
             &__content {
@@ -90,6 +72,10 @@
                     font-style: normal;
                     font-weight: 600;
                     line-height: normal;
+
+                    @media (max-width: ($breakpoint-xs - 1)) {
+                        text-align: center;
+                    }
                 }
             }
         }
@@ -103,9 +89,14 @@
                 display: flex;
                 margin-right: 45px;
                 font-size: 26px;
-                color: #fff;
+                color: var(--color-white);
                 font-weight: 300;
                 align-items: center;
+
+                @media (max-width: ($breakpoint-xs - 1)) {
+                    justify-content: center;
+                    margin-right: 0;
+                }
 
                 :first-child {
                     margin-right: 24px;
@@ -118,20 +109,33 @@
         }
 
         .scorers {
+            width: 100%;
             display: flex;
             align-items: center;
+            justify-content: space-between;
 
             &__players {
+                width: 100%;
                 display: flex;
                 row-gap: 25px;
                 margin-right: 45px;
                 align-items: center;
+                justify-content: space-between;
+
+                @media (max-width: ($breakpoint-xs - 1)) {
+                    justify-content: center;
+                    gap: 36px;
+                }
 
                 .player {
-                    color: #fff;
+                    color: var(--color-white);
                     text-align: center;
                     font-size: 10px;
                     font-weight: 500;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
 
                     img {
                         width: 40px;
@@ -165,7 +169,7 @@
                     width: 100%;
 
                     .name {
-                        color: #fff;
+                        color: var(--color-white);
                         font-size: 12px;
                         font-weight: 300;
                         margin-left: 10px;
@@ -184,7 +188,7 @@
                 .match__result {
                     text-align: center;
                     width: 80%;
-                    color: #fff;
+                    color: var(--color-white);
                     font-size: 12px;
                     font-weight: 500;
                 }

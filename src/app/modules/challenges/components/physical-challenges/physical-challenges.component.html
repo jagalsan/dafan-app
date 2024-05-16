@@ -10,7 +10,9 @@
                     <ion-icon slot="start" src="assets/icon/df-fan-point-gradient.svg"></ion-icon>
                     <span>{{ challenge.rewardPoints }} FP</span>
                 </div>
-                <ion-button (click)="scanChallenge(challenge)"> Scan </ion-button>
+                <ion-button class="df-button df-button--secondary" (click)="scanChallenge(challenge)">
+                    Scan
+                </ion-button>
             </div>
         </div>
     </ion-item>

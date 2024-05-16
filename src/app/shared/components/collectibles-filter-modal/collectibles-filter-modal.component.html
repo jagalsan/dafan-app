@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-icon (click)="close()" slot="start" name="close"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollY]="true">
+    <section class="filters df-modal__container">
+        <ion-accordion-group>
+            <ng-container *ngFor="let filter of filters; let i = index">
+                <ion-accordion class="filter" [value]="i" toggleIcon="add-outline">
+                    <ion-item slot="header" color="transparent">
+                        <ion-label>{{ filter.label }}</ion-label>
+                    </ion-item>
+                    <div class="ion-padding filter-options" slot="content">
+                        <ng-container *ngFor="let property of filter.properties">
+                            <ion-checkbox
+                                [value]="property.name"
+                                (ionChange)="setPropertyFilter($event, filter.name)"
+                                [checked]="propertyFiltering.value === property.value"
+                                >{{ property.label }}</ion-checkbox
+                            >
+                        </ng-container>
+                    </div>
+                </ion-accordion>
+            </ng-container>
+        </ion-accordion-group>
+        <ion-button class="df-button df-button--secondary" (click)="applyFilter()" expand="block">
+            Apply filter
+        </ion-button>
+    </section>
+</ion-content>

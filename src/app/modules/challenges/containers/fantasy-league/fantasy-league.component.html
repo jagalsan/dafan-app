@@ -1,0 +1,54 @@
+<ion-content class="main-page fantasy-league" [scrollY]="true">
+    <ion-grid class="main-page__grid">
+        <div class="fantasy-league__card fantasy-league__card--shadow">
+            <div class="fantasy-league__match" *ngFor="let match of fantasyLeague.matchList">
+                <div class="match__club">
+                    <img src="/assets/images/examples/{{ match.homeClub.image }}" />
+                    <span class="name">{{ match.homeClub.name }}</span>
+                </div>
+                <span class="match__result"> {{ match.homeClubScore }}-{{ match.awayClubScore }} </span>
+                <div class="match__club">
+                    <img src="/assets/images/examples/{{ match.awayTeam.image }}" />
+                    <span class="name">{{ match.awayTeam.name }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="fantasy-league__cards">
+            <div class="fantasy-league__card fantasy-league__card--shadow">
+                <h3 class="points-title">Total</h3>
+                <span class="points">600 <small>points</small></span>
+            </div>
+            <div class="fantasy-league__card fantasy-league__card--shadow">
+                <h3 class="points-title">Current fixture</h3>
+                <span class="points">120 <small>points</small></span>
+            </div>
+        </div>
+        <div class="fantasy-league__line-up">
+            <h2>Line up</h2>
+            <div class="player">
+                <img class="player__image" src="assets/images/examples/player-placeholder.png" alt="" />
+                <div class="player__content">
+                    <span class="player__position">GOA</span>
+                    <h4 class="player__name">Parreño</h4>
+                    <span class="player__price">300K €</span>
+                </div>
+            </div>
+            <div class="player">
+                <img class="player__image" src="assets/images/examples/player-placeholder.png" alt="" />
+                <div class="player__content">
+                    <span class="player__position">STR</span>
+                    <h4 class="player__name">Lucas Perez</h4>
+                    <span class="player__price">800K €</span>
+                </div>
+            </div>
+            <div class="player">
+                <img class="player__image" src="assets/images/examples/player-placeholder.png" alt="" />
+                <div class="player__content">
+                    <span class="player__position">DEF</span>
+                    <h4 class="player__name">Jaime Sanchez</h4>
+                    <span class="player__price">300K €</span>
+                </div>
+            </div>
+        </div>
+    </ion-grid>
+</ion-content>

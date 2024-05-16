@@ -5,6 +5,8 @@
 export const environment = {
     production: false,
     backUrl: 'http://localhost:3000',
+    clubName: 'Real Club Deportivo',
+    clubPrefix: 'Depor',
 };
 
 /*

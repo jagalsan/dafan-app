@@ -1,26 +1,23 @@
 <section class="leader-board">
-    <h3 class="leader-board__title">Leader board</h3>
+    <h3 class="leader-board__title" *ngIf="type !== 'normal'">Leader board</h3>
     <div class="leader-board__user-list">
-        <div class="user">
-            <ion-icon class="user__trophy user__trophy--first" name="trophy-outline"></ion-icon>
-            <span class="user__ranking">1</span>
-            <span class="user__alias">j.reneses</span>
-            <span class="user__points">1200</span>
-        </div>
-        <div class="user">
-            <ion-icon class="user__trophy" name="trophy-outline"></ion-icon>
-            <span class="user__ranking">2</span>
-            <span class="user__alias">a.marinp</span>
-            <span class="user__points">1100</span>
-        </div>
-        <div class="user">
-            <ion-icon class="user__trophy" name="trophy-outline"></ion-icon>
-            <span class="user__ranking">3</span>
-            <span class="user__alias">s.leiches</span>
-            <span class="user__points">900</span>
+        <div class="user" *ngFor="let user of leaderBoard.leaderBoardUsers; let i = index">
+            <ion-icon
+                class="user__trophy"
+                [ngClass]="i === 0 ? 'user__trophy--first' : ''"
+                name="trophy-outline"
+            ></ion-icon>
+            <span class="user__ranking">{{ user.ranking }}</span>
+            <span class="user__alias">{{ user.alias }}</span>
+            <span class="user__points">{{ user.points }}</span>
         </div>
     </div>
-    <span class="leader-board__show-all">
+    <span
+        [routerLink]="'/challenges'"
+        [queryParams]="{ tab: 'leaderBoard' }"
+        *ngIf="type !== 'normal'"
+        class="leader-board__show-all"
+    >
         Show all
         <ion-icon name="chevron-forward-outline"></ion-icon>
     </span>

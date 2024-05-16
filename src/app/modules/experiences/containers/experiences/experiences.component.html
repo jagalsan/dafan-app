@@ -5,7 +5,7 @@
     [scrollY]="true"
 >
     <ion-grid class="main-page__grid">
-        <h2 class="main-page__title">FanPoint experiences</h2>
+        <h2 class="main-page__title">Fan Points Experiences</h2>
         <section class="experiences__section club-experiences" *ngFor="let clubExperience of clubExperiences">
             <h3 class="club-experiences__title">{{ clubExperience.type.label }}</h3>
             <ion-list class="club-experiences__list">
@@ -14,16 +14,22 @@
                         class="experience"
                         [ngClass]="{ 'experience--blocked': userData.level < experience.levelRequired }"
                     >
-                        <img class="experience__image" [src]="experience.previewImage" />
+                        <img
+                            class="experience__image"
+                            (click)="navigateExperience(experience)"
+                            [src]="experience.previewImage"
+                        />
                         <div class="experience__label">
-                            <ion-label class="label">{{ experience.label }}</ion-label>
+                            <ion-label (click)="navigateExperience(experience)" class="label">{{
+                                experience.label
+                            }}</ion-label>
                             <span *ngIf="clubExperience.type.name === experiencesTypeEnum.Discounts" class="discount"
                                 >{{ experience.percentageDiscount }}%</span
                             >
                         </div>
                         <ion-button
                             slot="end"
-                            class="experience__button"
+                            class="experience__button df-button df-button--secondary"
                             [ngClass]="{ 'experience__button--blocked': userData.fanPoints < experience.pointsCost }"
                         >
                             <ng-container *ngIf="userData.fanPoints >= experience.pointsCost; else blocked">

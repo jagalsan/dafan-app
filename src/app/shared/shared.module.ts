@@ -6,8 +6,14 @@ import { TokenPackageListModule } from './modules/token-packages-list/token-pack
 import { SuggestModalComponent } from './components/suggest-modal/suggest-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CodeScanningModalComponent } from './components/code-scanning-modal/code-scanning-modal.component';
+import { CollectiblesFilterModalComponent } from './components/collectibles-filter-modal/collectibles-filter-modal.component';
 
-const COMPONENTS = [FanTokensModalComponent, SuggestModalComponent, CodeScanningModalComponent];
+const COMPONENTS = [
+    FanTokensModalComponent,
+    SuggestModalComponent,
+    CodeScanningModalComponent,
+    CollectiblesFilterModalComponent,
+];
 
 @NgModule({
     imports: [CommonModule, IonicModule.forRoot(), TokenPackageListModule, FormsModule, ReactiveFormsModule],
